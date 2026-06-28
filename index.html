@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roman Mall — Плиточник 10 Level</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', 'Inter', system-ui, sans-serif;
+            background: #0a0e14;
+            color: #eef2f6;
+        }
+
+        /* Світло-блакитний акцент */
+        .aqua {
+            color: #7dd3fc;
+        }
+        .aqua-bg {
+            background: #7dd3fc;
+            color: #0a0e14;
+            transition: all 0.3s ease;
+        }
+        .aqua-bg:hover {
+            background: #5bb8e6;
+            transform: scale(1.04);
+            box-shadow: 0 12px 40px -8px #7dd3fc60;
+        }
+        .aqua-border {
+            border-color: #7dd3fc;
+        }
+
+        .aqua-gradient {
+            background: linear-gradient(135deg, #7dd3fc, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Hero */
+        .hero-aqua {
+            background:
+                linear-gradient(165deg, rgba(10, 14, 20, 0.92) 0%, rgba(10, 14, 20, 0.70) 100%),
+                url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+
+        /* Картки */
+        .card-aqua {
+            background: #121821;
+            border: 1px solid #1e2835;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+        }
+        .card-aqua:hover {
+            border-color: #7dd3fc;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -20px #7dd3fc40;
+            background: #161e2a;
+        }
+
+        /* 10 Level badge з золотою короною */
+        .level-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #7dd3fc20, #38bdf820);
+            border: 2px solid #7dd3fc;
+            color: #7dd3fc;
+            font-weight: 900;
+            font-size: 0.85rem;
+            padding: 6px 16px 6px 12px;
+            border-radius: 50px;
+            letter-spacing: 0.05em;
+            box-shadow: 0 0 30px -5px #7dd3fc40;
+            animation: pulse-glow 2.5s ease-in-out infinite;
+        }
+
+        .level-badge .crown-gold {
+            color: #fbbf24;
+            font-size: 1.1rem;
+            filter: drop-shadow(0 0 8px #fbbf2460);
+        }
+
+        @keyframes pulse-glow {
+            0%,
+            100% {
+                box-shadow: 0 0 20px -5px #7dd3fc30;
+            }
+            50% {
+                box-shadow: 0 0 40px 0px #7dd3fc60;
+            }
+        }
+
+        /* Слайдер */
+        .slider-aqua {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px -20px #000000cc;
+            border: 1px solid #1e2835;
+        }
+        .slider-track {
+            display: flex;
+            transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .slider-track>div {
+            min-width: 100%;
+        }
+
+        .slider-btn {
+            background: rgba(10, 14, 20, 0.8);
+            backdrop-filter: blur(6px);
+            border: 1px solid #7dd3fc40;
+            transition: 0.25s;
+            color: #7dd3fc;
+        }
+        .slider-btn:hover {
+            background: #7dd3fc;
+            color: #0a0e14;
+            border-color: #7dd3fc;
+        }
+
+        /* Прайс */
+        .price-aqua {
+            background: #121821;
+            border: 1px solid #1e2835;
+            border-radius: 16px;
+            transition: 0.25s;
+        }
+        .price-aqua:hover {
+            border-color: #7dd3fc;
+            background: #161e2a;
+            box-shadow: 0 0 30px -10px #7dd3fc20;
+        }
+
+        /* Доти */
+        .dot-aqua {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #2a3442;
+            transition: 0.25s;
+            cursor: pointer;
+            border: none;
+        }
+        .dot-aqua.active {
+            background: #7dd3fc;
+            box-shadow: 0 0 20px #7dd3fc80;
+            width: 36px;
+            border-radius: 20px;
+        }
+
+        /* Мобільне меню */
+        #mobileMenu {
+            background: #0a0e14;
+            border-top: 1px solid #1e2835;
+        }
+        #mobileMenu a {
+            border-bottom: 1px solid #161e2a;
+            padding: 16px 0;
+            font-weight: 500;
+        }
+        #mobileMenu a:last-child {
+            border-bottom: none;
+        }
+
+        /* Статистика */
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, #7dd3fc, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Навбар */
+        .nav-aqua {
+            background: transparent;
+            border: 1.5px solid #7dd3fc;
+            color: #7dd3fc;
+            transition: 0.3s;
+        }
+        .nav-aqua:hover {
+            background: #7dd3fc;
+            color: #0a0e14;
+        }
+
+        /* Стрічка */
+        .ribbon-aqua {
+            background: linear-gradient(90deg, #7dd3fc20, #7dd3fc10, #7dd3fc20);
+            border-top: 1px solid #7dd3fc30;
+            border-bottom: 1px solid #7dd3fc30;
+        }
+
+        /* Кнопка в герої */
+        .btn-aqua-outline {
+            border: 1px solid #2a3442;
+            transition: 0.3s;
+        }
+        .btn-aqua-outline:hover {
+            border-color: #7dd3fc;
+            background: #7dd3fc10;
+        }
+
+        /* Іконки в картках */
+        .icon-aqua {
+            color: #7dd3fc;
+        }
+
+        /* Секція контактів */
+        .contact-glow {
+            box-shadow: 0 0 60px -20px #7dd3fc40;
+        }
+
+        /* Footer Level */
+        .footer-level {
+            color: #7dd3fc;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        /* Золота корона в стрічці */
+        .crown-gold-ribbon {
+            color: #fbbf24;
+            filter: drop-shadow(0 0 6px #fbbf2440);
+        }
+
+        /* Золота корона в контактах */
+        .crown-gold-contact {
+            color: #fbbf24;
+            font-size: 2rem;
+            filter: drop-shadow(0 0 12px #fbbf2460);
+            display: inline-block;
+            animation: crown-sparkle 2s ease-in-out infinite;
+        }
+
+        @keyframes crown-sparkle {
+            0%,
+            100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 8px #fbbf2440);
+            }
+            50% {
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 20px #fbbf2480);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ====== NAVBAR ====== -->
+    <header class="fixed top-0 left-0 w-full bg-[#0a0e14]/95 backdrop-blur-xl z-50 border-b border-[#1e2835]">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 aqua-bg rounded-xl flex items-center justify-center text-2xl shadow-lg shadow-blue-400/20">
+                    <i class="fa-solid fa-hammer text-[#0a0e14]"></i>
+                </div>
+                <div>
+                <h1 class="text-3xl font-black tracking-tighter aqua">Roman Mall</h1>
+                  <span class="level-badge">
+                        <i class="fa-solid fa-crown crown-gold"></i> 10 LEVEL
+                    </span>
+                </div>
+            </div>
+
+            <nav class="hidden lg:flex items-center gap-12 text-sm font-semibold uppercase tracking-wider">
+                <a href="#why" class="text-gray-300 hover:text-[#7dd3fc] transition">Чому обирають мене</a>
+                <a href="#works" class="text-gray-300 hover:text-[#7dd3fc] transition">Портфоліо</a>
+                <a href="#prices" class="text-gray-300 hover:text-[#7dd3fc] transition">Прайс</a>
+                <a href="#contact" class="text-gray-300 hover:text-[#7dd3fc] transition">Контакти</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="tel:+380507615032"
+                class="hidden md:flex items-center gap-2 nav-aqua px-5 py-2.5 rounded-xl font-bold text-sm tracking-wide">
+                <i class="fa-solid fa-phone"></i> +38 (050) 761 50 32
+            </a>
+            <button id="menuBtn" class="lg:hidden text-2xl text-gray-300 hover:text-[#7dd3fc] transition">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden px-6 py-4">
+        <nav class="flex flex-col">
+            <a href="#why" class="mobile-link hover:text-[#7dd3fc] transition">Чому обирають</a>
+            <a href="#works" class="mobile-link hover:text-[#7dd3fc] transition">Роботи</a>
+            <a href="#prices" class="mobile-link hover:text-[#7dd3fc] transition">Прайс</a>
+            <a href="#contact" class="mobile-link hover:text-[#7dd3fc] transition">Контакти</a>
+            <a href="tel:+380507615032" class="mt-6 aqua-bg text-center py-4 rounded-xl font-bold text-lg">
+                <i class="fa-solid fa-phone mr-2"></i> Зателефонувати
+            </a>
+        </nav>
+    </div>
+</header>
+
+<!-- ====== HERO ====== -->
+<section class="hero-aqua min-h-screen flex items-center pt-20 pb-12">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="flex items-center gap-5 mb-8 flex-wrap">
+                      <span class="level-badge" title="Майстер своєї справи">
+    <i class="fa-solid fa-crown crown-silver"></i>Майстер своєї справи
+                </span>
+                </div>
+                <h1 class="text-5xl md:text-5xl font-black leading-[1.05] tracking-tight">
+                    Професійне укладання плитки <br />
+                    <span class="aqua-gradient">Івано-Франківськ</span>
+                </h1>
+                <div class="flex flex-wrap gap-4 mt-10">
+                    <a href="#contact" class="aqua-bg font-extrabold px-10 py-4 rounded-2xl text-lg flex items-center gap-3 shadow-xl shadow-blue-400/25">
+                        <i class="fa-regular fa-calendar-check"></i> Записатися
+                    </a>
+                    <a href="#prices" class="btn-aqua-outline px-8 py-4 rounded-2xl font-semibold transition flex items-center gap-2">
+                        <i class="fa-regular fa-file-lines"></i> Переглянути прайс лист
+                    </a>
+                </div>
+            </div>
+
+            <!-- Статистика -->
+            <div class="grid grid-cols-2 gap-6">
+                <div class="card-aqua p-5 text-center">
+                    <div class="stat-number">100%</div>
+                    <p class="text-sm font-semibold uppercase tracking-wider text-gray-400 mt-1">Відповідальність</p>
+                </div>
+                <div class="card-aqua p-5 text-center">
+                    <div class="stat-number">300+</div>
+                    <p class="text-sm font-semibold uppercase tracking-wider text-gray-400 mt-1">об'єктів</p>
+                </div>
+                <div class="card-aqua p-5 text-center">
+                    <div class="stat-number">5 років</div>
+                    <p class="text-sm font-semibold uppercase tracking-wider text-gray-400 mt-1">гарантії на укладку</p>
+                </div>
+                <div class="card-aqua p-5 text-center">
+                    <div class="stat-number">100%</div>
+                    <p class="text-sm font-semibold uppercase tracking-wider text-gray-400 mt-1">якість та чистота на робочому місці</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== СТРІЧКА ====== -->
+<div class="ribbon-aqua py-4 text-center">
+    <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-center items-center gap-6 md:gap-12 text-sm font-medium tracking-wide text-gray-300">
+        <span><i class="fa-solid fa-crown crown-gold-ribbon mr-2"></i> Відповідальність та чесність </span>
+        <span><i class="fa-solid fa-check-circle aqua mr-2"></i> Кераміка, керамограніт, душові піддони та інше..</span>
+        <span><i class="fa-solid fa-check-circle aqua mr-2"></i> Складні кути та різи..</span>
+        <span><i class="fa-solid fa-check-circle aqua mr-2"></i> Гідроізоляція та інше..</span>
+    </div>
+</div>
+
+<!-- ====== WHY ME ====== -->
+<section id="why" class="py-24 bg-[#0e141c]">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            
+            <!-- Бейдж -->
+            <span class="aqua text-sm font-bold uppercase tracking-[0.2em] border border-aqua-border px-4 py-1.5 rounded-full inline-block mb-6">
+                чому саме 
+            </span>
+            
+            <!-- Головний заголовок (зробили значно більшим) -->
+            <h2 class="text-3xl font-semibold text-white mb-4">
+                Працюю на результат, який помітний одразу.</span>
+            </h2>
+            
+            <!-- Другий рядок заголовка -->
+              <p class="text-3xl font-semibold text-white mb-4">
+                Індивідуальний підхід, акуратне виконання та чітке дотримання термінів.
+            </p>
+            
+            <!-- Слоган -->
+            <p class="text-3xl font-semibold text-white mb-4">
+               Чисто. Якісно. Професійно. 
+            </p>
+            
+              <p class="text-3xl font-semibold text-white mb-4">
+                 <span class="aqua-gradient">PS: "Роблю так, як для себе"</span>
+            </p>     
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="card-aqua p-8 text-center">
+                <div class="text-6xl mb-5 icon-aqua">📏</div>
+                <h3 class="text-2xl font-bold mb-1">Шви 1.5–2 мм</h3>
+            </div>
+            <div class="card-aqua p-8 text-center">
+                <div class="text-5xl mb-4 icon-aqua">🧹</div>
+                <h3 class="text-2xl font-bold">Підчас роботи завжди прибрано.</h3>
+            </div>
+            <div class="card-aqua p-8 text-center">
+                <div class="text-5xl mb-4 icon-aqua">📋</div>
+                <h3 class="text-2xl font-bold">Гарантія на акуратність</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== WORKS SLIDER ====== -->
+<section id="works" class="py-24 bg-[#0a0e14]">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="aqua text-sm font-bold uppercase tracking-[0.2em] border border-aqua-border px-4 py-1.5 rounded-full inline-block">портфоліо</span>
+            <h2 class="text-4xl md:text-5xl font-black mt-5">Реалізовані <span class="aqua-gradient">об'єкти</span></h2>
+        </div>
+
+        <!-- Слайдер -->
+        <div class="relative slider-aqua mx-auto max-w-5xl">
+            
+            <div id="sliderTrack" class="slider-track">
+                
+                <div><img src="images/images1.jpg" alt="Душовий піддон 1" class="w-full max-h-[680px] object-contain mx-auto"></div>
+                <div><img src="images/images2.jpg" alt="Душовий піддон 2" class="w-full max-h-[680px] object-contain mx-auto"></div>
+                <div><img src="images/images3.jpg" alt="Душовий піддон 3" class="w-full max-h-[680px] object-contain mx-auto"></div>
+                <div><img src="images/images4.jpg" alt="Душовий піддон 4" class="w-full max-h-[680px] object-contain mx-auto"></div>
+                <div><img src="images/images5.jpg" alt="Душовий піддон 5" class="w-full max-h-[680px] object-contain mx-auto"></div>
+                <div><img src="images/images6.jpg" alt="Душовий піддон 6" class="w-full max-h-[680px] object-contain mx-auto"></div>
+                <div><img src="images/images7.jpg" alt="Душовий піддон 7" class="w-full max-h-[680px] object-contain mx-auto"></div>
+            </div>
+
+            <!-- Кнопки навігації -->
+            <button onclick="prevSlide()" 
+                    class="slider-btn absolute left-6 top-1/2 -translate-y-1/2 p-5 rounded-full z-10 transition hover:scale-110">
+                <i class="fa-solid fa-chevron-left text-3xl"></i>
+            </button>
+            
+            <button onclick="nextSlide()" 
+                    class="slider-btn absolute right-6 top-1/2 -translate-y-1/2 p-5 rounded-full z-10 transition hover:scale-110">
+                <i class="fa-solid fa-chevron-right text-3xl"></i>
+            </button>
+
+            <!-- Точки -->
+            <div id="dots" class="flex justify-center gap-3 mt-10"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== PRICES ====== -->
+<section id="prices" class="py-24 bg-[#0e141c]">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-black mt-5">Прозорий <span class="aqua-gradient">прайс</span></h2>
+        </div>
+
+       <div class="flex justify-center mb-12">
+    <a href= "files/Прайс на 2026 рік.pdf"
+       download="Прайс на 2026 рік.pdf"
+       class="flex items-center gap-3 aqua-bg px-10 py-5 rounded-2xl font-bold text-lg shadow-xl shadow-blue-400/20 hover:scale-105 transition">
+        <i class="fa-regular fa-file-pdf text-2xl"></i> 
+        Завантажити прайс на 2026 рік (PDF)
+    </a>
+</div>
+
+        <div class="max-w-4xl mx-auto space-y-4">
+            <!-- виклик -->
+            <div class="grid md:grid-cols-2 gap-4 mb-8">
+                <div class="price-aqua p-6 text-center">
+                    <p class="text-gray-400 text-sm font-semibold uppercase tracking-wider">По місту</p>
+                    <p class="text-4xl font-black aqua">1 000 <span class="text-base text-gray-400 font-medium">грн</span></p>
+                </div>
+                <div class="price-aqua p-6 text-center">
+                    <p class="text-gray-400 text-sm font-semibold uppercase tracking-wider">За межі міста</p>
+                    <p class="text-4xl font-black aqua">2 000 <span class="text-base text-gray-400 font-medium">грн</span></p>
+                </div>
+            </div>
+
+            <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
+                <span class="font-semibold text-lg">Кераміка 20×30 / 30×60</span>
+                <span class="text-2xl font-black aqua">від 650 грн/м²</span>
+            </div>
+            <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
+                <span class="font-semibold text-lg">Керамограніт 60×60</span>
+                <span class="text-2xl font-black aqua">від 750 грн/м²</span>
+            </div>
+            <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
+                <span class="font-semibold text-lg">Керамограніт 120*60</span>
+                <span class="text-2xl font-black aqua"> від 850 грн/м²</span>
+            </div>
+            <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
+                <span class="font-semibold text-lg">Фартух з фугою (без розеток)</span>
+                <span class="text-2xl font-black aqua">1 500 грн/м.п</span>
+            </div>
+            <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
+                <span class="font-semibold text-lg">Кут 45°(готовий)</span>
+                <span class="text-2xl font-black aqua">800 грн/м.п</span>
+            </div>
+            <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
+                <span class="font-semibold text-lg">Епоксидна фуга </span>
+                <span class="text-2xl font-black aqua">від 350 грн/м²</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== CONTACT ====== -->
+<section id="contact" class="py-28 bg-[#0a0e14] text-center relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#7dd3fc10] to-transparent"></div>
+    <div class="relative max-w-2xl mx-auto px-6">
+        <span class="aqua text-sm font-bold uppercase tracking-[0.2em] border border-aqua-border px-4 py-1.5 rounded-full inline-block">зв'язок</span>
+        <div class="text-6xl mt-4">
+            <i class="fa-solid fa-crown crown-gold-contact"></i>
+         </div>
+        <p class="text-gray-200 text-lg mt-4">Обговоримо об'єкт, терміни та вартість</p>
+        <a href="tel:+380507615032"
+        class="inline-flex items-center gap-4 aqua-bg font-extrabold text-2xl px-10 py-8 rounded-3xl mt-10 shadow-2xl shadow-blue-200/30 contact-glow transition hover:scale-105">
+        <i class="fa-solid fa-phone"></i> +38 (050) 761 50 32
+    </a>
+    <p class="text-gray-200 text-sm mt-6 tracking-wider">Пн–Пт: 9:00 – 21:00</p>
+</div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="bg-[#060a10] py-8 text-center border-t border-[#1e2835]">
+    <p class="text-gray-500 text-sm tracking-wider">
+        <i class="fa-regular fa-copyright mr-1"></i> 2026 Roman Mall — плиточник <span class="footer-level">10 Level</span> в Івано-Франківську
+    </p>
+</footer>
+
+<!-- ====== SCRIPTS ====== -->
+<script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const icon = menuBtn.querySelector('i');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-xmark');
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-xmark');
+        });
+    });
+
+    // ==================== СЛАЙДЕР ====================
+    let currentSlide = 0;
+    const track = document.getElementById('sliderTrack');
+    const slides = track ? track.children.length : 0;
+    const dotsContainer = document.getElementById('dots');
+
+    function createDots() {
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < slides; i++) {
+            const dot = document.createElement('button');
+            dot.className = `dot-aqua ${i === 0 ? 'active' : ''}`;
+            dot.onclick = () => goToSlide(i);
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    function updateSlider() {
+        if (!track) return;
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        document.querySelectorAll('.dot-aqua').forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides) % slides;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+    }
+
+    // Автослайд
+    let autoSlideInterval;
+    function startAutoSlide() {
+        if (slides <= 1) return;
+        autoSlideInterval = setInterval(nextSlide, 5000);
+    }
+
+    // Ініціалізація слайдера
+    if (track) {
+        createDots();
+        updateSlider();
+        startAutoSlide();
+
+        // Зупинка при наведенні
+        const sliderContainer = document.querySelector('.slider-aqua');
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+            sliderContainer.addEventListener('mouseleave', startAutoSlide);
+        }
+    }
+
+    // Глобальні функції для кнопок
+    window.nextSlide = nextSlide;
+    window.prevSlide = prevSlide;
+    window.goToSlide = goToSlide;
+</script>
+</body>
+</html>
