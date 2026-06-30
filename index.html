@@ -249,14 +249,6 @@
             h1 { font-size: 3rem; }
         }
 
-        #why h2, #why p {
-            font-size: 1.75rem;
-            line-height: 1.2;
-        }
-        @media (min-width: 640px) {
-            #why h2, #why p { font-size: 2.25rem; }
-        }
-
         .stat-number {
             font-size: 2.5rem;
         }
@@ -475,36 +467,136 @@
         </div>
     </section>
 
-    <!-- ====== WHY ME ====== -->
-    <section id="why" class="py-24 bg-[#0e141c]">
-    <div class="text-center mb-12">
-    <span class="aqua text-xs font-bold uppercase tracking-[0.2em] border border-aqua-border px-3 py-1 rounded-full inline-block mb-4">
-        чому обирають мене
-    </span>
+ <!-- ====== WHY ME ====== -->
+<section id="why" class="py-24 lg:py-32 bg-[#0a1019] relative overflow-hidden">
+    <!-- Декоративний фон -->
+    <div class="absolute inset-0 bg-[radial-gradient(at_center,#1a2333_0%,transparent_70%)]"></div>
     
-    <h2 class="text-1xl md:text-3xl font-bold text-white mb-3 leading-tight">
-        Працюю на результат, <span class="aqua-gradient">який помітний одразу</span>
-    </h2>
-    
-    <div class="max-w-1xl mx-auto space-y-1 text-gray-300 text-xs md:text-sm">
-        <p>✅ Індивідуальний підхід до кожного об'єкта</p>
-        <p>✅ Акуратне виконання та чітке дотримання термінів</p>
-        <p>✅ Чистота, якість, професіоналізм — <span class="aqua font-medium">без компромісів</span></p>
+    <div class="max-w-5xl mx-auto px-6 relative z-10">
+        
+        <!-- Заголовок секції -->
+        <div class="text-center mb-16">
+            <span class="inline-flex items-center gap-2 bg-[#1a2333] text-aqua text-sm font-bold uppercase tracking-widest border border-aqua/30 px-6 py-3 rounded-2xl mb-6">
+                ✨ ЧОМУ ОБИРАЮТЬ МЕНЕ
+            </span>
+            
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tighter">
+                Працюю на результат,<br>
+                <span class="aqua-gradient bg-clip-text">який помітний одразу</span>
+            </h2>
+        </div>
+
+        <!-- Список переваг -->
+        <div class="grid md:grid-cols-2 gap-x-10 gap-y-8 max-w-4xl mx-auto">
+            <div class="flex gap-4 group">
+                <div class="w-8 h-8 flex-shrink-0 bg-green-500/10 text-green-400 rounded-2xl flex items-center justify-center text-2xl transition-all group-hover:scale-110">
+                    ✅
+                </div>
+                <p class="text-gray-100 text-[17px] md:text-[18px] leading-relaxed pt-1">
+                    Рівні шви та бездоганна геометрія
+                </p>
+            </div>
+
+            <div class="flex gap-4 group">
+                <div class="w-8 h-8 flex-shrink-0 bg-green-500/10 text-green-400 rounded-2xl flex items-center justify-center text-2xl transition-all group-hover:scale-110">
+                    ✅
+                </div>
+                <p class="text-gray-100 text-[17px] md:text-[18px] leading-relaxed pt-1">
+                    Ідеально рівна поверхня без перепадів
+                </p>
+            </div>
+
+            <div class="flex gap-4 group">
+                <div class="w-8 h-8 flex-shrink-0 bg-green-500/10 text-green-400 rounded-2xl flex items-center justify-center text-2xl transition-all group-hover:scale-110">
+                    ✅
+                </div>
+                <p class="text-gray-100 text-[17px] md:text-[18px] leading-relaxed pt-1">
+                    Порізка плитки без сколів
+                </p>
+            </div>
+
+            <div class="flex gap-4 group">
+                <div class="w-8 h-8 flex-shrink-0 bg-green-500/10 text-green-400 rounded-2xl flex items-center justify-center text-2xl transition-all group-hover:scale-110">
+                    ✅
+                </div>
+                <p class="text-gray-100 text-[17px] md:text-[18px] leading-relaxed pt-1">
+                    Чистий монтаж від початку до завершення
+                </p>
+            </div>
+
+            <div class="flex gap-4 group">
+                <div class="w-8 h-8 flex-shrink-0 bg-green-500/10 text-green-400 rounded-2xl flex items-center justify-center text-2xl transition-all group-hover:scale-110">
+                    ✅
+                </div>
+                <p class="text-gray-100 text-[17px] md:text-[18px] leading-relaxed pt-1">
+                    Якість, яку видно з першого погляду
+                </p>
+            </div>
+
+            <div class="flex gap-4 group">
+                <div class="w-8 h-8 flex-shrink-0 bg-green-500/10 text-green-400 rounded-2xl flex items-center justify-center text-2xl transition-all group-hover:scale-110">
+                    ✅
+                </div>
+                <p class="text-gray-100 text-[17px] md:text-[18px] leading-relaxed pt-1">
+                    Точна розкладка ще до початку робіт
+                </p>
+            </div>
+
+            <div class="flex gap-4 group">
+                <div class="w-8 h-8 flex-shrink-0 bg-green-500/10 text-green-400 rounded-2xl flex items-center justify-center text-2xl transition-all group-hover:scale-110">
+                    ✅
+                </div>
+                <p class="text-gray-100 text-[17px] md:text-[18px] leading-relaxed pt-1">
+                    Робота професійним інструментом
+                </p>
+            </div>
+
+            <div class="flex gap-4 group">
+                <div class="w-8 h-8 flex-shrink-0 bg-green-500/10 text-green-400 rounded-2xl flex items-center justify-center text-2xl transition-all group-hover:scale-110">
+                    ✅
+                </div>
+                <p class="text-gray-100 text-[17px] md:text-[18px] leading-relaxed pt-1">
+                    Укладання великоформатної плитки
+                </p>
+            </div>
+
+            <div class="flex gap-4 group">
+                <div class="w-8 h-8 flex-shrink-0 bg-green-500/10 text-green-400 rounded-2xl flex items-center justify-center text-2xl transition-all group-hover:scale-110">
+                    ✅
+                </div>
+                <p class="text-gray-100 text-[17px] md:text-[18px] leading-relaxed pt-1">
+                    Керамограніт будь-якої складності
+                </p>
+            </div>
+
+            <div class="flex gap-4 group">
+                <div class="w-8 h-8 flex-shrink-0 bg-green-500/10 text-green-400 rounded-2xl flex items-center justify-center text-2xl transition-all group-hover:scale-110">
+                    ✅
+                </div>
+                <p class="text-gray-100 text-[17px] md:text-[18px] leading-relaxed pt-1">
+                    Монтаж плитки 120×60, 120×120 та більше 
+                </p>
+            </div>
+        </div>
+
+        <!-- PS Блок -->
+        <div class="mt-20 flex justify-center">
+            <div class="bg-gradient-to-br from-[#1a2333] to-[#121a27] border border-aqua/20 rounded-3xl px-10 py-8 text-center max-w-md shadow-2xl">
+                <p class="text-2xl md:text-3xl font-semibold text-white leading-tight">
+                    <span class="aqua-gradient">"Роблю так, як для себе"</span>
+                </p>
+            </div>
+        </div>
+
     </div>
-    
-    <div class="mt-4 inline-block bg-[#121821] border border-[#1e2835] rounded-xl px-5 py-2">
-        <p class="text-xs md:text-sm font-semibold">
-            <span class="text-gray-400">PS:</span> 
-            <span class="aqua-gradient font-bold">"Роблю так, як для себе"</span>
-        </p>
-    </div>
-</div>
+</section>
+
   <!-- ====== СТРІЧКА ====== -->
     <div class="ribbon-aqua py-4 text-center">
         <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-center items-center gap-6 md:gap-12 text-sm font-medium tracking-wide text-gray-300">
             <span><i class="fa-solid fa-crown crown-gold-ribbon mr-2"></i> Відповідальність та чесність </span>
-            <span><i class="fa-solid fa-check-circle aqua mr-2"></i> Кераміка, керамограніт, душові піддони та інше..</span>
-            <span><i class="fa-solid fa-check-circle aqua mr-2"></i> Складні кути та різи..</span>
+            <span><i class="fa-solid fa-check-circle aqua mr-2"></i> Керамограніт, душові піддони та інше..</span>
+            <span><i class="fa-solid fa-check-circle aqua mr-2"></i> Складні кути, полички та різи..</span>
             <span><i class="fa-solid fa-check-circle aqua mr-2"></i> Гідроізоляція та інше..</span>
         </div>
     </div>
@@ -566,214 +658,253 @@
     </div>
 </section>
 
-    <!-- ====== REVIEWS ====== -->
-    <section id="reviews" class="py-24 bg-[#0e141c]">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="aqua text-sm font-bold uppercase tracking-[0.2em] border border-aqua-border px-4 py-1.5 rounded-full inline-block">відгуки</span>
-                <h2 class="text-4xl md:text-5xl font-black mt-5">Що кажуть <span class="aqua-gradient">клієнти</span></h2>
-                <p class="text-gray-400 text-lg mt-4 max-w-2xl mx-auto">Реальні відгуки від замовників, які вже довірили мені свої об'єкти</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <!-- Відгук 1 -->
-                <div class="review-card p-6 flex flex-col">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="review-avatar">О</div>
-                        <div>
-                            <p class="font-bold text-white">Оксана</p>
-                            <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                        </div>
-                    </div>
-                    <div class="review-stars text-lg mb-3">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                        “Звернулася до Романа для укладання плитки у ванній кімнаті. Все зробив швидко, якісно та чисто. Шви рівні, кут 45° — ідеальний. Дякую за професійний підхід! Рекомендую.”
-                    </p>
-                </div>
-
-                <!-- Відгук 2 -->
-                <div class="review-card p-6 flex flex-col">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="review-avatar">А</div>
-                        <div>
-                            <p class="font-bold text-white">Андрій</p>
-                            <p class="text-gray-400 text-sm">Котедж, с. Крихівці</p>
-                        </div>
-                    </div>
-                    <div class="review-stars text-lg mb-3">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                        “Дуже задоволений роботою! Роман виконав укладку керамограніту на кухні. Все виміряв, порахував, порадив найкращий варіант розкладки. Результат перевершив очікування. 10 з 10!”
-                    </p>
-                </div>
-
-                <!-- Відгук 3 -->
-                <div class="review-card p-6 flex flex-col">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="review-avatar">М</div>
-                        <div>
-                            <p class="font-bold text-white">Марія</p>
-                            <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                        </div>
-                    </div>
-                    <div class="review-stars text-lg mb-3">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                        “Робили душовий піддон з ухилом. Усе виконано ідеально, вода зливається без затримок. Роман дуже акуратний, після себе все прибрав. Велике спасибі за якісну роботу!”
-                    </p>
-                </div>
-
-                <!-- Відгук 4 -->
-                <div class="review-card p-6 flex flex-col">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="review-avatar">П</div>
-                        <div>
-                            <p class="font-bold text-white">Петро</p>
-                            <p class="text-gray-400 text-sm">Офіс, м. Івано-Франківськ</p>
-                        </div>
-                    </div>
-                    <div class="review-stars text-lg mb-3">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                        “Виконував роботи в комерційному приміщенні. Чітко дотримався термінів, ціна була заздалегідь обговорена і не змінювалася. Раджу всім, хто шукає відповідального плиточника.”
-                    </p>
-                </div>
-
-                <!-- Відгук 5 -->
-                <div class="review-card p-6 flex flex-col">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="review-avatar">Н</div>
-                        <div>
-                            <p class="font-bold text-white">Наталія</p>
-                            <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                        </div>
-                    </div>
-                    <div class="review-stars text-lg mb-3">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                        “Роман — майстер з золотими руками! Зробив фартух на кухні з фугою — виглядає дуже стильно. Також допоміг з вибором матеріалів. Щиро дякую за чудову роботу!”
-                    </p>
-                </div>
-
-                <!-- Відгук 6 -->
-                <div class="review-card p-6 flex flex-col">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="review-avatar">В</div>
-                        <div>
-                            <p class="font-bold text-white">Володимир</p>
-                            <p class="text-gray-400 text-sm">Котедж, с. Угорники</p>
-                        </div>
-                    </div>
-                    <div class="review-stars text-lg mb-3">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                        “Великий об'єм роботи по укладанню керамограніту. Роман впорався швидко і якісно. Всі кути і стики акуратні. Замовили також гідроізоляцію — зробив на вищому рівні.”
-                    </p>
-                </div>
-            </div>
+<!-- ====== REVIEWS ====== -->
+<section id="reviews" class="py-24 bg-[#0e141c]">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="aqua text-sm font-bold uppercase tracking-[0.2em] border border-aqua-border px-4 py-1.5 rounded-full inline-block">відгуки</span>
+            <h2 class="text-4xl md:text-5xl font-black mt-5">Що кажуть <span class="aqua-gradient">клієнти</span></h2>
+            <p class="text-gray-400 text-lg mt-4 max-w-2xl mx-auto">Реальні відгуки від замовників, які вже довірили мені свої об'єкти</p>
         </div>
-    </section>
 
-    <!-- ====== ДОДАТИ ВІДГУК (НОВИЙ ПРЕМІАЛЬНИЙ БЛОК) ====== -->
-    <section id="add-review" class="py-20 bg-[#0a0e14] border-t border-[#1e2835]">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <span class="aqua text-sm font-bold uppercase tracking-[0.2em] border border-aqua-border px-4 py-1.5 rounded-full inline-block">
-                    <i class="fa-regular fa-pen-to-square mr-2"></i> ваш відгук
-                </span>
-                <h3 class="text-3xl md:text-4xl font-black mt-5">Поділіться <span class="aqua-gradient">враженнями</span></h3>
-                <p class="text-gray-400 text-sm mt-3 max-w-lg mx-auto">Ваша думка допомагає іншим зробити правильний вибір</p>
-                <div class="section-divider mt-6"></div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Відгук 1 -->
+            <div class="review-card p-6 flex flex-col">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="review-avatar">О</div>
+                    <div>
+                        <p class="font-bold text-white">Оксана</p>
+                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
+                    </div>
+                </div>
+                <div class="review-stars text-lg mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                    “Звернулася до Романа для укладання плитки у ванній кімнаті. Все зробив швидко, якісно та чисто. Шви рівні, кут 45 ідеальний. Дякую за професійний підхід! Рекомендую.”
+                </p>
             </div>
 
-            <div class="glass-effect rounded-3xl p-8 md:p-10">
-                <form id="reviewForm" action="https://formspree.io/f/ваш_код_форми" method="POST" class="space-y-6">
-                    
-                    <div class="grid md:grid-cols-2 gap-5">
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-300 mb-2">
-                                <i class="fa-regular fa-user aqua mr-2"></i> Ваше ім'я
-                            </label>
-                            <input type="text" name="name" required
-                                   class="w-full input-premium rounded-xl px-5 py-3.5 text-white placeholder-gray-500"
-                                   placeholder="Наприклад: Оксана">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-300 mb-2">
-                                <i class="fa-regular fa-building aqua mr-2"></i> Об'єкт
-                            </label>
-                            <input type="text" name="object" required
-                                   class="w-full input-premium rounded-xl px-5 py-3.5 text-white placeholder-gray-500"
-                                   placeholder="Квартира / Котедж / Офіс">
-                        </div>
-                    </div>
-
+            <!-- Відгук 2 -->
+            <div class="review-card p-6 flex flex-col">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="review-avatar">А</div>
                     <div>
-                        <label class="block text-sm font-semibold text-gray-300 mb-2">
-                            <i class="fa-regular fa-star aqua mr-2"></i> Оцінка
-                        </label>
-                        <div class="flex gap-2 text-3xl star-rating" id="starRating">
-                            <i class="fa-regular fa-star" data-star="1"></i>
-                            <i class="fa-regular fa-star" data-star="2"></i>
-                            <i class="fa-regular fa-star" data-star="3"></i>
-                            <i class="fa-regular fa-star" data-star="4"></i>
-                            <i class="fa-regular fa-star" data-star="5"></i>
-                        </div>
-                        <input type="hidden" name="rating" id="ratingInput" value="5">
+                        <p class="font-bold text-white">Андрій</p>
+                        <p class="text-gray-400 text-sm">Котедж, с. Крихівці</p>
                     </div>
-
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-300 mb-2">
-                            <i class="fa-regular fa-comment aqua mr-2"></i> Ваш відгук
-                        </label>
-                        <textarea name="review" rows="4" required
-                                  class="w-full input-premium rounded-xl px-5 py-3.5 text-white placeholder-gray-500 resize-none"
-                                  placeholder="Розкажіть про ваш досвід роботи зі мною..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-premium w-full py-4 rounded-xl text-lg flex items-center justify-center gap-3">
-                        <i class="fa-regular fa-paper-plane"></i>
-                        Надіслати відгук
-                    </button>
-
-                    <p class="text-gray-500 text-xs text-center">
-                        <i class="fa-regular fa-shield-check mr-1"></i>
-                        Ваш відгук буде опубліковано після модерації
-                    </p>
-                </form>
+                </div>
+                <div class="review-stars text-lg mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                    “Дуже задоволений роботою! Все виміряв, порахував, порадив найкращий варіант розкладки. Результат перевершив очікування. 10 з 10!”
+                </p>
             </div>
+
+            <!-- Відгук 3 -->
+            <div class="review-card p-6 flex flex-col">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="review-avatar">М</div>
+                    <div>
+                        <p class="font-bold text-white">Марія</p>
+                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
+                    </div>
+                </div>
+                <div class="review-stars text-lg mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                    “Робили душовий піддон. Усе виконано ідеально, вода зливається без затримок. Роман дуже акуратний, після себе все прибрав. Велике спасибі!”
+                </p>
+            </div>
+
+            <!-- Відгук 4 -->
+            <div class="review-card p-6 flex flex-col">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="review-avatar">П</div>
+                    <div>
+                        <p class="font-bold text-white">Олег</p>
+                        <p class="text-gray-400 text-sm">Офіс, м. Івано-Франківськ</p>
+                    </div>
+                </div>
+                <div class="review-stars text-lg mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                    “Виконував роботи в комерційному приміщенні 300 м2. Чітко дотримався термінів, ціна була заздалегідь обговорена. Раджу всім!”
+                </p>
+            </div>
+
+            <!-- Відгук 5 -->
+            <div class="review-card p-6 flex flex-col">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="review-avatar">Н</div>
+                    <div>
+                        <p class="font-bold text-white">Наталія</p>
+                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
+                    </div>
+                </div>
+                <div class="review-stars text-lg mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                    “Роман — майстер з золотими руками! Зробив фартух на кухні дуже стильно. Також допоміг з вибором матеріалів. Щиро дякую!”
+                </p>
+            </div>
+
+            <!-- Відгук 6 -->
+            <div class="review-card p-6 flex flex-col">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="review-avatar">В</div>
+                    <div>
+                        <p class="font-bold text-white">Володимир</p>
+                        <p class="text-gray-400 text-sm">Котедж, с. Угорники</p>
+                    </div>
+                </div>
+                <div class="review-stars text-lg mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                    “Великий об'єм роботи по укладанню керамограніту 120×60 — майже 700м². Впорався швидко і якісно. Задоволений та рекомендую!”
+                </p>
+            </div>
+
+            <!-- === Нові 6 відгуків === -->
+
+            <!-- Відгук 7 -->
+            <div class="review-card p-6 flex flex-col">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="review-avatar">С</div>
+                    <div>
+                        <p class="font-bold text-white">Сергій</p>
+                        <p class="text-gray-400 text-sm">Котедж, с. Підпечари</p>
+                    </div>
+                </div>
+                <div class="review-stars text-lg mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                    “Робив великоформатну плитку 120×60 по всьому будинку. Рівень і геометрія просто супер. Все акуратно в термін.”
+                </p>
+            </div>
+
+            <!-- Відгук 8 -->
+            <div class="review-card p-6 flex flex-col">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="review-avatar">А</div>
+                    <div>
+                        <p class="font-bold text-white">Анна</p>
+                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ (Каскад)</p>
+                    </div>
+                </div>
+                <div class="review-stars text-lg mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                    “Роман зробив санвузол під ключ. Все чисто, акуратно і з душею. Робить так, як для себе. Дуже рекомендую!”
+                </p>
+            </div>
+
+            <!-- Відгук 9 -->
+            <div class="review-card p-6 flex flex-col">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="review-avatar">Р</div>
+                    <div>
+                        <p class="font-bold text-white">Роман</p>
+                        <p class="text-gray-400 text-sm">Будинок, Крихівці</p>
+                    </div>
+                </div>
+                <div class="review-stars text-lg mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                    “Робив плитку на терасі та сходах. Результат перевершив очікування. Професіонал своєї справи!”
+                </p>
+            </div>
+
+            <!-- Відгук 10 -->
+            <div class="review-card p-6 flex flex-col">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="review-avatar">М</div>
+                    <div>
+                        <p class="font-bold text-white">Міша</p>
+                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ </p>
+                    </div>
+                </div>
+                <div class="review-stars text-lg mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                    “Дуже акуратний майстер. Зробив підлогу і стіни в санвузлі. Після себе все прибирав, квартира залишалась чистою.”
+                </p>
+            </div>
+
+            <!-- Відгук 11 -->
+            <div class="review-card p-6 flex flex-col">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="review-avatar">Д</div>
+                    <div>
+                        <p class="font-bold text-white">Дмитро</p>
+                        <p class="text-gray-400 text-sm">Таунхаус, м. Івано-Франківськ</p>
+                    </div>
+                </div>
+                <div class="review-stars text-lg mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                    “Робив плитку в трьох санвузлах. Якість на найвищому рівні, все по рівню, шви ідеальні. Працює професійним інструментом.”
+                </p>
+            </div>
+
+            <!-- Відгук 12 -->
+            <div class="review-card p-6 flex flex-col">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="review-avatar">Т</div>
+                    <div>
+                        <p class="font-bold text-white">Тетяна</p>
+                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
+                    </div>
+                </div>
+                <div class="review-stars text-lg mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                    “Зробив плитку на балконі та в коридорі. Все акуратно, без сколів і перепадів. Приємно спілкуватися і працювати з такою людиною.”
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ====== ДОДАТИ ВІДГУК ====== -->
+<section id="add-review" class="py-16 bg-[#0a0e14] border-t border-[#1e2835]">
+    <div class="max-w-md mx-auto px-6 text-center">
+        
+      <span class="aqua text-sm font-bold uppercase tracking-widest border border-aqua-border px-6 py-3 rounded-2xl inline-block mb-6">
+            ✨ ВАШ ВІДГУК
+        </span>
+        
+        
+        <h3 class="text-3xl font-black text-white mb-4">
+            Поділіться враженням 
+        </h3>
+
+ <!-- Кнопка Viber -->
+<a href="viber://chat?phone=%2B380507615032" 
+   class="block w-full bg-[#1a2333] hover:bg-[#212b3d] active:bg-[#16202f] border border-[#2a3749] hover:border-aqua transition-all text-white font-semibold text-lg py-4 rounded-2xl flex items-center justify-center gap-3 shadow-md">
+    <i class="fa-brands fa-viber text-2xl" style="color: #7C3AED;"></i>
+    Написати відгук 
+</a>
+
+       <p class="text-gray-500 text-sm mt-8 flex items-center justify-center gap-2">
+            <i class="fa-regular fa-hand-point-right"></i>
+            Натисніть кнопку — чат відкриється автоматично
+        </p>
+    </div>
+</section>
 
     <!-- ====== PRICES ====== -->
     <section id="prices" class="py-24 bg-[#0e141c]">
@@ -793,29 +924,33 @@
             <div class="max-w-4xl mx-auto space-y-4">
                 <div class="grid md:grid-cols-2 gap-4 mb-8">
                     <div class="price-aqua p-6 text-center">
-                        <p class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Виїзд на об'єкт по місту</p>
+                        <p class="text-white-400 text-sm font-semibold uppercase tracking-wider">✅ Виїзд по місту</p>
                         <p class="text-4xl font-black aqua">1 000 <span class="text-base text-gray-400 font-medium">грн</span></p>
                     </div>
                     <div class="price-aqua p-6 text-center">
-                        <p class="text-gray-400 text-sm font-semibold uppercase tracking-wider">За межі міста</p>
+                        <p class="text-white-400 text-sm font-semibold uppercase tracking-wider">✅ За межі міста</p>
                         <p class="text-4xl font-black aqua">2 000 <span class="text-base text-gray-400 font-medium">грн</span></p>
                     </div>
                 </div>
 
                 <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
-                    <span class="font-semibold text-lg">Кераміка 20×30 / 30×60</span>
+                    <span class="font-semibold text-lg">Кераміка - 20×30 / 30×60</span>
                     <span class="text-2xl font-black aqua">від 650 грн/м²</span>
                 </div>
                 <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
-                    <span class="font-semibold text-lg">Керамограніт 60×60</span>
+                    <span class="font-semibold text-lg">Керамограніт - 60×60</span>
                     <span class="text-2xl font-black aqua">від 750 грн/м²</span>
                 </div>
                 <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
-                    <span class="font-semibold text-lg">Керамограніт 120*60</span>
+                    <span class="font-semibold text-lg">Керамограніт - 120*60</span>
                     <span class="text-2xl font-black aqua">від 850 грн/м²</span>
                 </div>
                 <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
-                    <span class="font-semibold text-lg">Фартух (без розеток)</span>
+                    <span class="font-semibold text-lg">Паркетна дошка - 20×120 см</span>
+                    <span class="text-2xl font-black aqua">від 1 200 грн/м²</span>
+                </div>
+                <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
+                    <span class="font-semibold text-lg">Фартух - (без розеток)</span>
                     <span class="text-2xl font-black aqua">1 500 грн/м.п</span>
                 </div>
                 <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
@@ -830,47 +965,49 @@
         </div>
     </section>
 
-    <!-- Виправити contact section -->
-<section id="contact" class="py-28 bg-[#0a0e14] text-center relative">
+ <!-- ====== CONTACT SECTION ====== -->
+<section id="contact" class="py-24 md:py-28 bg-[#0a0e14] text-center relative">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#7dd3fc10] to-transparent"></div>
+    
     <div class="relative max-w-2xl mx-auto px-6">
-        <span class="aqua text-sm font-bold uppercase tracking-[0.2em] border border-aqua-border px-4 py-1.5 rounded-full inline-block">зв'язок</span>
         
-        <h2 class="text-3xl md:text-4xl font-black mt-6">Зв'яжіться зі мною</h2>
+        <span class="aqua text-sm font-bold uppercase tracking-widest border border-aqua-border px-6 py-2.5 rounded-2xl inline-block mb-6">
+    ✨ ЗВ'ЯЗОК
+    </span>
+        <h2 class="text-3xl md:text-4xl font-black text-white mt-4 mb-4 leading-tight">
+            Реалізую ваш проект 
+        </h2>
         
-        <a href="tel:+380507615032" 
-           class="inline-flex items-center gap-3 mt-8 text-2xl font-bold aqua hover:scale-105 transition">
-            <i class="fa-solid fa-phone"></i> +38 (050) 761 50 32
-        </a>
-        
-        <p class="text-gray-400 text-sm mt-3">Пн–Пт: 9:00 – 18:00</p>
+        <p class="text-gray-300 text-base mb-10 max-w-md mx-auto">
+            Замовлення будь-якої складності + <span class="text-aqua font-medium"> </span>3D-візуалізація</span>
+        </p>
+
+
+        <!-- Месенджери -->
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="viber://chat?phone=%2B380507615032" 
+               class="inline-flex items-center gap-3 bg-[#121821] px-7 py-4 rounded-2xl border border-[#1e2835] hover:border-[#7dd3fc] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 group">
+                <i class="fa-brands fa-viber text-3xl" style="color: #7360f2;"></i>
+                <span class="text-base font-semibold text-gray-300 group-hover:text-white">Viber</span>
+            </a>
+            
+            <a href="tel:+380507615032" 
+               class="inline-flex items-center gap-3 bg-[#121821] px-7 py-4 rounded-2xl border border-[#1e2835] hover:border-[#7dd3fc] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20 group">
+                <i class="fa-solid fa-phone text-3xl" style="color: #34b7f1;"></i>
+                <span class="text-base font-semibold text-gray-300 group-hover:text-white">Телефон</span>
+            </a>
+        </div>
+
     </div>
 </section>
+
     <!-- ====== FOOTER ====== -->
     <footer class="bg-[#060a10] py-12 text-center border-t border-[#1e2835]">
         <div class="max-w-4xl mx-auto px-6">
-            <!-- Соціальні месенджери -->
-            <div class="flex flex-wrap justify-center gap-4 mb-8">
-                <a href="viber://chat?number=%2B380507615032" 
-                   target="_blank"
-                   class="inline-flex items-center gap-3 bg-[#121821] px-6 py-3 rounded-2xl border border-[#1e2835] hover:border-[#7dd3fc] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 group">
-                    <i class="fa-brands fa-viber text-2xl" style="color: #7360f2;"></i>
-                    <span class="text-sm font-semibold text-gray-300 group-hover:text-white">Viber</span>
-                </a>
-                <a href="https://t.me/+380507615032" 
-                   target="_blank"
-                   class="inline-flex items-center gap-3 bg-[#121821] px-6 py-3 rounded-2xl border border-[#1e2835] hover:border-[#7dd3fc] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 group">
-                    <i class="fa-brands fa-telegram text-2xl" style="color: #26a5e4;"></i>
-                    <span class="text-sm font-semibold text-gray-300 group-hover:text-white">Telegram</span>
-                </a>
-                <a href="tel:+380507615032" 
-                   class="inline-flex items-center gap-3 bg-[#121821] px-6 py-3 rounded-2xl border border-[#1e2835] hover:border-[#7dd3fc] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20 group">
-                    <i class="fa-solid fa-phone text-2xl" style="color: #34b7f1;"></i>
-                    <span class="text-sm font-semibold text-gray-300 group-hover:text-white">Телефон</span>
-                </a>
+           
             <!-- Основний текст -->
             <p class="text-gray-500 text-sm tracking-wider">
-                <i class="fa-regular fa-copyright mr-1"></i> 2026 Roman Mall — плиточник <span class="footer-level">10 Level</span> в Івано-Франківську
+                <i class="fa-regular fa-copyright mr-1"></i> 2026 Roman Mall — плиточник <span class="footer-level">10 Level</span> Івано-Франківськ
             </p>
             
     </footer>
