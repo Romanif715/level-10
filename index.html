@@ -493,7 +493,7 @@
             ✅
         </div>
         <p class="text-gray-100 text-[17px] md:text-[18px] leading-relaxed pt-1">
-            Рівні шви та геометрія
+            Грамотний підхід до роботи
         </p>
     </div>
 
@@ -502,7 +502,7 @@
             ✅
         </div>
         <p class="text-gray-100 text-[17px] md:text-[18px] leading-relaxed pt-1">
-            Ідеально рівна поверхня
+            Рівна поверхня без перепадів
         </p>
     </div>
 
@@ -556,7 +556,7 @@
             ✅
         </div>
         <p class="text-gray-100 text-[17px] md:text-[18px] leading-relaxed pt-1">
-            Грамотний підхід до роботи 
+            Рівні шви та геометрія
         </p>
     </div>
 
@@ -574,7 +574,7 @@
             ✅
         </div>
         <p class="text-gray-100 text-[17px] md:text-[18px] leading-relaxed pt-1">
-            Монтаж плитки 120×60, 120×120 та більше 
+            Монтаж плитки 120×60 та більше 
         </p>
     </div>
 </div>
@@ -607,10 +607,6 @@
     <div class="max-w-6xl mx-auto px-6">
 
         <div class="text-center mb-10">
-            <span class="aqua text-sm font-bold uppercase tracking-[0.2em] border border-aqua-border px-4 py-1.5 rounded-full inline-block">
-                Портфоліо
-            </span>
-
             <h2 class="text-4xl md:text-5xl font-black mt-5">
                 Реалізовані <span class="aqua-gradient">об'єкти</span>
             </h2>
@@ -657,11 +653,12 @@
                 <img src="images/images8.jpg" alt="Робота 8"
                     class="w-full object-contain max-h-[350px] mx-auto transition duration-300 hover:scale-105 cursor-pointer">
             </div>
-            
+
              <div class="bg-[#111827] rounded-2xl p-3 shadow-xl">
                 <img src="images/images9.jpg" alt="Робота 9"
                     class="w-full object-contain max-h-[350px] mx-auto transition duration-300 hover:scale-105 cursor-pointer">
             </div>
+
         </div>
     </div>
 </section>
@@ -670,7 +667,6 @@
 <section id="reviews" class="py-24 bg-[#0e141c]">
     <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-16">
-            <span class="aqua text-sm font-bold uppercase tracking-[0.2em] border border-aqua-border px-4 py-1.5 rounded-full inline-block">відгуки</span>
             <h2 class="text-4xl md:text-5xl font-black mt-5">Що кажуть <span class="aqua-gradient">клієнти</span></h2>
             <p class="text-gray-400 text-lg mt-4 max-w-2xl mx-auto">Реальні відгуки від замовників, які вже довірили мені свої об'єкти</p>
         </div>
@@ -880,8 +876,8 @@
                     “Зробив плитку на балконі та в коридорі. Все акуратно, без сколів і перепадів. Приємно спілкуватися і працювати з такою людиною.”
                 </p>
             </div>
-            
-             <!-- Відгук 13 -->
+
+            <!-- Відгук 13 -->
             <div class="review-card p-6 flex flex-col">
                 <div class="flex items-center gap-4 mb-4">
                     <div class="review-avatar">Т</div>
@@ -894,7 +890,8 @@
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
                 <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                    “Всім дуже сильно задоволена. Роман робив підлогу,фартух в кухні та стіни в ванній. Все виконано акуратно, швидко і рівно.
+                    “Всім дуже сильно задоволена. 
+                     Роман робив підлогу,фартух в кухні та стіни в ванній. Все виконано акуратно, швидко і рівно.
                      Рекомендую і щиро дякую🙏”
                 </p>
             </div>
@@ -902,28 +899,50 @@
     </div>
 </section>
 
-<!-- ====== ДОДАТИ ВІДГУК ====== -->
-<section id="add-review" class="py-16 bg-[#0a0e14] border-t border-[#1e2835]">
-    <div class="max-w-md mx-auto px-6 text-center">
+<!-- Форма відгуків -->
+<section class="py-16 bg-gray-900">
+    <div class="max-w-2xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-white text-center mb-10">Залиште свій відгук</h2>
         
-      <span class="aqua text-sm font-bold uppercase tracking-widest border border-aqua-border px-6 py-3 rounded-2xl inline-block mb-6">
-            ✨ ВАШ ВІДГУК
-        </span>
-        
+        <div class="bg-gray-800 rounded-3xl p-8 shadow-xl">
+            <form id="reviewForm" class="space-y-6">
+                
+                <!-- Ім'я -->
+                <div>
+                    <label class="block text-gray-400 text-sm mb-2">Ваше ім'я</label>
+                    <input type="text" id="name" required
+                           class="w-full bg-gray-700 text-white rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-green-500">
+                </div>
 
-        <!-- 🔥 РОБОЧИЙ ВАРІАНТ -->
-        <a href="viber://chat?number=%2B380507615032" 
-           class="block w-full bg-[#1a2333] hover:bg-[#212b3d] active:bg-[#16202f] border border-[#2a3749] hover:border-aqua transition-all text-white font-semibold text-lg py-4 rounded-2xl flex items-center justify-center gap-3 shadow-md">
-            <i class="fa-brands fa-viber text-2xl" style="color: #7C3AED;"></i>
-            Написати відгук 
-        </a>
+                <!-- Зірки -->
+                <div>
+                    <label class="block text-gray-400 text-sm mb-2">Оцінка</label>
+                    <div id="stars" class="flex text-4xl cursor-pointer">
+                        <span data-value="1">★</span>
+                        <span data-value="2">★</span>
+                        <span data-value="3">★</span>
+                        <span data-value="4">★</span>
+                        <span data-value="5">★</span>
+                    </div>
+                    <input type="hidden" id="rating" value="5">
+                </div>
 
-        <p class="text-gray-500 text-sm mt-8 flex items-center justify-center gap-2">
-            <i class="fa-regular fa-hand-point-right"></i>
-            Натисніть кнопку — чат відкриється автоматично
-        </p>
+                <!-- Текст відгуку -->
+                <div>
+                    <label class="block text-gray-400 text-sm mb-2">Ваш відгук</label>
+                    <textarea id="message" rows="5" required
+                              class="w-full bg-gray-700 text-white rounded-3xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-green-500 resize-none"></textarea>
+                </div>
+
+                <button type="submit"
+                        class="w-full bg-green-600 hover:bg-green-500 transition-colors text-white font-semibold text-lg py-4 rounded-2xl flex items-center justify-center gap-2">
+                    <span>Надіслати відгук у Viber</span>
+                </button>
+            </form>
+        </div>
     </div>
 </section>
+
 
     <!-- ====== PRICES ====== -->
     <section id="prices" class="py-24 bg-[#0e141c]">
@@ -989,18 +1008,13 @@
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#7dd3fc10] to-transparent"></div>
     
     <div class="relative max-w-2xl mx-auto px-6">
-        
-        <span class="aqua text-sm font-bold uppercase tracking-widest border border-aqua-border px-6 py-2.5 rounded-2xl inline-block mb-6">
-    ✨ ЗВ'ЯЗОК
-    </span>
-        <h2 class="text-3xl md:text-4xl font-black text-white mt-4 mb-4 leading-tight">
-            Реалізую ваш проект 
+        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">
+            Реалізую ваш проект від ідеї до готового результату
         </h2>
         
-        <p class="text-gray-300 text-base mb-10 max-w-md mx-auto">
-            Замовлення будь-якої складності + <span class="text-aqua font-medium"> </span>3D-візуалізація</span>
+        <p class="text-gray-300 text-lg mt-6 mb-10">
+            Замовлення будь-якої складності • 3D-візуалізація • Професійний підхід
         </p>
-
 
         <!-- Месенджери -->
         <div class="flex flex-wrap justify-center gap-4">
@@ -1016,7 +1030,6 @@
                 <span class="text-base font-semibold text-gray-300 group-hover:text-white">Телефон</span>
             </a>
         </div>
-
     </div>
 </section>
 
@@ -1031,37 +1044,43 @@
             
     </footer>
 
-    <!-- ====== SCRIPTS ====== -->
+    <!-- ====== SCRIPTS (ВИПРАВЛЕНИЙ) ====== -->
     <script>
         // Mobile menu
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
-        const icon = menuBtn.querySelector('i');
+        const icon = menuBtn ? menuBtn.querySelector('i') : null;
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-xmark');
-        });
-
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-xmark');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-xmark');
+                }
             });
-        });
 
-        // Slider
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    if (icon) {
+                        icon.classList.add('fa-bars');
+                        icon.classList.remove('fa-xmark');
+                    }
+                });
+            });
+        }
+
+        // Slider (якщо є)
         let currentSlide = 0;
         const track = document.getElementById('sliderTrack');
-        const slides = track ? track.children.length : 0;
+        const slidesCount = track ? track.children.length : 0;
         const dotsContainer = document.getElementById('dots');
 
         function createDots() {
-            if (!dotsContainer) return;
+            if (!dotsContainer || slidesCount <= 1) return;
             dotsContainer.innerHTML = '';
-            for (let i = 0; i < slides; i++) {
+            for (let i = 0; i < slidesCount; i++) {
                 const dot = document.createElement('button');
                 dot.className = `dot-aqua ${i === 0 ? 'active' : ''}`;
                 dot.onclick = () => goToSlide(i);
@@ -1077,114 +1096,61 @@
             });
         }
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides;
-            updateSlider();
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides) % slides;
-            updateSlider();
-        }
-
-        function goToSlide(index) {
-            currentSlide = index;
-            updateSlider();
-        }
-
-        let autoSlideInterval;
-        function startAutoSlide() {
-            if (slides <= 1) return;
-            autoSlideInterval = setInterval(nextSlide, 5000);
-        }
+        function nextSlide() { currentSlide = (currentSlide + 1) % slidesCount; updateSlider(); }
+        function prevSlide() { currentSlide = (currentSlide - 1 + slidesCount) % slidesCount; updateSlider(); }
+        function goToSlide(index) { currentSlide = index; updateSlider(); }
 
         if (track) {
             createDots();
             updateSlider();
-            startAutoSlide();
-
+            let auto = setInterval(nextSlide, 5000);
             const sliderContainer = document.querySelector('.slider-aqua');
             if (sliderContainer) {
-                sliderContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
-                sliderContainer.addEventListener('mouseleave', startAutoSlide);
+                sliderContainer.addEventListener('mouseenter', () => clearInterval(auto));
+                sliderContainer.addEventListener('mouseleave', () => auto = setInterval(nextSlide, 5000));
             }
         }
 
-        window.nextSlide = nextSlide;
-        window.prevSlide = prevSlide;
-        window.goToSlide = goToSlide;
-
-        // ====== ЗІРКИ ДЛЯ ВІДГУКІВ ======
-        const stars = document.querySelectorAll('#starRating i');
-        const ratingInput = document.getElementById('ratingInput');
+        // Форма відгуків
+        const stars = document.querySelectorAll('#stars span');
+        const ratingInput = document.getElementById('rating');
+        const reviewForm = document.getElementById('reviewForm');
 
         stars.forEach(star => {
-            star.addEventListener('click', function() {
-                const value = parseInt(this.dataset.star);
+            star.addEventListener('click', () => {
+                const value = parseInt(star.dataset.value);
                 ratingInput.value = value;
-                stars.forEach((s, index) => {
-                    if (index < value) {
-                        s.className = 'fa-solid fa-star';
-                        s.style.color = '#fbbf24';
-                    } else {
-                        s.className = 'fa-regular fa-star';
-                        s.style.color = '';
-                    }
-                });
-            });
-
-            // Hover ефект
-            star.addEventListener('mouseenter', function() {
-                const value = parseInt(this.dataset.star);
-                stars.forEach((s, index) => {
-                    if (index < value) {
-                        s.className = 'fa-solid fa-star';
-                        s.style.color = '#fbbf24';
-                    } else {
-                        s.className = 'fa-regular fa-star';
-                        s.style.color = '';
-                    }
-                });
-            });
-
-            star.addEventListener('mouseleave', function() {
-                const currentRating = parseInt(ratingInput.value);
-                stars.forEach((s, index) => {
-                    if (index < currentRating) {
-                        s.className = 'fa-solid fa-star';
-                        s.style.color = '#fbbf24';
-                    } else {
-                        s.className = 'fa-regular fa-star';
-                        s.style.color = '';
-                    }
+                stars.forEach(s => {
+                    s.style.color = parseInt(s.dataset.value) <= value ? '#10b981' : '#4b5563';
                 });
             });
         });
 
-        // ====== ВІДПРАВКА ФОРМИ ======
-        document.getElementById('reviewForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const form = this;
-            const data = new FormData(form);
-            
-            fetch(form.action, {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    alert('Дякуємо за ваш відгук! Він буде опублікований після перевірки.');
-                    form.reset();
-                    stars.forEach(s => {
-                        s.className = 'fa-regular fa-star';
-                        s.style.color = '';
-                    });
-                    ratingInput.value = 5;
-                } else {
-                    alert('Сталася помилка. Спробуйте ще раз.');
+        if (reviewForm) {
+            reviewForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value.trim();
+                const rating = ratingInput.value;
+                const message = document.getElementById('message').value.trim();
+                
+                if (!name || !message) {
+                    alert("Будь ласка, заповніть ім'я та текст відгуку");
+                    return;
                 }
-            }).catch(() => alert('Сталася помилка. Спробуйте ще раз.'));
-        });
+                
+                const text = `Новий відгук!%0A%0AІм'я: ${name}%0AОцінка: ${rating} ★%0A%0A${message}`;
+                
+                const viberNumber = "380507615032"; 
+                const viberLink = `viber://chat?number=${viberNumber}&text=${text}`;
+                
+                window.open(viberLink, '_blank');
+                
+                this.reset();
+                ratingInput.value = "5";
+                stars.forEach(s => s.style.color = '#4b5563');
+            });
+        }
     </script>
 </body>
 </html>
