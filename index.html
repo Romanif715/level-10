@@ -917,12 +917,12 @@
                 <!-- Зірки -->
                 <div>
                     <label class="block text-gray-400 text-sm mb-2">Оцінка</label>
-                    <div id="stars" class="flex text-4xl cursor-pointer">
-                        <span data-value="1">★</span>
-                        <span data-value="2">★</span>
-                        <span data-value="3">★</span>
-                        <span data-value="4">★</span>
-                        <span data-value="5">★</span>
+                    <div id="stars" class="flex text-4xl gap-2 cursor-pointer">
+                        <span data-value="1" class="star">★</span>
+                        <span data-value="2" class="star">★</span>
+                        <span data-value="3" class="star">★</span>
+                        <span data-value="4" class="star">★</span>
+                        <span data-value="5" class="star">★</span>
                     </div>
                     <input type="hidden" id="rating" value="5">
                 </div>
@@ -936,13 +936,13 @@
 
                 <button type="submit"
                         class="w-full bg-green-600 hover:bg-green-500 transition-colors text-white font-semibold text-lg py-4 rounded-2xl flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-viber"></i>
                     <span>Надіслати відгук у Viber</span>
                 </button>
             </form>
         </div>
     </div>
 </section>
-
 
     <!-- ====== PRICES ====== -->
     <section id="prices" class="py-24 bg-[#0e141c]">
@@ -1044,113 +1044,72 @@
             
     </footer>
 
-    <!-- ====== SCRIPTS (ВИПРАВЛЕНИЙ) ====== -->
-    <script>
-        // Mobile menu
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const icon = menuBtn ? menuBtn.querySelector('i') : null;
-
-        if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                if (icon) {
-                    icon.classList.toggle('fa-bars');
-                    icon.classList.toggle('fa-xmark');
-                }
-            });
-
-            document.querySelectorAll('.mobile-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    if (icon) {
-                        icon.classList.add('fa-bars');
-                        icon.classList.remove('fa-xmark');
-                    }
-                });
-            });
-        }
-
-        // Slider (якщо є)
-        let currentSlide = 0;
-        const track = document.getElementById('sliderTrack');
-        const slidesCount = track ? track.children.length : 0;
-        const dotsContainer = document.getElementById('dots');
-
-        function createDots() {
-            if (!dotsContainer || slidesCount <= 1) return;
-            dotsContainer.innerHTML = '';
-            for (let i = 0; i < slidesCount; i++) {
-                const dot = document.createElement('button');
-                dot.className = `dot-aqua ${i === 0 ? 'active' : ''}`;
-                dot.onclick = () => goToSlide(i);
-                dotsContainer.appendChild(dot);
+   <script>
+    // ====== MOBILE MENU ======
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-xmark');
             }
-        }
+        });
+    }
 
-        function updateSlider() {
-            if (!track) return;
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
-            document.querySelectorAll('.dot-aqua').forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        function nextSlide() { currentSlide = (currentSlide + 1) % slidesCount; updateSlider(); }
-        function prevSlide() { currentSlide = (currentSlide - 1 + slidesCount) % slidesCount; updateSlider(); }
-        function goToSlide(index) { currentSlide = index; updateSlider(); }
-
-        if (track) {
-            createDots();
-            updateSlider();
-            let auto = setInterval(nextSlide, 5000);
-            const sliderContainer = document.querySelector('.slider-aqua');
-            if (sliderContainer) {
-                sliderContainer.addEventListener('mouseenter', () => clearInterval(auto));
-                sliderContainer.addEventListener('mouseleave', () => auto = setInterval(nextSlide, 5000));
-            }
-        }
-
-        // Форма відгуків
+    // ====== FORM REVIEWS ======
+    document.addEventListener('DOMContentLoaded', function() {
+        const reviewForm = document.getElementById('reviewForm');
         const stars = document.querySelectorAll('#stars span');
         const ratingInput = document.getElementById('rating');
-        const reviewForm = document.getElementById('reviewForm');
 
+        // Клік по зірках
         stars.forEach(star => {
-            star.addEventListener('click', () => {
-                const value = parseInt(star.dataset.value);
+            star.addEventListener('click', function() {
+                const value = parseInt(this.dataset.value);
                 ratingInput.value = value;
+
                 stars.forEach(s => {
-                    s.style.color = parseInt(s.dataset.value) <= value ? '#10b981' : '#4b5563';
+                    s.style.color = parseInt(s.dataset.value) <= value ? '#fbbf24' : '#4b5563';
                 });
             });
         });
 
+        // Відправка форми
         if (reviewForm) {
             reviewForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                
+
                 const name = document.getElementById('name').value.trim();
-                const rating = ratingInput.value;
+                const rating = parseInt(ratingInput.value) || 5;
                 const message = document.getElementById('message').value.trim();
-                
+
                 if (!name || !message) {
                     alert("Будь ласка, заповніть ім'я та текст відгуку");
                     return;
                 }
-                
-                const text = `Новий відгук!%0A%0AІм'я: ${name}%0AОцінка: ${rating} ★%0A%0A${message}`;
-                
-                const viberNumber = "380507615032"; 
-                const viberLink = `viber://chat?number=${viberNumber}&text=${text}`;
-                
+
+                const starsText = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+                const viberMessage = `🟢 НОВИЙ ВІДГУК!%0A%0A👤 Ім'я: ${encodeURIComponent(name)}%0A⭐ Оцінка: ${rating} ${starsText}%0A%0A📝 ${encodeURIComponent(message)}%0A%0A📅 ${new Date().toLocaleString('uk-UA')}`;
+
+                const viberLink = `viber://chat?number=%2B380507615032&text=${viberMessage}`;
                 window.open(viberLink, '_blank');
-                
+
+                // Очищення форми
                 this.reset();
                 ratingInput.value = "5";
-                stars.forEach(s => s.style.color = '#4b5563');
+                stars.forEach(s => s.style.color = '#fbbf24');
+
+                alert('✅ Відгук підготовлений! Відправте його у Viber.');
             });
         }
-    </script>
-</body>
-</html>
+
+        // Встановлюємо 5 зірок за замовчуванням
+        ratingInput.value = 5;
+        stars.forEach(s => s.style.color = '#fbbf24');
+    });
+
+</script>
