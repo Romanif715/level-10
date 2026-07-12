@@ -170,9 +170,9 @@
 
         /* Статистика */
         .stat-number {
-            font-size: 2.75rem;
+            font-size: 2.1rem;
+            line-height: 1.1;
             font-weight: 900;
-            line-height: 1;
             background: linear-gradient(135deg, #7dd3fc, #38bdf8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -250,7 +250,8 @@
         }
 
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 2.1rem;
+            line-height: 1.1;
         }
         @media (min-width: 640px) {
             .stat-number { font-size: 3.5rem; }
@@ -365,25 +366,44 @@
             color: #fbbf24;
         }
 
-    /* Зменшуємо іконки керування відео */
-    video::-webkit-media-controls-play-button,
-    video::-webkit-media-controls-volume-slider,
-    video::-webkit-media-controls-mute-button,
-    video::-webkit-media-controls-fullscreen-button {
-        transform: scale(0.75); /* Зменшуємо іконки */
-    }
+        /* Зменшуємо іконки керування відео */
+        video::-webkit-media-controls-play-button,
+        video::-webkit-media-controls-volume-slider,
+        video::-webkit-media-controls-mute-button,
+        video::-webkit-media-controls-fullscreen-button {
+            transform: scale(0.75);
+        }
 
-    video::-webkit-media-controls-timeline {
-        height: 4px; /* Тонша лінія прогресу */
-    }
+        video::-webkit-media-controls-timeline {
+            height: 4px;
+        }
 
-</style>
+        /* Додаткові мобільні виправлення */
+        @media (max-width: 640px) {
+            .hero-aqua h1 {
+                font-size: 2.1rem;
+            }
+            .review-card {
+                margin-bottom: 1rem;
+            }
+            .slider-aqua {
+                max-width: 100%;
+                margin: 0 1rem;
+            }
+            .grid.md\\:grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+            .price-aqua {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <!-- ====== NAVBAR ====== -->
     <header class="fixed top-0 left-0 w-full bg-[#0a0e14]/95 backdrop-blur-xl z-50 border-b border-[#1e2835]">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
 
             <div class="flex items-center gap-3">
                 <div class="w-12 h-12 aqua-bg rounded-xl flex items-center justify-center text-2xl shadow-lg shadow-blue-400/20">
@@ -478,7 +498,7 @@
         </div>
     </section>
 
- <!-- ====== WHY ME ====== -->
+    <!-- ====== WHY ME ====== -->
 <section id="why" class="py-24 lg:py-32 bg-[#0a1019] relative overflow-hidden">
     <!-- Декоративний фон -->
     <div class="absolute inset-0 bg-[radial-gradient(at_center,#1a2333_0%,transparent_70%)]"></div>
@@ -602,7 +622,7 @@
     </div>
 </section>
 
-  <!-- ====== СТРІЧКА ====== -->
+    <!-- ====== СТРІЧКА ====== -->
     <div class="ribbon-aqua py-4 text-center">
         <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-center items-center gap-6 md:gap-12 text-sm font-medium tracking-wide text-gray-300">
             <span><i class="fa-solid fa-crown crown-gold-ribbon mr-2"></i> Відповідальність та чесність </span>
@@ -612,18 +632,16 @@
         </div>
     </div>
 
-   <!-- ====== PORTFOLIO SLIDER ====== -->
-<section id="works" class="py-16 bg-[#0a0e14]">
-    <div class="max-w-6xl mx-auto px-6">
+    <!-- ====== PORTFOLIO SLIDER ====== -->
+    <section id="works" class="py-16 bg-[#0a0e14]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl md:text-5xl font-black mt-5">
+                    Реалізовані <span class="aqua-gradient">об'єкти</span>
+                </h2>
+            </div>
 
-        <div class="text-center mb-10">
-            <h2 class="text-4xl md:text-5xl font-black mt-5">
-                Реалізовані <span class="aqua-gradient">об'єкти</span>
-            </h2>
-        </div>
-
-
-<!-- Слайдер -->
+                   <!-- Слайдер -->
 <div class="slider-aqua relative mx-auto max-w-3xl">
     <div id="sliderTrack" class="slider-track flex transition-transform duration-400 ease-in-out">
 
@@ -737,143 +755,16 @@
     </div>
 </section>
 
-<style>
-    .slider-track {
-        scroll-snap-type: x mandatory;
-    }
-    
-    .slider-dot {
-        width: 12px;
-        height: 12px;
-        background: #e5e7eb;
-        border-radius: 9999px;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        cursor: pointer;
-    }
-    
-    .slider-dot-active {
-        background: #22d3ee;
-        width: 32px;
-        box-shadow: 0 0 12px #22d3ee;
-    }
-
-    .slider-btn {
-        opacity: 0.9;
-    }
-    
-    .slider-btn:hover {
-        opacity: 1;
-    }
-</style>
-
-<script>
-    let currentSlide = 0;
-    const track = document.getElementById('sliderTrack');
-    const slides = track.children.length;
-    const dotsContainer = document.getElementById('dots');
-
-    // Створення точок
-    function createDots() {
-        dotsContainer.innerHTML = '';
-        for (let i = 0; i < slides; i++) {
-            const dot = document.createElement('div');
-            dot.className = `slider-dot ${i === 0 ? 'slider-dot-active' : ''}`;
-            dot.onclick = () => goToSlide(i);
-            dotsContainer.appendChild(dot);
-        }
-    }
-
-    function updateDots() {
-        const dots = dotsContainer.children;
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].classList.toggle('slider-dot-active', i === currentSlide);
-        }
-    }
-
-    function goToSlide(slideIndex) {
-        currentSlide = slideIndex;
-        track.style.transform = `translateX(-${currentSlide * 100}%)`;
-        updateDots();
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides;
-        goToSlide(currentSlide);
-    }
-
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides) % slides;
-        goToSlide(currentSlide);
-    }
-
-    // Автослайд
-    let autoplayInterval;
-    function startAutoplay() {
-        autoplayInterval = setInterval(nextSlide, 4000);
-    }
-
-    function stopAutoplay() {
-        clearInterval(autoplayInterval);
-    }
-
-    // Ініціалізація
-    function initSlider() {
-        createDots();
-        
-        // Пауза при наведенні
-        const sliderContainer = document.querySelector('.slider-aqua');
-        sliderContainer.addEventListener('mouseenter', stopAutoplay);
-        sliderContainer.addEventListener('mouseleave', startAutoplay);
-
-        // Клавіші
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') prevSlide();
-            if (e.key === 'ArrowRight') nextSlide();
-        });
-
-        startAutoplay();
-    }
-
-    // Запуск
-    window.onload = initSlider;
-</script>
-
-<!-- Відео секція -->
-<section class="py-12 bg-[#0a0e14]">
-    <div class="max-w-5xl mx-auto px-6">
-        <div class="text-center mb-8">
-            <h2 class="text-3xl md:text-4xl font-black">Моє відео з об'єктів</h2>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="rounded-3xl overflow-hidden border border-white/10 shadow-xl">
-                <video controls class="w-full aspect-video max-h-[340px]">
-                    <source src="video/video1.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <div class="rounded-3xl overflow-hidden border border-white/10 shadow-xl">
-                <video controls class="w-full aspect-video max-h-[340px]">
-                    <source src="video/video2.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Секція "Як роблять інші" -->
 <section class="py-16 bg-[#0a0e14] border-t border-b border-red-900/30">
     <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-12">
             <span class="inline-block bg-red-900/30 text-red-400 text-sm font-bold px-6 py-2 rounded-full mb-4">
-                ⚠️ Як часто роблять!
+                ⚠️ Як часто роблять! 
             </span>
-            <h2 class="text-4xl md:text-5xl font-black">
-                За то - дешево!
+            <h2 class="text-2xl md:text-3xl font-black">
+                Ось приклад роботи, де дешево!
             </h2>
-            <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-                Ось приклад роботи, де економія на майстері. 
-            </p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
@@ -1315,7 +1206,7 @@
             
     </footer>
 
-    <!-- ====== SCRIPTS (ВИПРАВЛЕНИЙ) ====== -->
+    <!-- ====== SCRIPTS ====== -->
     <script>
         // Mobile menu
         const menuBtn = document.getElementById('menuBtn');
@@ -1342,86 +1233,73 @@
             });
         }
 
-        // Slider (якщо є)
+        // Slider
         let currentSlide = 0;
         const track = document.getElementById('sliderTrack');
-        const slidesCount = track ? track.children.length : 0;
+        const slides = track ? track.children.length : 0;
         const dotsContainer = document.getElementById('dots');
 
         function createDots() {
-            if (!dotsContainer || slidesCount <= 1) return;
+            if (!dotsContainer || slides <= 1) return;
             dotsContainer.innerHTML = '';
-            for (let i = 0; i < slidesCount; i++) {
-                const dot = document.createElement('button');
+            for (let i = 0; i < slides; i++) {
+                const dot = document.createElement('div');
                 dot.className = `dot-aqua ${i === 0 ? 'active' : ''}`;
                 dot.onclick = () => goToSlide(i);
                 dotsContainer.appendChild(dot);
             }
         }
 
-        function updateSlider() {
-            if (!track) return;
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
-            document.querySelectorAll('.dot-aqua').forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        function nextSlide() { currentSlide = (currentSlide + 1) % slidesCount; updateSlider(); }
-        function prevSlide() { currentSlide = (currentSlide - 1 + slidesCount) % slidesCount; updateSlider(); }
-        function goToSlide(index) { currentSlide = index; updateSlider(); }
-
-        if (track) {
-            createDots();
-            updateSlider();
-            let auto = setInterval(nextSlide, 5000);
-            const sliderContainer = document.querySelector('.slider-aqua');
-            if (sliderContainer) {
-                sliderContainer.addEventListener('mouseenter', () => clearInterval(auto));
-                sliderContainer.addEventListener('mouseleave', () => auto = setInterval(nextSlide, 5000));
+        function updateDots() {
+            const dots = dotsContainer ? dotsContainer.children : [];
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.toggle('active', i === currentSlide);
             }
         }
 
-        // Форма відгуків
-        const stars = document.querySelectorAll('#stars span');
-        const ratingInput = document.getElementById('rating');
-        const reviewForm = document.getElementById('reviewForm');
-
-        stars.forEach(star => {
-            star.addEventListener('click', () => {
-                const value = parseInt(star.dataset.value);
-                ratingInput.value = value;
-                stars.forEach(s => {
-                    s.style.color = parseInt(s.dataset.value) <= value ? '#10b981' : '#4b5563';
-                });
-            });
-        });
-
-        if (reviewForm) {
-            reviewForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const name = document.getElementById('name').value.trim();
-                const rating = ratingInput.value;
-                const message = document.getElementById('message').value.trim();
-                
-                if (!name || !message) {
-                    alert("Будь ласка, заповніть ім'я та текст відгуку");
-                    return;
-                }
-                
-                const text = `Новий відгук!%0A%0AІм'я: ${name}%0AОцінка: ${rating} ★%0A%0A${message}`;
-                
-                const viberNumber = "380507615032"; 
-                const viberLink = `viber://chat?number=${viberNumber}&text=${text}`;
-                
-                window.open(viberLink, '_blank');
-                
-                this.reset();
-                ratingInput.value = "5";
-                stars.forEach(s => s.style.color = '#4b5563');
-            });
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            if (track) track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDots();
         }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides;
+            goToSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides) % slides;
+            goToSlide(currentSlide);
+        }
+
+        function initSlider() {
+            if (!track) return;
+            createDots();
+            let autoplayInterval;
+
+            function startAutoplay() {
+                autoplayInterval = setInterval(nextSlide, 4000);
+            }
+            function stopAutoplay() {
+                clearInterval(autoplayInterval);
+            }
+
+            const sliderContainer = document.querySelector('.slider-aqua');
+            if (sliderContainer) {
+                sliderContainer.addEventListener('mouseenter', stopAutoplay);
+                sliderContainer.addEventListener('mouseleave', startAutoplay);
+            }
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') prevSlide();
+                if (e.key === 'ArrowRight') nextSlide();
+            });
+
+            startAutoplay();
+        }
+
+        window.addEventListener('load', initSlider);
     </script>
 </body>
 </html>
