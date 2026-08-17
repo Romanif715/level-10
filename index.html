@@ -914,66 +914,130 @@
         </div>
     </section>
 
+    
     <!-- ====== MATERIALS ====== -->
-    <section id="materials" class="py-16 bg-[#0a0e14]">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-black mt-12">
-                    Перевірені бренди - <span class="aqua-gradient">якісні матеріали</span>
-                </h2>
-            </div>
+<section id="materials" class="py-16 bg-[#0a0e14]">
+    <div class="max-w-6xl mx-auto px-6">
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                <!-- Фото 1 -->
-                <div onclick="showImage(this)" class="group cursor-pointer">
-                    <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
-                        <img src="materials/material-1.jpg" 
-                             alt="MAPEI" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <p class="text-center text-sky-400 text-sm font-medium mt-6">MAPEI</p>
-                </div>
-
-                <!-- Фото 2 -->
-                <div onclick="showImage(this)" class="group cursor-pointer">
-                    <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
-                        <img src="materials/material-2.jpg" 
-                             alt="Епоксидна фуга" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <p class="text-center text-sky-400 text-sm font-medium mt-6">ЕПОКСИДНА ФУГА</p>
-                </div>
-
-                <div onclick="showImage(this)" class="group cursor-pointer">
-                    <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
-                        <img src="materials/material-3.jpg" alt="Primer G Pro" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <p class="text-center text-sky-400 text-sm font-medium mt-6">Primer G Pro</p>
-                </div>
-
-                <div onclick="showImage(this)" class="group cursor-pointer">
-                    <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
-                        <img src="materials/material-4.jpg" alt="KREISEL 104" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <p class="text-center text-sky-400 text-sm font-medium mt-6">KREISEL 104</p>
-                </div>
-
-                <div onclick="showImage(this)" class="group cursor-pointer">
-                    <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
-                        <img src="materials/material-5.jpg" alt="KREISEL T04" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <p class="text-center text-sky-400 text-sm font-medium mt-6">KREISEL T04</p>
-                </div>
-
-                <div onclick="showImage(this)" class="group cursor-pointer">
-                    <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
-                        <img src="materials/material-6.jpg" alt="KREISEL 108 Білий" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <p class="text-center text-sky-400 text-sm font-medium mt-6 mb-10">KREISEL 108 Білий</p>
-                </div>
-            </div>
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-black mt-12">
+                Перевірені бренди - <span class="aqua-gradient">якісні матеріали</span>
+            </h2>
         </div>
-    </section>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+            <!-- Матеріал 1 -->
+            <div onclick="showImage(this)" class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
+                    <img src="materials/material-1.jpg"
+                         alt="MAPEI"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+
+                <div class="text-center mt-5">
+                    <p class="text-sky-400 text-sm font-bold">
+                        MAPEI
+                    </p>
+                    <p class="text-gray-400 text-xs mt-1">
+                        Професійні матеріали
+                    </p>
+                </div>
+            </div>
+
+            <!-- Матеріал 2 -->
+            <div onclick="showImage(this)" class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
+                    <img src="materials/material-2.jpg"
+                         alt="Епоксидна фуга"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+
+                <div class="text-center mt-5">
+                    <p class="text-sky-400 text-sm font-bold">
+                        ЕПОКСИДНА ФУГА
+                    </p>
+                    <p class="text-gray-400 text-xs mt-1">
+                        Для надійного шва
+                    </p>
+                </div>
+            </div>
+
+            <!-- Матеріал 3 -->
+            <div onclick="showImage(this)" class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
+                    <img src="materials/material-3.jpg"
+                         alt="Primer G Pro"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+
+                <div class="text-center mt-5">
+                    <p class="text-sky-400 text-sm font-bold">
+                        MAPEI Primer G Pro
+                    </p>
+                    <p class="text-gray-400 text-xs mt-1">
+                        Професійна ґрунтовка
+                    </p>
+                </div>
+            </div>
+
+            <!-- Матеріал 4 -->
+            <div onclick="showImage(this)" class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
+                    <img src="materials/material-4.jpg"
+                         alt="KREISEL 104"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+
+                <div class="text-center mt-5">
+                    <p class="text-sky-400 text-sm font-bold">
+                        KREISEL 104
+                    </p>
+                    <p class="text-gray-400 text-xs mt-1">
+                        Клей для великоформатної плитки 60×60, 120×60 та 120×120
+                    </p>
+                </div>
+            </div>
+
+            <!-- Матеріал 5 -->
+            <div onclick="showImage(this)" class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
+                    <img src="materials/material-5.jpg"
+                         alt="KREISEL T04"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+
+                <div class="text-center mt-5">
+                    <p class="text-sky-400 text-sm font-bold">
+                        KREISEL T04
+                    </p>
+                    <p class="text-gray-400 text-xs mt-1">
+                      Клей для великоформатної плитки 60×60, 120×60 та 120×120
+                    </p>
+                </div>
+            </div>
+
+            <!-- Матеріал 6 -->
+            <div onclick="showImage(this)" class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
+                    <img src="materials/material-6.jpg"
+                         alt="KREISEL 108 Білий"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+
+                <div class="text-center mt-5">
+                    <p class="text-sky-400 text-sm font-bold">
+                        KREISEL 108 Білий
+                    </p>
+                    <p class="text-gray-400 text-xs mt-1">
+                       Клей для великоформатної плитки 60×60, 120×60 та 120×120
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     <!-- ====== REVIEWS ====== -->
     <section id="reviews" class="py-24 bg-[#0e141c]">
