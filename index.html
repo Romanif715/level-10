@@ -335,7 +335,7 @@
             <nav class="hidden lg:flex items-center gap-12 text-sm font-semibold uppercase tracking-wider">
                 <a href="#why" class="text-gray-300 hover:text-[#7dd3fc] transition">ЧОМУ ОБИРАЮТЬ МЕНЕ</a>
                 <a href="#works" class="text-gray-300 hover:text-[#7dd3fc] transition">ОБ'ЄКТИ</a>
-                <a href="#materials" class="text-gray-300 hover:text-[#7dd3fc] transition">МАТЕРІАЛ</a>
+                <a href="#materials" class="text-gray-300 hover:text-[#7dd3fc] transition">МАТЕРІАЛИ</a>
                 <a href="#reviews" class="text-gray-300 hover:text-[#7dd3fc] transition">ВІДГУКИ</a>
                 <a href="#prices" class="text-gray-300 hover:text-[#7dd3fc] transition">ПРАЙС</a>
                 <a href="#contact" class="text-gray-300 hover:text-[#7dd3fc] transition">КОНТАКТИ</a>
@@ -356,7 +356,7 @@
         <div id="mobileMenu" class="hidden lg:hidden px-6 py-4">
             <nav class="flex flex-col">
                 <a href="#why" class="mobile-link hover:text-[#7dd3fc] transition">Чому обирають</a>
-                <a href="#materials" class="mobile-link hover:text-[#7dd3fc] transition">Матеріал</a>
+                <a href="#materials" class="mobile-link hover:text-[#7dd3fc] transition">Матеріали</a>
                 <a href="#works" class="mobile-link hover:text-[#7dd3fc] transition">Об'єкти</a>
                 <a href="#reviews" class="mobile-link hover:text-[#7dd3fc] transition">Відгуки</a>
                 <a href="#prices" class="mobile-link hover:text-[#7dd3fc] transition">Прайс</a>
@@ -1368,32 +1368,38 @@
         </div>
     </section>
 
-    <!-- Прямий контакт через Viber -->
-    <section class="py-16 bg-gray-900">
-        <div class="max-w-2xl mx-auto px-4 text-center">
-            <h2 class="text-xl font-bold text-white mb-6">«⭐ Ваш відгук — найкраща рекомендація. ⭐»</h2>
-        </div>
-    </section>
+    <div class="text-center py-8">
+    <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10">
+        <span class="text-amber-400 text-lg">★</span>
+        <span class="text-base font-medium text-gray-200 tracking-wide">
+            Ваш відгук — найкраща рекомендація
+        </span>
+        <span class="text-amber-400 text-lg">★</span>
+    </div>
+</div>
 
-    <!-- ====== PRICES ====== -->
+   <!-- ====== PRICES ====== -->
     <section id="prices" class="py-24 bg-[#0e141c]">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-black mt-5">Прозорий <span class="aqua-gradient">прайс</span></h2>
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-3">
+        Прозорий <span class="aqua">прайс</span>
+                </h2>
             </div>
 
-            <div class="flex justify-center mb-12">
-                <a href="files/Прайс на 2026 рік.pdf" target="_blank"
-                    class="flex items-center gap-3 aqua-bg px-10 py-5 rounded-2xl font-bold text-lg shadow-xl shadow-blue-400/20 hover:scale-105 transition">
-                    <i class="fa-regular fa-file-pdf text-2xl"></i> 
-                    Переглянути 2026 
-                </a>
-            </div>
+  <!-- ====== Прайс на 2026 рік.pdf ====== -->
+           <div class="flex justify-center mb-12">
+    <a href="files/Прайс на 2026 рік.pdf" target="_blank" oncontextmenu="return false"
+        class="flex items-center gap-3 aqua-bg px-10 py-5 rounded-2xl font-bold text-lg shadow-xl shadow-blue-400/20 hover:scale-105 transition">
+        <i class="fa-regular fa-file-pdf text-2xl"></i> 
+        Переглянути ціни на 2026 рік
+    </a>
+</div>
 
             <div class="max-w-4xl mx-auto space-y-4">
                 <div class="grid md:grid-cols-2 gap-4 mb-8">
                     <div class="price-aqua p-6 text-center">
-                        <p class="text-white-400 text-sm font-semibold uppercase tracking-wider">✅ Виїзд на об'єкт по місту + складання кошторису.</p>
+                        <p class="text-white-400 text-sm font-semibold uppercase tracking-wider">✅ Виїзд по місту + складання кошторису.</p>
                         <p class="text-4xl font-black aqua">2 000 <span class="text-base text-gray-400 font-medium">грн</span></p>
                     </div>
                     <div class="price-aqua p-6 text-center">
@@ -1401,25 +1407,61 @@
                         <p class="text-4xl font-black aqua">3 000 <span class="text-base text-gray-400 font-medium">грн</span></p>
                     </div>
                 </div>
+  
+  <!-- Преміум укладка -->
+<div class="price-aqua p-6 text-center relative overflow-hidden rounded-2xl border border-emerald-500/25">
+    <!-- акцент зверху -->
+    <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-500 via-sky-400 to-emerald-500"></div>
 
-                <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
+    <p class="text-emerald-400 text-base font-black uppercase tracking-[0.15em] mb-3">
+        ★ PREMIUM ★
+    </p>
+
+    <p class="text-white text-lg font-semibold mb-1">
+        120×60 см · шов 1 мм
+    </p>
+
+    <p class="text-sm text-gray-400 mb-5 max-w-md mx-auto leading-relaxed">
+        Підвищена точність + ретельний контроль геометрії кожної плитки.<br>
+        Шов 1 мм за умови, що виробник допускає таку ширину шва.
+    </p>
+
+    <p class="text-2xl font-black aqua">
+        від 1 200 <span class="text-base text-gray-400 font-medium">грн/м²</span>
+    </p>
+
+    <!-- акцент знизу -->
+    <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-500 via-sky-400 to-emerald-500"></div>
+</div>
+
+<!-- Професійна стандартна укладка -->
+
+<div class="price-aqua p-6 flex flex-wrap justify-between items-center">
                     <span class="font-semibold text-lg">Керамограніт 60×60</span>
+                    <span class="text-sm text-gray-400 mt-1 block">1,5–2 мм </span>
                     <span class="text-2xl font-black aqua">від 750 грн/м²</span>
                 </div>
+     
                 <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
-                    <span class="font-semibold text-lg">Керамограніт 120*60</span>
+                    <span class="font-semibold text-lg">Керамограніт 120*60 </span>
+                    <span class="text-sm text-gray-400 mt-1 block">1,5–2 мм </span>
                     <span class="text-2xl font-black aqua">від 900 грн/м²</span>
                 </div>
+
                 <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
-                    <span class="font-semibold text-lg">Паркетна дошка 20×120 </span>
+                    <span class="font-semibold text-lg">Паркет дошка 20×120 </span>
+                    <span class="text-sm text-gray-400 mt-1 block">1,5–2 мм </span>
                     <span class="text-2xl font-black aqua">від 1 200 грн/м²</span>
                 </div>
                 <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
                     <span class="font-semibold text-lg">Фартух (без розеток)</span>
+                     <span class="text-sm text-gray-400 mt-1 block">1 мм </span>
                     <span class="text-2xl font-black aqua">1 500 грн/м.п</span>
                 </div>
+               
                 <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
-                    <span class="font-semibold text-lg">45° кут з фугою (готовий)</span>
+                    <span class="font-semibold text-lg">45° кут (готовий) </span>
+                     <span class="text-sm text-gray-400 mt-1 block"> 2 сторони  </span>
                     <span class="text-2xl font-black aqua">800 грн/м.п</span>
                 </div>
                 <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
