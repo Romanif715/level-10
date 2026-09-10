@@ -82,7 +82,7 @@
                             <i class="fa-regular fa-calendar-check"></i> Записатися
                         </a>
                         <a href="#prices" class="btn-aqua-outline px-8 py-4 rounded-2xl font-semibold transition flex items-center gap-2">
-                            <i class="fa-regular fa-file-lines"></i> Переглянути прайс
+                            <i class="fa-regular fa-file-lines"></i> Переглянути прайс лист
                         </a>
                     </div>
                 </div>
@@ -110,30 +110,27 @@
         </div>
     </section>
 
-    <!-- ====== СЕКЦІЯ: ЧОМУ ОБИРАЮТЬ ====== -->
-<section id="why" class="py-24 lg:py-32 bg-[#0a1019] relative overflow-hidden">
-    
-    <!-- Фоновий градієнт -->
-    <div class="absolute inset-0 bg-[radial-gradient(at_center,#1a2333_0%,transparent_70%)]"></div>
-    
-    <div class="max-w-5xl mx-auto px-6 relative z-10">
+    <!-- ====== WHY ME ====== -->
+    <section id="why" class="py-24 lg:py-32 bg-[#0a1019] relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(at_center,#1a2333_0%,transparent_70%)]"></div>
         
-        <!-- Заголовок секції -->
-        <div class="text-center mb-16">
-            <span class="inline-flex items-center gap-2 bg-[#1a2333] text-aqua text-sm font-bold uppercase tracking-widest border border-aqua/30 px-6 py-3 rounded-2xl mb-6">
-                ✨ ЧОМУ ОБИРАЮТЬ 
-            </span>
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
             
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tighter">
-                Результат, який видно<br>
-                <span class="aqua-gradient bg-clip-text">без пояснень</span>
-            </h2>
-        </div>
+            <div class="text-center mb-16">
+                <span class="inline-flex items-center gap-2 bg-[#1a2333] text-aqua text-sm font-bold uppercase tracking-widest border border-aqua/30 px-6 py-3 rounded-2xl mb-6">
+                    ✨ ЧОМУ ОБИРАЮТЬ 
+                </span>
+                
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tighter">
+                    Працюю на результат,<br>
+                    <span class="aqua-gradient bg-clip-text">який помітний одразу</span>
+                </h2>
+            </div>
 
-       <!-- Список переваг (2 колонки) -->
+ <!-- Список переваг (2 колонки) -->
 <div class="grid md:grid-cols-2 gap-x-10 gap-y-3 max-w-4xl mx-auto">
-    
-    <!-- Перевага 1 -->
+
+             <!-- Перевага 1 -->
     <div class="flex gap-3 group">
         <div class="w-7 h-7 flex-shrink-0 bg-green-500/10 text-green-400 rounded-xl flex items-center justify-center text-lg transition-all group-hover:scale-110">
             ✅
@@ -189,7 +186,7 @@
             ✅
         </div>
         <p class="text-gray-100 text-[16px] md:text-[17px] leading-snug pt-0.5">
-            Керамогранітом будь-якої складності
+            Керамограніт будь-якої складності
         </p>
     </div>
 
@@ -232,20 +229,18 @@
             Гарантія 5 років на виконані роботи
         </p>
     </div>
-
-</div>
-
-        <!-- Цитата внизу -->
-        <div class="mt-20 flex justify-center">
-            <div class="bg-gradient-to-br from-[#1a2333] to-[#121a27] border border-aqua/20 rounded-3xl px-10 py-8 text-center max-w-md shadow-2xl">
-                <p class="text-2xl md:text-3xl font-semibold text-white leading-tight">
-                    <span class="aqua-gradient">«Роблю так, ніби це мій власний будинок»</span>
-                </p>
-            </div>
         </div>
+       <div class="mt-20 flex justify-center">
+                <div class="bg-gradient-to-br from-[#1a2333] to-[#121a27] border border-aqua/20 rounded-3xl px-10 py-8 text-center max-w-md shadow-2xl">
+                    <p class="text-2xl md:text-3xl font-semibold text-white leading-tight">
+                        <span class="aqua-gradient">"Роблю так, як для себе"</span>
+                    </p>
+                </div>
+            </div>
 
-    </div>
-</section>
+        </div>
+    </section>
+
 
     <!-- ====== СТРІЧКА ====== -->
     <div class="ribbon-aqua py-4 text-center">
@@ -257,283 +252,280 @@
         </div>
     </div>
 
-<!-- ====== WORKS (Об'єкти) ====== -->
-<section id="works" class="py-16 bg-[#0a0e14]">
-    <div class="max-w-6xl mx-auto px-5">
-        
-        <div class="text-center mb-12">
-            <h2 class="text-4xl md:text-5xl font-black">
-                Реалізовані <span class="aqua-gradient">об'єкти</span>
-            </h2>
+    <!-- ====== WORKS (Об'єкти) ====== -->
+    <section id="works" class="py-16 bg-[#0a0e14]">
+        <div class="max-w-5xl mx-auto px-5">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-black mt-12">
+                    Реалізовані <span class="aqua-gradient">об'єкти</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Фото 1 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images1.jpg" alt="Робота 1 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 1</div>
+                    </div>
+                </div>
+
+                <!-- Фото 2 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images2.jpg" alt="Робота 2 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 2</div>
+                    </div>
+                </div>
+
+                <!-- Фото 3 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images3.jpg" alt="Робота 3 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 3</div>
+                    </div>
+                </div>
+
+                <!-- Фото 4 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images4.jpg" alt="Робота 4 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 4</div>
+                    </div>
+                </div>
+
+                <!-- Фото 5 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images5.jpg" alt="Робота 5 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 5</div>
+                    </div>
+                </div>
+
+                <!-- Фото 6 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images6.jpg" alt="Робота 6 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 6</div>
+                    </div>
+                </div>
+
+                <!-- Фото 7 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images7.jpg" alt="Робота 7 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 7</div>
+                    </div>
+                </div>
+
+                <!-- Фото 8 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images8.jpg" alt="Робота 8 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 8</div>
+                    </div>
+                </div>
+
+                <!-- Фото 9 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images9.jpg" alt="Робота 9 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 9</div>
+                    </div>
+                </div>
+
+                <!-- Фото 10 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images10.jpg" alt="Робота 10 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 10</div>
+                    </div>
+                </div>
+
+                <!-- Фото 11 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images11.jpg" alt="Робота 11 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 11</div>
+                    </div>
+                </div>
+
+                <!-- Фото 12 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images12.jpg" alt="Робота 12 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 12</div>
+                    </div>
+                </div>
+
+                <!-- Фото 13 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images13.jpg" alt="Робота 13 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 13</div>
+                    </div>
+                </div>
+
+                <!-- Фото 14 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images14.jpg" alt="Робота 14 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 14</div>
+                    </div>
+                </div>
+
+                <!-- Фото 15 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images15.jpg" alt="Робота 15 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 15</div>
+                    </div>
+                </div>
+
+                <!-- Фото 16 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images16.jpg" alt="Робота 16 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 16</div>
+                    </div>
+                </div>
+
+                <!-- Фото 17 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images17.jpg" alt="Робота 17 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 17</div>
+                    </div>
+                </div>
+
+                <!-- Фото 18 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images18.jpg" alt="Робота 18 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 18</div>
+                    </div>
+                </div>
+
+                <!-- Фото 19 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images19.jpg" alt="Робота 19 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 19</div>
+                    </div>
+                </div>
+
+                <!-- Фото 20 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images20.jpg" alt="Робота 20 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 20</div>
+                    </div>
+                </div>
+
+                <!-- Фото 21 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images21.jpg" alt="Робота 21 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 21</div>
+                    </div>
+                </div>
+
+                <!-- Фото 22 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images22.jpg" alt="Робота 22 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 22</div>
+                    </div>
+                </div>
+
+                <!-- Фото 23 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images23.jpg" alt="Робота 23 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 23</div>
+                    </div>
+                </div>
+
+                <!-- Фото 24 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images24.jpg" alt="Робота 24 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 24</div>
+                    </div>
+                </div>
+
+                <!-- Фото 25 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images25.jpg" alt="Робота 25 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 25</div>
+                    </div>
+                </div>
+
+                <!-- Фото 26 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images26.jpg" alt="Робота 26 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 26</div>
+                    </div>
+                </div>
+
+                <!-- Фото 27 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images27.jpg" alt="Робота 27 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 27</div>
+                    </div>
+                </div>
+
+                <!-- Фото 28 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images28.jpg" alt="Робота 28 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 28</div>
+                    </div>
+                </div>
+
+                <!-- Фото 29 -->
+                <div onclick="showImage(this)" class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300">
+                        <img src="images/images29.jpg" alt="Робота 29 — укладання плитки" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 29</div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Сітка фото в одному боксі -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            
-            <!-- Фото 1 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images1.jpg" alt="Робота 1 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 1</div>
-                </div>
-            </div>
-
-            <!-- Фото 2 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images2.jpg" alt="Робота 2 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 2</div>
-                </div>
-            </div>
-
-            <!-- Фото 3 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images3.jpg" alt="Робота 3 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 3</div>
-                </div>
-            </div>
-
-            <!-- Фото 4 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images4.jpg" alt="Робота 4 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 4</div>
-                </div>
-            </div>
-
-            <!-- Фото 5 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images5.jpg" alt="Робота 5 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 5</div>
-                </div>
-            </div>
-
-            <!-- Фото 6 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images6.jpg" alt="Робота 6 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 6</div>
-                </div>
-            </div>
-
-            <!-- Фото 7 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images7.jpg" alt="Робота 7 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 7</div>
-                </div>
-            </div>
-
-            <!-- Фото 8 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images8.jpg" alt="Робота 8 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 8</div>
-                </div>
-            </div>
-
-            <!-- Фото 9 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images9.jpg" alt="Робота 9 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 9</div>
-                </div>
-            </div>
-
-            <!-- Фото 10 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images10.jpg" alt="Робота 10 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 10</div>
-                </div>
-            </div>
-
-            <!-- Фото 11 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images11.jpg" alt="Робота 11 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 11</div>
-                </div>
-            </div>
-
-            <!-- Фото 12 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images12.jpg" alt="Робота 12 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 12</div>
-                </div>
-            </div>
-
-            <!-- Фото 13 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images13.jpg" alt="Робота 13 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 13</div>
-                </div>
-            </div>
-
-            <!-- Фото 14 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images14.jpg" alt="Робота 14 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 14</div>
-                </div>
-            </div>
-
-            <!-- Фото 15 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images15.jpg" alt="Робота 15 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 15</div>
-                </div>
-            </div>
-
-            <!-- Фото 16 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images16.jpg" alt="Робота 16 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 16</div>
-                </div>
-            </div>
-
-            <!-- Фото 17 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images17.jpg" alt="Робота 17 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 17</div>
-                </div>
-            </div>
-
-            <!-- Фото 18 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images18.jpg" alt="Робота 18 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 18</div>
-                </div>
-            </div>
-
-            <!-- Фото 19 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images19.jpg" alt="Робота 19 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 19</div>
-                </div>
-            </div>
-
-            <!-- Фото 20 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images20.jpg" alt="Робота 20 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 20</div>
-                </div>
-            </div>
-
-            <!-- Фото 21 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images21.jpg" alt="Робота 21 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 21</div>
-                </div>
-            </div>
-
-            <!-- Фото 22 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images22.jpg" alt="Робота 22 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 22</div>
-                </div>
-            </div>
-
-            <!-- Фото 23 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images23.jpg" alt="Робота 23 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 23</div>
-                </div>
-            </div>
-
-            <!-- Фото 24 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images24.jpg" alt="Робота 24 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 24</div>
-                </div>
-            </div>
-
-            <!-- Фото 25 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images25.jpg" alt="Робота 25 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 25</div>
-                </div>
-            </div>
-
-            <!-- Фото 26 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images26.jpg" alt="Робота 26 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 26</div>
-                </div>
-            </div>
-
-            <!-- Фото 27 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images27.jpg" alt="Робота 27 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 27</div>
-                </div>
-            </div>
-
-            <!-- Фото 28 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images28.jpg" alt="Робота 28 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 28</div>
-                </div>
-            </div>
-
-            <!-- Фото 29 -->
-            <div onclick="showImage(this)" class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl border border-gray-800 hover:border-[#7dd3fc] transition-all duration-300 aspect-[4/3]">
-                    <img src="images/images29.jpg" alt="Робота 29 — укладання плитки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute bottom-4 left-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-all">Робота 29</div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Lightbox (єдиний) -->
     <div id="lightbox" class="hidden fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4" onclick="closeLightbox()">
@@ -629,631 +621,489 @@
         </div>
     </section>
 
+    
     <!-- ====== MATERIALS ====== -->
-    <section id="materials" class="py-16 bg-[#0a0e14]">
-        <div class="max-w-6xl mx-auto px-6">
+<section id="materials" class="py-16 bg-[#0a0e14]">
+    <div class="max-w-6xl mx-auto px-6">
 
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-black mt-12">
-                    Перевірені бренди - <span class="aqua-gradient">якісні матеріали</span>
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-
-                <!-- Матеріал 1 -->
-                <div onclick="showImage(this)" class="group cursor-pointer">
-                    <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
-                        <img src="materials/material-1.jpg"
-                             alt="MAPEI"
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-
-                    <div class="text-center mt-5">
-                        <p class="text-sky-400 text-sm font-bold">
-                            MAPEI
-                        </p>
-                        <p class="text-gray-400 text-xs mt-1">
-                            Професійні матеріали
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Матеріал 2 -->
-                <div onclick="showImage(this)" class="group cursor-pointer">
-                    <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
-                        <img src="materials/material-2.jpg"
-                             alt="Епоксидна фуга"
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-
-                    <div class="text-center mt-5">
-                        <p class="text-sky-400 text-sm font-bold">
-                            ЕПОКСИДНА ФУГА
-                        </p>
-                        <p class="text-gray-400 text-xs mt-1">
-                            Для надійного шва
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Матеріал 3 -->
-                <div onclick="showImage(this)" class="group cursor-pointer">
-                    <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
-                        <img src="materials/material-3.jpg"
-                             alt="Primer G Pro"
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-
-                    <div class="text-center mt-5">
-                        <p class="text-sky-400 text-sm font-bold">
-                            MAPEI Primer G Pro
-                        </p>
-                        <p class="text-gray-400 text-xs mt-1">
-                            Професійна ґрунтовка
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Матеріал 4 -->
-                <div onclick="showImage(this)" class="group cursor-pointer">
-                    <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
-                        <img src="materials/material-4.jpg"
-                             alt="KREISEL 104"
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-
-                    <div class="text-center mt-5">
-                        <p class="text-sky-400 text-sm font-bold">
-                            KREISEL 104
-                        </p>
-                        <p class="text-gray-400 text-xs mt-1">
-                            Клей для великоформатної плитки 60×60, 120×60 та 120×120
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Матеріал 5 -->
-                <div onclick="showImage(this)" class="group cursor-pointer">
-                    <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
-                        <img src="materials/material-5.jpg"
-                             alt="KREISEL T04"
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-
-                    <div class="text-center mt-5">
-                        <p class="text-sky-400 text-sm font-bold">
-                            KREISEL T04
-                        </p>
-                        <p class="text-gray-400 text-xs mt-1">
-                            Клей для великоформатної плитки 60×60, 120×60 та 120×120
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Матеріал 6 -->
-                <div onclick="showImage(this)" class="group cursor-pointer">
-                    <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
-                        <img src="materials/material-6.jpg"
-                             alt="KREISEL 108 Білий"
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-
-                    <div class="text-center mt-5">
-                        <p class="text-sky-400 text-sm font-bold">
-                            KREISEL 108 Білий
-                        </p>
-                        <p class="text-gray-400 text-xs mt-1">
-                            Клей для великоформатної плитки 60×60, 120×60 та 120×120
-                        </p>
-                    </div>
-                </div>
-
-            </div>
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-black mt-12">
+                Перевірені бренди - <span class="aqua-gradient">якісні матеріали</span>
+            </h2>
         </div>
-    </section>
 
-    <!-- ====== REVIEWS (Carousel) ====== -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+            <!-- Матеріал 1 -->
+            <div onclick="showImage(this)" class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
+                    <img src="materials/material-1.jpg"
+                         alt="MAPEI"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+
+                <div class="text-center mt-5">
+                    <p class="text-sky-400 text-sm font-bold">
+                        MAPEI
+                    </p>
+                    <p class="text-gray-400 text-xs mt-1">
+                        Професійні матеріали
+                    </p>
+                </div>
+            </div>
+
+            <!-- Матеріал 2 -->
+            <div onclick="showImage(this)" class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
+                    <img src="materials/material-2.jpg"
+                         alt="Епоксидна фуга"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+
+                <div class="text-center mt-5">
+                    <p class="text-sky-400 text-sm font-bold">
+                        ЕПОКСИДНА ФУГА
+                    </p>
+                    <p class="text-gray-400 text-xs mt-1">
+                        Для надійного шва
+                    </p>
+                </div>
+            </div>
+
+            <!-- Матеріал 3 -->
+            <div onclick="showImage(this)" class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
+                    <img src="materials/material-3.jpg"
+                         alt="Primer G Pro"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+
+                <div class="text-center mt-5">
+                    <p class="text-sky-400 text-sm font-bold">
+                        MAPEI Primer G Pro
+                    </p>
+                    <p class="text-gray-400 text-xs mt-1">
+                        Професійна ґрунтовка
+                    </p>
+                </div>
+            </div>
+
+            <!-- Матеріал 4 -->
+            <div onclick="showImage(this)" class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
+                    <img src="materials/material-4.jpg"
+                         alt="KREISEL 104"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+
+                <div class="text-center mt-5">
+                    <p class="text-sky-400 text-sm font-bold">
+                        KREISEL 104
+                    </p>
+                    <p class="text-gray-400 text-xs mt-1">
+                        Клей для великоформатної плитки 60×60, 120×60 та 120×120
+                    </p>
+                </div>
+            </div>
+
+            <!-- Матеріал 5 -->
+            <div onclick="showImage(this)" class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
+                    <img src="materials/material-5.jpg"
+                         alt="KREISEL T04"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+
+                <div class="text-center mt-5">
+                    <p class="text-sky-400 text-sm font-bold">
+                        KREISEL T04
+                    </p>
+                    <p class="text-gray-400 text-xs mt-1">
+                      Клей для великоформатної плитки 60×60, 120×60 та 120×120
+                    </p>
+                </div>
+            </div>
+
+            <!-- Матеріал 6 -->
+            <div onclick="showImage(this)" class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-700 hover:border-sky-400 transition-all duration-300">
+                    <img src="materials/material-6.jpg"
+                         alt="KREISEL 108 Білий"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+
+                <div class="text-center mt-5">
+                    <p class="text-sky-400 text-sm font-bold">
+                        KREISEL 108 Білий
+                    </p>
+                    <p class="text-gray-400 text-xs mt-1">
+                       Клей для великоформатної плитки 60×60, 120×60 та 120×120
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ====== REVIEWS ====== -->
     <section id="reviews" class="py-24 bg-[#0e141c]">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-4xl md:text-5xl font-black mt-5">Що кажуть <span class="aqua-gradient">клієнти</span></h2>
             </div>
 
-            <!-- Карусель -->
-            <div class="relative">
-                <!-- Кнопка «Назад» -->
-                <button id="reviews-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 w-12 h-12 rounded-full bg-[#1a2332] border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 hover:border-cyan-400 transition-all flex items-center justify-center shadow-lg">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <!-- Кнопка «Вперед» -->
-                <button id="reviews-next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 w-12 h-12 rounded-full bg-[#1a2332] border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 hover:border-cyan-400 transition-all flex items-center justify-center shadow-lg">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-
-                <!-- Контейнер слайдів -->
-                <div class="overflow-hidden">
-                    <div id="reviews-track" class="flex transition-transform duration-500 ease-out">
-                        
-                        <!-- Відгук 1 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">О</div>
-                                    <div>
-                                        <p class="font-bold text-white">Оксана</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Звернулася до Романа для укладання плитки у ванній кімнаті. Все зробив швидко, якісно та чисто. Шви рівні, кут 45 ідеальний. Дякую за професійний підхід! Рекомендую."
-                                </p>
-                            </div>
+                <!-- Відгук 1 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">О</div>
+                        <div>
+                            <p class="font-bold text-white">Оксана</p>
+                            <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
                         </div>
-
-                        <!-- Відгук 2 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">А</div>
-                                    <div>
-                                        <p class="font-bold text-white">Андрій</p>
-                                        <p class="text-gray-400 text-sm">Котедж, с. Крихівці</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Дуже задоволений роботою! Все виміряв, порахував, порадив найкращий варіант розкладки. Результат перевершив очікування. 10 з 10!"
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 3 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">М</div>
-                                    <div>
-                                        <p class="font-bold text-white">Марія</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Робили душовий піддон. Усе виконано ідеально, вода зливається без затримок. Роман дуже акуратний, після себе все прибрав. Велике спасибі!"
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 4 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">П</div>
-                                    <div>
-                                        <p class="font-bold text-white">Олег</p>
-                                        <p class="text-gray-400 text-sm">Офіс, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Виконував роботи в комерційному приміщенні 300 м2. Чітко дотримався термінів, ціна була заздалегідь обговорена. Раджу всім!"
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 5 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">Н</div>
-                                    <div>
-                                        <p class="font-bold text-white">Наталія</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Роман — майстер з золотими руками! Зробив фартух на кухні дуже стильно. Також допоміг з вибором матеріалів. Щиро дякую!"
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 6 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">В</div>
-                                    <div>
-                                        <p class="font-bold text-white">Володимир</p>
-                                        <p class="text-gray-400 text-sm">Котедж, с. Угорники</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Великий об'єм роботи по укладанню керамограніту 120×60 — майже 700м². Впорався швидко і якісно. Задоволений та рекомендую!"
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 7 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">С</div>
-                                    <div>
-                                        <p class="font-bold text-white">Сергій</p>
-                                        <p class="text-gray-400 text-sm">Котедж, с. Підпечари</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Робив великоформатну плитку 120×60 по всьому будинку. Рівень і геометрія просто супер. Все акуратно в термін."
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 8 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">А</div>
-                                    <div>
-                                        <p class="font-bold text-white">Анна</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ (Каскад)</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Роман зробив санвузол під ключ. Все чисто, акуратно і з душею. Робить так, як для себе. Дуже рекомендую!"
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 9 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">Р</div>
-                                    <div>
-                                        <p class="font-bold text-white">Роман</p>
-                                        <p class="text-gray-400 text-sm">Будинок, Крихівці</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Робив плитку на терасі та сходах. Результат перевершив очікування. Професіонал своєї справи!"
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 10 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">М</div>
-                                    <div>
-                                        <p class="font-bold text-white">Міша</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Дуже акуратний майстер. Зробив підлогу і стіни в санвузлі. Після себе все прибирав, квартира залишалась чистою."
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 11 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">Д</div>
-                                    <div>
-                                        <p class="font-bold text-white">Дмитро</p>
-                                        <p class="text-gray-400 text-sm">Таунхаус, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Робив плитку в трьох санвузлах. Якість на найвищому рівні, все по рівню, шви ідеальні. Працює професійним інструментом."
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 12 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">Т</div>
-                                    <div>
-                                        <p class="font-bold text-white">Тетяна</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Зробив плитку на балконі та в коридорі. Все акуратно, без сколів і перепадів. Приємно спілкуватися і працювати з такою людиною."
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 13 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">Л</div>
-                                    <div>
-                                        <p class="font-bold text-white">Лілія</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Всім дуже сильно задоволена. Роман робив підлогу, фартух в кухні та стіни в ванній. Все виконано акуратно, швидко і рівно. Рекомендую і щиро дякую🙏"
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 14 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">О</div>
-                                    <div>
-                                        <p class="font-bold text-white">Олександра Піцик</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Щиро рекомендую!! Романа — справжній майстер, справжній фахівець своєї справи. Та дуже порядна людина. Все зробив акуратно, швидко, охайно та дуже якісно!! Дякую, Роман за сумлінне ставлення та чудовий результат!! Рекомендую, ніколи не пожалієте!!!"
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 15 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">В</div>
-                                    <div>
-                                        <p class="font-bold text-white">Володимир Коржев</p>
-                                        <p class="text-gray-400 text-sm">Таунхаус, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Рекомендую даного майстра для плиточно-оздоблювальних робіт. Роботу виконав акуратно, швидко і якісно. Працював у мене, моїх друзів. Всі його роботою задоволені."
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 16 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">В</div>
-                                    <div>
-                                        <p class="font-bold text-white">Василь Камаш</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Дуже задоволені роботою. Сподобався підхід майстра. Працює акуратно і професійно. Добре розуміє свою роботу. Всі питання обговорює і враховує побажання."
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 17 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">О</div>
-                                    <div>
-                                        <p class="font-bold text-white">Олександр Мельник</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Дуже задоволений роботою майстра. Плитку поклав акуратно. Терміни дотримався, зробив навіть швидше, прибрав після себе. Рекомендую всім!"
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Відгук 18 -->
-                        <div class="review-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
-                            <div class="review-card p-6 flex flex-col h-full">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">Н</div>
-                                    <div>
-                                        <p class="font-bold text-white">Наталія Ковальчук</p>
-                                        <p class="text-gray-400 text-sm">Будинок, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Майстер працює чисто, швидко, та без зайвих розмов. Однозначно рекомендую!"
-                                </p>
-                            </div>
-                        </div>
-
                     </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Звернулася до Романа для укладання плитки у ванній кімнаті. Все зробив швидко, якісно та чисто. Шви рівні, кут 45 ідеальний. Дякую за професійний підхід! Рекомендую."
+                    </p>
                 </div>
 
-                <!-- Точки навігації -->
-                <div id="reviews-dots" class="flex justify-center gap-2 mt-8"></div>
+                <!-- Відгук 2 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">А</div>
+                        <div>
+                            <p class="font-bold text-white">Андрій</p>
+                            <p class="text-gray-400 text-sm">Котедж, с. Крихівці</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Дуже задоволений роботою! Все виміряв, порахував, порадив найкращий варіант розкладки. Результат перевершив очікування. 10 з 10!"
+                    </p>
+                </div>
+
+                <!-- Відгук 3 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">М</div>
+                        <div>
+                            <p class="font-bold text-white">Марія</p>
+                            <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Робили душовий піддон. Усе виконано ідеально, вода зливається без затримок. Роман дуже акуратний, після себе все прибрав. Велике спасибі!"
+                    </p>
+                </div>
+
+                <!-- Відгук 4 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">П</div>
+                        <div>
+                            <p class="font-bold text-white">Олег</p>
+                            <p class="text-gray-400 text-sm">Офіс, м. Івано-Франківськ</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Виконував роботи в комерційному приміщенні 300 м2. Чітко дотримався термінів, ціна була заздалегідь обговорена. Раджу всім!"
+                    </p>
+                </div>
+
+                <!-- Відгук 5 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">Н</div>
+                        <div>
+                            <p class="font-bold text-white">Наталія</p>
+                            <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Роман — майстер з золотими руками! Зробив фартух на кухні дуже стильно. Також допоміг з вибором матеріалів. Щиро дякую!"
+                    </p>
+                </div>
+
+                <!-- Відгук 6 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">В</div>
+                        <div>
+                            <p class="font-bold text-white">Володимир</p>
+                            <p class="text-gray-400 text-sm">Котедж, с. Угорники</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Великий об'єм роботи по укладанню керамограніту 120×60 — майже 700м². Впорався швидко і якісно. Задоволений та рекомендую!"
+                    </p>
+                </div>
+
+                <!-- Відгук 7 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">С</div>
+                        <div>
+                            <p class="font-bold text-white">Сергій</p>
+                            <p class="text-gray-400 text-sm">Котедж, с. Підпечари</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Робив великоформатну плитку 120×60 по всьому будинку. Рівень і геометрія просто супер. Все акуратно в термін."
+                    </p>
+                </div>
+
+                <!-- Відгук 8 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">А</div>
+                        <div>
+                            <p class="font-bold text-white">Анна</p>
+                            <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ (Каскад)</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Роман зробив санвузол під ключ. Все чисто, акуратно і з душею. Робить так, як для себе. Дуже рекомендую!"
+                    </p>
+                </div>
+
+                <!-- Відгук 9 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">Р</div>
+                        <div>
+                            <p class="font-bold text-white">Роман</p>
+                            <p class="text-gray-400 text-sm">Будинок, Крихівці</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Робив плитку на терасі та сходах. Результат перевершив очікування. Професіонал своєї справи!"
+                    </p>
+                </div>
+
+                <!-- Відгук 10 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">М</div>
+                        <div>
+                            <p class="font-bold text-white">Міша</p>
+                            <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ </p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Дуже акуратний майстер. Зробив підлогу і стіни в санвузлі. Після себе все прибирав, квартира залишалась чистою."
+                    </p>
+                </div>
+
+                <!-- Відгук 11 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">Д</div>
+                        <div>
+                            <p class="font-bold text-white">Дмитро</p>
+                            <p class="text-gray-400 text-sm">Таунхаус, м. Івано-Франківськ</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Робив плитку в трьох санвузлах. Якість на найвищому рівні, все по рівню, шви ідеальні. Працює професійним інструментом."
+                    </p>
+                </div>
+
+                <!-- Відгук 12 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">Т</div>
+                        <div>
+                            <p class="font-bold text-white">Тетяна</p>
+                            <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Зробив плитку на балконі та в коридорі. Все акуратно, без сколів і перепадів. Приємно спілкуватися і працювати з такою людиною."
+                    </p>
+                </div>
+
+                <!-- Відгук 13 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">Т</div>
+                        <div>
+                            <p class="font-bold text-white">Лілія</p>
+                            <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Всім дуже сильно задоволена. 
+                         Роман робив підлогу,фартух в кухні та стіни в ванній. Все виконано акуратно, швидко і рівно.
+                         Рекомендую і щиро дякую🙏"
+                    </p>
+                </div>
+
+                <!-- Відгук 14 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">О</div>
+                        <div>
+                            <p class="font-bold text-white">Олександра Піцик</p>
+                            <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Щиро рекомендую!! Романа
+                        Справжній майстер, справжній фахівець своєї справи. Та дуже порядна людина. Все зробив акуратно,швидко, охайно та дуже якісно!!
+                        Дякую, Роман за сумлінне ставлення, та чудовий результат!!
+                        Приємно мати справу з відповідним професіоналом, який знає всі тонкощі своєї роботи,))
+                        Рекомендую, ніколи не пожалієте!!!"
+                    </p>
+                </div>
+
+                <!-- Відгук 15 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">В</div>
+                        <div>
+                            <p class="font-bold text-white">Володимир Коржев</p>
+                            <p class="text-gray-400 text-sm">Таунхаус, м. Івано-Франківськ</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Рекомендую  даного майстра для  плиточно- оздоблювальних робіт.
+                        Роботу виконав акуратно, швидко  якісно. Працював у мене, моїх друзів.
+                        Всі його роботою задоволені."
+                    </p>
+                </div>
+
+                <!-- Відгук 16 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">В</div>
+                        <div>
+                            <p class="font-bold text-white">Василь Камаш</p>
+                            <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Дуже задоволені роботою. Сподобався підхід майстра.
+                         Працює акуратно і професійно. Добре розуміє свою роботу. 
+                         Всі питання обговорює і враховує побажання."
+                    </p>
+                </div>
+
+                <!-- Відгук 17 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">О</div>
+                        <div>
+                            <p class="font-bold text-white">Олександр Мельник</p>
+                            <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Дуже задоволений роботою майстра. Плитку поклав акуратно.
+                        Терміни дотримався зробив навіть швидше, прибрав після себе. Рекомендую всім!"
+                    </p>
+                </div>
+
+                <!-- Відгук 18 -->
+                <div class="review-card p-6 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="review-avatar">Н</div>
+                        <div>
+                            <p class="font-bold text-white">Наталія Ковальчук</p>
+                            <p class="text-gray-400 text-sm">Будинок, м. Івано-Франківськ</p>
+                        </div>
+                    </div>
+                    <div class="review-stars text-lg mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                        "Майстер працює чисто, швидко, та без зайвих розмов. Однозначно рекомендую!"
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const track = document.getElementById('reviews-track');
-            const slides = document.querySelectorAll('.review-slide');
-            const prevBtn = document.getElementById('reviews-prev');
-            const nextBtn = document.getElementById('reviews-next');
-            const dotsContainer = document.getElementById('reviews-dots');
-
-            let currentIndex = 0;
-            let slidesPerView = 1;
-
-            function updateSlidesPerView() {
-                if (window.innerWidth >= 1024) {
-                    slidesPerView = 3;
-                } else if (window.innerWidth >= 768) {
-                    slidesPerView = 2;
-                } else {
-                    slidesPerView = 1;
-                }
-            }
-
-            function getMaxIndex() {
-                return Math.max(0, slides.length - slidesPerView);
-            }
-
-            function createDots() {
-                dotsContainer.innerHTML = '';
-                const totalPages = getMaxIndex() + 1;
-                for (let i = 0; i < totalPages; i++) {
-                    const dot = document.createElement('button');
-                    dot.className = `w-2.5 h-2.5 rounded-full transition-all ${i === currentIndex ? 'bg-cyan-400 w-6' : 'bg-gray-600 hover:bg-gray-500'}`;
-                    dot.addEventListener('click', () => {
-                        currentIndex = i;
-                        updateCarousel();
-                    });
-                    dotsContainer.appendChild(dot);
-                }
-            }
-
-            function updateCarousel() {
-                const maxIndex = getMaxIndex();
-                if (currentIndex > maxIndex) currentIndex = maxIndex;
-                if (currentIndex < 0) currentIndex = 0;
-
-                const offset = -(currentIndex * (100 / slidesPerView));
-                track.style.transform = `translateX(${offset}%)`;
-
-                // Оновлюємо точки
-                const dots = dotsContainer.querySelectorAll('button');
-                dots.forEach((dot, i) => {
-                    if (i === currentIndex) {
-                        dot.className = 'w-6 h-2.5 rounded-full transition-all bg-cyan-400';
-                    } else {
-                        dot.className = 'w-2.5 h-2.5 rounded-full transition-all bg-gray-600 hover:bg-gray-500';
-                    }
-                });
-            }
-
-            prevBtn.addEventListener('click', () => {
-                currentIndex--;
-                if (currentIndex < 0) currentIndex = getMaxIndex();
-                updateCarousel();
-            });
-
-            nextBtn.addEventListener('click', () => {
-                currentIndex++;
-                if (currentIndex > getMaxIndex()) currentIndex = 0;
-                updateCarousel();
-            });
-
-            // Автопрокрутка
-            let autoplay = setInterval(() => {
-                currentIndex++;
-                if (currentIndex > getMaxIndex()) currentIndex = 0;
-                updateCarousel();
-            }, 5000);
-
-            // Зупиняємо автопрокрутку при наведенні
-            track.parentElement.addEventListener('mouseenter', () => clearInterval(autoplay));
-            track.parentElement.addEventListener('mouseleave', () => {
-                autoplay = setInterval(() => {
-                    currentIndex++;
-                    if (currentIndex > getMaxIndex()) currentIndex = 0;
-                    updateCarousel();
-                }, 5000);
-            });
-
-            window.addEventListener('resize', () => {
-                updateSlidesPerView();
-                createDots();
-                updateCarousel();
-            });
-
-            // Ініціалізація
-            updateSlidesPerView();
-            createDots();
-            updateCarousel();
-        });
-    </script>
-
     <div class="text-center py-8">
-        <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10">
-            <span class="text-amber-400 text-lg">★</span>
-            <span class="text-base font-medium text-gray-200 tracking-wide">
-                Ваш відгук — найкраща рекомендація
-            </span>
-            <span class="text-amber-400 text-lg">★</span>
-        </div>
+    <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10">
+        <span class="text-amber-400 text-lg">★</span>
+        <span class="text-base font-medium text-gray-200 tracking-wide">
+            Ваш відгук — найкраща рекомендація
+        </span>
+        <span class="text-amber-400 text-lg">★</span>
     </div>
+</div>
 
-    <!-- ====== PRICES ====== -->
+   <!-- ====== PRICES ====== -->
     <section id="prices" class="py-24 bg-[#0e141c]">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-black text-white mb-3">
-                    Прозорий <span class="aqua">прайс</span>
+        Прозорий <span class="aqua">прайс</span>
                 </h2>
             </div>
-
-            <!-- Прайс на 2026 рік.pdf -->
-            <div class="flex justify-center mb-12">
-                <a href="files/Prays-2026.pdf" target="_blank" oncontextmenu="return false"
-                   class="flex items-center gap-3 aqua-bg px-10 py-5 rounded-2xl font-bold text-lg shadow-xl shadow-blue-400/20 hover:scale-105 transition">
-                    <i class="fa-regular fa-file-pdf text-2xl"></i> 
-                    Переглянути ціни
-                </a>
-            </div>
+            
+<!-- ====== Прайс на 2026 рік.pdf ====== -->
+ <div class="flex justify-center mb-12">
+    <a href="files/Prays-2026.pdf" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="flex items-center gap-3 aqua-bg px-10 py-5 rounded-2xl font-bold text-lg shadow-xl shadow-blue-400/20 hover:scale-105 transition">
+        <i class="fa-regular fa-file-pdf text-2xl"></i> 
+        Переглянути ціни 2026 рік
+    </a>
+</div>
 
             <div class="max-w-4xl mx-auto space-y-4">
                 <div class="grid md:grid-cols-2 gap-4 mb-8">
@@ -1267,40 +1117,43 @@
                     </div>
                 </div>
   
-                <!-- Преміум укладка -->
-                <div class="price-aqua p-6 text-center relative overflow-hidden rounded-2xl border border-emerald-500/25">
-                    <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-500 via-sky-400 to-emerald-500"></div>
+  <!-- Преміум укладка -->
+<div class="price-aqua p-6 text-center relative overflow-hidden rounded-2xl border border-emerald-500/25">
+    <!-- акцент зверху -->
+    <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-500 via-sky-400 to-emerald-500"></div>
 
-                    <p class="text-emerald-400 text-base font-black uppercase tracking-[0.15em] mb-3">
-                        ★ PREMIUM CLASS ★
-                    </p>
+    <p class="text-emerald-400 text-base font-black uppercase tracking-[0.15em] mb-3">
+        ★ PREMIUM CLASS ★
+    </p>
 
-                    <p class="text-white text-lg font-semibold mb-1">
-                     шов 1 мм
-                    </p>
+    <p class="text-white text-lg font-semibold mb-1">
+     1 мм
+    </p>
 
-                    <p class="text-sm text-gray-400 mb-5 max-w-md mx-auto leading-relaxed">
-                        Для тих, хто не готовий на компроміси.
+            <p class="text-sm text-gray-400 mb-5 max-w-md mx-auto leading-relaxed">
+                    Для тих, хто не готовий на компроміси.
                         Максимальна точність укладки та контроль геометрії кожної плитки.<br>
-                        Шов — строго за вимогами виробника.
+                        Шов 1 мм — строго за вимогами виробника.
                     </p>
 
-                    <p class="text-2xl font-black aqua">
-                        від 1 200 <span class="text-base text-gray-400 font-medium">грн/м²</span>
-                    </p>
+    <p class="text-2xl font-black aqua">
+        від 1 200 <span class="text-base text-gray-400 font-medium">грн/м²</span>
+    </p>
 
-                    <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-500 via-sky-400 to-emerald-500"></div>
-                </div>
+    <!-- акцент знизу -->
+    <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-500 via-sky-400 to-emerald-500"></div>
+</div>
 
-                <!-- Професійна стандартна укладка -->
-                <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
+<!-- Професійна стандартна укладка -->
+
+<div class="price-aqua p-6 flex flex-wrap justify-between items-center">
                     <span class="font-semibold text-lg">Керамограніт 60×60</span>
                     <span class="text-sm text-gray-400 mt-1 block">1,5–2 мм </span>
                     <span class="text-2xl font-black aqua">від 750 грн/м²</span>
                 </div>
      
                 <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
-                    <span class="font-semibold text-lg">Керамограніт 120*60 </span>
+                    <span class="font-semibold text-lg">Керамограніт 120×60 </span>
                     <span class="text-sm text-gray-400 mt-1 block">1,5–2 мм </span>
                     <span class="text-2xl font-black aqua">від 900 грн/м²</span>
                 </div>
@@ -1310,19 +1163,17 @@
                     <span class="text-sm text-gray-400 mt-1 block">1,5–2 мм </span>
                     <span class="text-2xl font-black aqua">від 1 200 грн/м²</span>
                 </div>
-
                 <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
                     <span class="font-semibold text-lg">Фартух (без розеток)</span>
-                    <span class="text-sm text-gray-400 mt-1 block">1 мм </span>
+                     <span class="text-sm text-gray-400 mt-1 block">1 мм </span>
                     <span class="text-2xl font-black aqua">1 500 грн/м.п</span>
                 </div>
                
                 <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
                     <span class="font-semibold text-lg">45° кут (готовий) </span>
-                    <span class="text-sm text-gray-400 mt-1 block"> 2 сторони  </span>
+                     <span class="text-sm text-gray-400 mt-1 block"> 2 сторони  </span>
                     <span class="text-2xl font-black aqua">800 грн/м.п</span>
                 </div>
-
                 <div class="price-aqua p-6 flex flex-wrap justify-between items-center">
                     <span class="font-semibold text-lg">Епоксидна фуга </span>
                     <span class="text-2xl font-black aqua">від 350 грн/м²</span>
