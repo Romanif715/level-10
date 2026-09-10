@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', 'Inter', system-ui, sans-serif;
+    background: #0a0e14;
+    color: #eef2f6;
+    overflow-x: hidden;
+}
+
+/* Світло-блакитний акцент */
+.aqua {
+    color: #7dd3fc;
+}
+.aqua-bg {
+    background: #7dd3fc;
+    color: #0a0e14;
+    transition: all 0.3s ease;
+}
+.aqua-bg:hover {
+    background: #5bb8e6;
+    transform: scale(1.04);
+    box-shadow: 0 12px 40px -8px #7dd3fc60;
+}
+.aqua-border {
+    border-color: #7dd3fc;
+}
+
+.aqua-gradient {
+    background: linear-gradient(135deg, #7dd3fc, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Hero */
+.hero-aqua {
+    background:
+        linear-gradient(165deg, rgba(10, 14, 20, 0.92) 0%, rgba(10, 14, 20, 0.70) 100%),
+        url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+}
+
+/* Картки */
+.card-aqua {
+    background: #121821;
+    border: 1px solid #1e2835;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+.card-aqua:hover {
+    border-color: #7dd3fc;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -20px #7dd3fc40;
+    background: #161e2a;
+}
+
+/* 10 Level badge */
+.level-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #7dd3fc20, #38bdf820);
+    border: 2px solid #7dd3fc;
+    color: #7dd3fc;
+    font-weight: 900;
+    font-size: 0.85rem;
+    padding: 6px 16px 6px 12px;
+    border-radius: 50px;
+    letter-spacing: 0.05em;
+    box-shadow: 0 0 30px -5px #7dd3fc40;
+    animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+.level-badge .crown-gold {
+    color: #fbbf24;
+    font-size: 1.1rem;
+    filter: drop-shadow(0 0 8px #fbbf2460);
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px -5px #7dd3fc30; }
+    50% { box-shadow: 0 0 40px 0px #7dd3fc60; }
+}
+
+/* Прайс */
+.price-aqua {
+    background: #121821;
+    border: 1px solid #1e2835;
+    border-radius: 16px;
+    transition: 0.25s;
+}
+.price-aqua:hover {
+    border-color: #7dd3fc;
+    background: #161e2a;
+    box-shadow: 0 0 30px -10px #7dd3fc20;
+}
+
+/* Мобільне меню */
+#mobileMenu {
+    background: #0a0e14;
+    border-top: 1px solid #1e2835;
+}
+#mobileMenu a {
+    border-bottom: 1px solid #161e2a;
+    padding: 16px 0;
+    font-weight: 500;
+}
+#mobileMenu a:last-child {
+    border-bottom: none;
+}
+
+/* Статистика */
+.stat-number {
+    font-size: 2.1rem;
+    line-height: 1.1;
+    font-weight: 900;
+    background: linear-gradient(135deg, #7dd3fc, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Навбар */
+.nav-aqua {
+    background: transparent;
+    border: 1.5px solid #7dd3fc;
+    color: #7dd3fc;
+    transition: 0.3s;
+}
+.nav-aqua:hover {
+    background: #7dd3fc;
+    color: #0a0e14;
+}
+
+/* Стрічка */
+.ribbon-aqua {
+    background: linear-gradient(90deg, #7dd3fc20, #7dd3fc10, #7dd3fc20);
+    border-top: 1px solid #7dd3fc30;
+    border-bottom: 1px solid #7dd3fc30;
+}
+
+/* Кнопка в герої */
+.btn-aqua-outline {
+    border: 1px solid #2a3442;
+    transition: 0.3s;
+}
+.btn-aqua-outline:hover {
+    border-color: #7dd3fc;
+    background: #7dd3fc10;
+}
+
+.icon-aqua {
+    color: #7dd3fc;
+}
+
+.footer-level {
+    color: #7dd3fc;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+}
+
+.crown-gold-ribbon {
+    color: #fbbf24;
+    filter: drop-shadow(0 0 6px #fbbf2440);
+}
+
+/* Відгуки — картки з аватарками */
+.review-card {
+    background: #121821;
+    border: 1px solid #1e2835;
+    border-radius: 24px;
+    transition: all 0.3s ease;
+}
+.review-card:hover {
+    border-color: #7dd3fc;
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -20px #7dd3fc40;
+    background: #161e2a;
+}
+.review-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7dd3fc30, #38bdf830);
+    border: 2px solid #7dd3fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #7dd3fc;
+    flex-shrink: 0;
+}
+.review-stars {
+    color: #fbbf24;
+    letter-spacing: 2px;
+}
+
+/* ====== ПРЕМІАЛЬНІ ЕФЕКТИ ====== */
+.glass-effect {
+    background: rgba(18, 24, 33, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(125, 211, 252, 0.1);
+}
+
+.section-divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #7dd3fc, transparent);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.hover-lift {
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hover-lift:hover {
+    transform: translateY(-6px) scale(1.01);
+}
+
+.input-premium {
+    background: rgba(18, 24, 33, 0.8);
+    border: 1px solid #1e2835;
+    transition: all 0.3s ease;
+}
+.input-premium:focus {
+    border-color: #7dd3fc;
+    box-shadow: 0 0 0 4px #7dd3fc20;
+    outline: none;
+}
+
+.btn-premium {
+    background: linear-gradient(135deg, #7dd3fc, #38bdf8);
+    color: #0a0e14;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 8px 32px -8px #7dd3fc50;
+}
+.btn-premium:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 48px -8px #7dd3fc80;
+}
+
+/* Зменшуємо іконки керування відео */
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-fullscreen-button {
+    transform: scale(0.75);
+}
+
+video::-webkit-media-controls-timeline {
+    height: 4px;
+}
+
+/* Мобільні виправлення */
+h1 {
+    font-size: 2.25rem;
+    line-height: 1.1;
+}
+@media (min-width: 640px) {
+    h1 { font-size: 3rem; }
+}
+
+.stat-number {
+    font-size: 2.1rem;
+    line-height: 1.1;
+}
+@media (min-width: 640px) {
+    .stat-number { font-size: 3.5rem; }
+}
+
+.ribbon-aqua span {
+    font-size: 0.875rem;
+    line-height: 1.35;
+}
+
+.price-aqua {
+    padding: 1.25rem;
+}
+
+@media (max-width: 640px) {
+    .hero-aqua h1 {
+        font-size: 2.1rem;
+    }
+    .review-card {
+        margin-bottom: 1rem;
+    }
+    .price-aqua {
+        padding: 1rem;
+    }
+}
+
+/* Lightbox */
+#lightbox {
+    backdrop-filter: blur(4px);
+}
+
+/* Сховати скролбар у прев’ю */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
