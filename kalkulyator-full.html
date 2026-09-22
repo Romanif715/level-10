@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор вартості | Roman Mall</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Manrope', 'Inter', system-ui, sans-serif; background: #0a0e14; color: #eef2f6; }
+    .aqua { color: #7dd3fc; }
+    .aqua-bg { background: #7dd3fc; color: #0a0e14; }
+    .aqua-gradient {
+      background: linear-gradient(135deg, #7dd3fc, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card-dark {
+      background: linear-gradient(135deg, #121821, #0e141c);
+      border: 1px solid #1e2835;
+      border-radius: 20px;
+    }
+    .input-dark {
+      background: #0a0e14;
+      border: 1.5px solid #1e2835;
+      border-radius: 12px;
+      color: #fff;
+      padding: 10px 14px;
+      width: 100%;
+      outline: none;
+      transition: 0.2s;
+    }
+    .input-dark:focus {
+      border-color: #7dd3fc;
+      box-shadow: 0 0 0 3px #7dd3fc20;
+    }
+    select.input-dark option { background: #121821; color: #fff; }
+    .row-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: #121821;
+      border: 1.5px solid #1e2835;
+      border-radius: 14px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+    .row-item:hover { border-color: #7dd3fc40; }
+    .row-item label { flex: 1; min-width: 160px; font-size: 0.9rem; color: #d1d5db; }
+    .row-item input { width: 90px; text-align: center; }
+    .row-item .unit { font-size: 0.8rem; color: #6b7280; width: 40px; }
+    .row-item .price-tag { font-size: 0.8rem; color: #7dd3fc; white-space: nowrap; }
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title i {
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      background: #7dd3fc15;
+      border: 1px solid #7dd3fc30;
+      border-radius: 10px;
+      color: #7dd3fc;
+      font-size: 1rem;
+    }
+    .breakdown-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 8px 0;
+      border-bottom: 1px dashed #1e2835;
+      font-size: 0.9rem;
+      gap: 12px;
+    }
+    .breakdown-item:last-child { border-bottom: none; }
+    .breakdown-item .label { flex: 1; min-width: 0; }
+    .breakdown-item .label small { display: block; margin-top: 2px; font-size: 0.75rem; }
+    .breakdown-item .value { white-space: nowrap; flex-shrink: 0; }
+    .breakdown-item.total {
+      border-top: 1px solid #1e2835;
+      margin-top: 8px;
+      padding-top: 12px;
+      font-weight: 800;
+      color: #7dd3fc;
+      font-size: 1.05rem;
+      align-items: center;
+    }
+    @media print {
+      body { background: #fff !important; color: #000 !important; }
+      .card-dark { background: #fff !important; border: 1px solid #ccc !important; }
+      .input-dark { background: #fff !important; color: #000 !important; border: 1px solid #ccc !important; }
+      .aqua-bg, button { background: #eee !important; color: #000 !important; }
+      .aqua-gradient { -webkit-text-fill-color: #000 !important; color: #000 !important; }
+      .section-title i { background: #eee !important; color: #000 !important; }
+      #btnPdf, button[onclick="window.print()"] { display: none !important; }
+      .text-gray-400, .text-gray-500, .text-gray-300 { color: #333 !important; }
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="max-w-4xl mx-auto px-4 py-8 sm:py-12">
+
+    <!-- Header -->
+    <div class="text-center mb-10">
+      <a href="index.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-aqua text-sm mb-4 transition">
+        <i class="fa-solid fa-arrow-left"></i> На головну
+      </a>
+      <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">
+        Калькулятор <span class="aqua-gradient">вартості</span>
+      </h1>
+      <p class="text-gray-400 mt-2 text-sm">Усі позиції з прайсу · Roman Mall · 01.05.2026</p>
+    </div>
+
+    <!-- 1. Виклик -->
+    <div class="card-dark p-5 sm:p-6 mb-5">
+      <div class="section-title"><i class="fa-solid fa-car"></i> Виклик майстра</div>
+      <select id="location" class="input-dark">
+        <option value="0">Без виклику (тільки роботи)</option>
+        <option value="2000">По місту — 2 000 грн</option>
+        <option value="3000">За межами міста — 3 000 грн</option>
+      </select>
+    </div>
+
+    <!-- 2. Укладка -->
+    <div class="card-dark p-5 sm:p-6 mb-5">
+      <div class="section-title"><i class="fa-solid fa-th-large"></i> Основна укладка</div>
+      <div class="grid sm:grid-cols-2 gap-4 mb-4">
+        <div>
+          <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">Тип поверхні</label>
+          <select id="surface" class="input-dark">
+            <option value="floor">Підлога</option>
+            <option value="wall">Стіна</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">Площа, м²</label>
+          <input type="number" id="area" min="0" step="0.1" placeholder="12.5" class="input-dark">
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">Категорія і розмір плитки <span class="text-aqua">(без фуги)</span></label>
+        <select id="tileType" class="input-dark">
+          <optgroup label="Керамічна плитка">
+            <option value="cer-750">20×30 / 30×30 / 30×60 — 750 грн/м²</option>
+            <option value="cer-800">10×20 / 20×20 / 25×25 — 800 грн/м²</option>
+            <option value="cer-1500">10×10 / 5×20 — 1 500 грн/м²</option>
+          </optgroup>
+          <optgroup label="Керамограніт">
+            <option value="porc-750">35×35 / 45×45 / 60×60 — 750 грн/м²</option>
+            <option value="porc-900">120×60 (стандарт 1,5–2 мм) — 900 грн/м²</option>
+            <option value="porc-1200">120×60 (Premium 1 мм) — 1 200 грн/м²</option>
+            <option value="porc-parquet">Паркетна дошка — 1 200 грн/м²</option>
+            <option value="porc-1700">120×120 — 1 700 грн/м²</option>
+            <option value="porc-mosaic">Мозаїка — 1 200 грн/м²</option>
+            <option value="porc-metro">Кабанчик — 1 500 грн/м.п</option>
+            <option value="porc-base">Цоколь — 1 200 грн/м.п</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">Спосіб укладки</label>
+          <select id="layout" class="input-dark">
+            <option value="1">Пряма (стандарт)</option>
+            <option value="1.5">По діагоналі / ялинка (+50%)</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">Безшовна</label>
+          <select id="seamless" class="input-dark">
+            <option value="1">Ні</option>
+            <option value="1.3">Так (+30%)</option>
+          </select>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 mt-3 italic">* Керамограніт ≤ 10 м² — ціна ×2 автоматично</p>
+    </div>
+
+    <!-- 3. Фуга -->
+    <div class="card-dark p-5 sm:p-6 mb-5">
+      <div class="section-title"><i class="fa-solid fa-paint-roller"></i> Фугування</div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">Тип фуги</label>
+          <select id="grout" class="input-dark">
+            <option value="0">Без фугування</option>
+            <option value="250">Цементна — 250 грн/м²</option>
+            <option value="350">Епоксидна (від) — 350 грн/м²</option>
+            <option value="400">Епоксидна (середня) — 400 грн/м²</option>
+            <option value="500">Епоксидна (складна) — 500 грн/м²</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">Фуга + 45° кут, м.п</label>
+          <input type="number" id="grout45" min="0" step="0.1" value="0" class="input-dark">
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Підготовка -->
+    <div class="card-dark p-5 sm:p-6 mb-5">
+      <div class="section-title"><i class="fa-solid fa-screwdriver-wrench"></i> Підготовчі роботи</div>
+      <div class="row-item">
+        <label>Грунтовка</label>
+        <input type="number" id="primer" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м²</span>
+        <span class="price-tag">50 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Грунтовка плитковим клеєм</label>
+        <input type="number" id="primerGlue" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м²</span>
+        <span class="price-tag">250 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Гідроізоляція 2 шари</label>
+        <input type="number" id="hydro" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м²</span>
+        <span class="price-tag">500 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Гідроізоляційна стрічка</label>
+        <input type="number" id="hydroTape" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м.п</span>
+        <span class="price-tag">200 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Мембрана під плитку</label>
+        <input type="number" id="membrane" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м²</span>
+        <span class="price-tag">200 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Закладення штроб</label>
+        <input type="number" id="strobs" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м.п</span>
+        <span class="price-tag">100 грн</span>
+      </div>
+    </div>
+
+    <!-- 5. Додаткові -->
+    <div class="card-dark p-5 sm:p-6 mb-5">
+      <div class="section-title"><i class="fa-solid fa-plus"></i> Додаткові роботи</div>
+      <div class="row-item">
+        <label>45° кут (готовий)</label>
+        <input type="number" id="angle45" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м.п</span>
+        <span class="price-tag">800 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Чистовий різ</label>
+        <input type="number" id="cleanCut" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м.п</span>
+        <span class="price-tag">350 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Порізка плитки</label>
+        <input type="number" id="cutting" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м.п</span>
+        <span class="price-tag">200 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Декор / фриз (кераміка)</label>
+        <input type="number" id="decorCer" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м.п</span>
+        <span class="price-tag">300 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Декор / фриз (керамограніт)</label>
+        <input type="number" id="decorPorc" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м.п</span>
+        <span class="price-tag">500 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Фартух з фугою</label>
+        <input type="number" id="apron" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м.п</span>
+        <span class="price-tag">1 500 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Плиточний плінтус (з 45°)</label>
+        <input type="number" id="skirting" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м.п</span>
+        <span class="price-tag">500 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Сходи (без 45°)</label>
+        <input type="number" id="stairs" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м.п</span>
+        <span class="price-tag">2 500 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Герметик</label>
+        <input type="number" id="sealant" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м.п</span>
+        <span class="price-tag">200 грн</span>
+      </div>
+    </div>
+
+    <!-- 6. Вирізи -->
+    <div class="card-dark p-5 sm:p-6 mb-5">
+      <div class="section-title"><i class="fa-solid fa-circle-dot"></i> Вирізи і люки</div>
+      <div class="row-item">
+        <label>Виріз до 40 мм</label>
+        <input type="number" id="hole40" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">250 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Виріз до 70 мм / розетки</label>
+        <input type="number" id="hole70" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">300 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Виріз 70–150 мм</label>
+        <input type="number" id="hole150" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">500 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Виріз 200–600 мм</label>
+        <input type="number" id="hole600" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">800 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Люк на магнітах</label>
+        <input type="number" id="hatchMagnet" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">1 500 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Люк скритий до 60 см</label>
+        <input type="number" id="hatch60" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">2 500 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Люк скритий від 60 см</label>
+        <input type="number" id="hatchOver60" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">3 500 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Заміна однієї плитки</label>
+        <input type="number" id="replaceTile" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">5 000 грн</span>
+      </div>
+    </div>
+
+    <!-- 7. Інше -->
+    <div class="card-dark p-5 sm:p-6 mb-5">
+      <div class="section-title"><i class="fa-solid fa-box"></i> Інші роботи</div>
+      <div class="row-item">
+        <label>Установка ванни з герметиком</label>
+        <input type="number" id="bath" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">3 500 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Панелі під ванну з люком</label>
+        <input type="number" id="bathPanel" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">3 000 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Гіпс. конструкція / інсталяція</label>
+        <input type="number" id="gypsumInst" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">3 500 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Гіпс. конструкція / труба</label>
+        <input type="number" id="gypsumPipe" min="0" step="0.1" value="0" class="input-dark">
+        <span class="unit">м.п</span>
+        <span class="price-tag">800 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Поличка до 40 см + 45°</label>
+        <input type="number" id="shelf40" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">2 500 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Поличка до 60 см + 45°</label>
+        <input type="number" id="shelf60" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">3 000 грн</span>
+      </div>
+      <div class="row-item">
+        <label>Душ. піддон 90×90 без борту</label>
+        <input type="number" id="tray90no" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">400 $</span>
+      </div>
+      <div class="row-item">
+        <label>Душ. піддон 90×90 з бортом</label>
+        <input type="number" id="tray90yes" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">500 $</span>
+      </div>
+      <div class="row-item">
+        <label>Душ. піддон 90–150 см</label>
+        <input type="number" id="trayLarge" min="0" step="1" value="0" class="input-dark">
+        <span class="unit">шт</span>
+        <span class="price-tag">600 $</span>
+      </div>
+    </div>
+
+    <!-- Результат -->
+    <div class="card-dark p-6 sm:p-8" style="border-color: #7dd3fc40;">
+      <div class="text-center mb-4">
+        <p class="text-sm text-gray-400 uppercase tracking-wider font-semibold mb-1">Орієнтовна вартість</p>
+        <div id="totalDisplay" class="text-3xl sm:text-4xl font-black aqua-gradient">0 грн</div>
+      </div>
+      <div id="breakdown" class="bg-[#0a0e14] rounded-xl p-4 max-h-64 overflow-y-auto text-sm">
+        <div class="text-gray-500 text-center py-4">Заповніть поля — сума з'явиться тут</div>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3 mt-5">
+        <button type="button" id="btnPdf" onclick="savePdf()"
+                class="flex-1 aqua-bg font-bold py-3.5 rounded-xl text-base flex items-center justify-center gap-2 hover:opacity-90 transition disabled:opacity-40 disabled:cursor-not-allowed"
+                disabled>
+          <i class="fa-solid fa-file-pdf"></i> Зберегти в PDF
+        </button>
+        <a href="index.html"
+                class="flex-1 bg-[#1e2835] text-gray-300 font-semibold py-3.5 rounded-xl text-base flex items-center justify-center gap-2 hover:bg-[#2a3442] transition border border-[#2a3442]">
+          <i class="fa-solid fa-home"></i> На головну
+        </a>
+      </div>
+      <p class="text-xs text-gray-500 text-center mt-4">Ціни без вартості матеріалів. Піддони в $.</p>
+    </div>
+
+    <p class="text-center text-gray-600 text-xs mt-8">Roman Mall · Плиточник 10 Level · Івано-Франківськ</p>
+  </div>
+
+  <script>
+    const PRICES = {
+      tiles: {
+        'cer-750':   { price: 750,  unit: 'm2', name: 'Кераміка 20×30/30×30/30×60' },
+        'cer-800':   { price: 800,  unit: 'm2', name: 'Кераміка 10×20/20×20/25×25' },
+        'cer-1500':  { price: 1500, unit: 'm2', name: 'Кераміка 10×10/5×20' },
+        'porc-750':  { price: 750,  unit: 'm2', name: 'Керамограніт 35–60', smallAreaDouble: true },
+        'porc-900':  { price: 900,  unit: 'm2', name: 'Керамограніт 120×60 станд.', smallAreaDouble: true },
+        'porc-1200': { price: 1200, unit: 'm2', name: 'Керамограніт 120×60 Prem.', smallAreaDouble: true },
+        'porc-parquet': { price: 1200, unit: 'm2', name: 'Паркетна дошка', smallAreaDouble: true },
+        'porc-1700': { price: 1700, unit: 'm2', name: 'Керамограніт 120×120', smallAreaDouble: true },
+        'porc-mosaic': { price: 1200, unit: 'm2', name: 'Мозаїка', smallAreaDouble: true },
+        'porc-metro': { price: 1500, unit: 'mp', name: 'Кабанчик' },
+        'porc-base':  { price: 1200, unit: 'mp', name: 'Цоколь' }
+      },
+      grout: { 250: 'Цементна фуга', 350: 'Епоксидна (від)', 400: 'Епоксидна (середня)', 500: 'Епоксидна (складна)' },
+      prep: {
+        primer: { price: 50, name: 'Грунтовка' }, primerGlue: { price: 250, name: 'Грунтовка клеєм' },
+        hydro: { price: 500, name: 'Гідроізоляція' }, hydroTape: { price: 200, name: 'Гідрострічка' },
+        membrane: { price: 200, name: 'Мембрана' }, strobs: { price: 100, name: 'Штроби' }
+      },
+      extra: {
+        angle45: { price: 800, name: '45° кут' }, cleanCut: { price: 350, name: 'Чистовий різ' },
+        cutting: { price: 200, name: 'Порізка' }, decorCer: { price: 300, name: 'Декор (кер.)' },
+        decorPorc: { price: 500, name: 'Декор (кер.гр.)' }, apron: { price: 1500, name: 'Фартух' },
+        skirting: { price: 500, name: 'Плінтус' }, stairs: { price: 2500, name: 'Сходи' },
+        sealant: { price: 200, name: 'Герметик' }
+      },
+      pieces: {
+        hole40: { price: 250, name: 'Виріз ≤40 мм' }, hole70: { price: 300, name: 'Виріз ≤70 мм' },
+        hole150: { price: 500, name: 'Виріз 70–150' }, hole600: { price: 800, name: 'Виріз 200–600' },
+        hatchMagnet: { price: 1500, name: 'Люк магніт' }, hatch60: { price: 2500, name: 'Люк ≤60 см' },
+        hatchOver60: { price: 3500, name: 'Люк >60 см' }, replaceTile: { price: 5000, name: 'Заміна плитки' },
+        bath: { price: 3500, name: 'Установка ванни' }, bathPanel: { price: 3000, name: 'Панелі під ванну' },
+        gypsumInst: { price: 3500, name: 'Гіпс/інсталяція' }, gypsumPipe: { price: 800, name: 'Гіпс/труба' },
+        shelf40: { price: 2500, name: 'Поличка ≤40' }, shelf60: { price: 3000, name: 'Поличка ≤60' },
+        tray90no: { price: 400, name: 'Піддон 90×90 без борту', currency: 'USD' },
+        tray90yes: { price: 500, name: 'Піддон 90×90 з бортом', currency: 'USD' },
+        trayLarge: { price: 600, name: 'Піддон 90–150 см', currency: 'USD' }
+      }
+    };
+
+    function val(id) {
+      const el = document.getElementById(id);
+      if (!el) return 0;
+      const v = parseFloat(el.value);
+      return isNaN(v) ? 0 : v;
+    }
+
+    function fmt(n) {
+      return Math.round(n).toLocaleString('uk-UA') + ' грн';
+    }
+
+    function calculate() {
+      let total = 0, totalUsd = 0;
+      const lines = [];
+
+      const loc = val('location');
+      if (loc > 0) {
+        total += loc;
+        lines.push({
+          name: loc === 2000 ? 'Виклик по місту' : 'Виклик за містом',
+          detail: '1 × ' + loc + ' грн',
+          sum: loc
+        });
+      }
+
+      const area = val('area');
+      const tileEl = document.getElementById('tileType');
+      const tile = tileEl ? PRICES.tiles[tileEl.value] : null;
+      const layoutMult = val('layout') || 1;
+      const seamlessMult = val('seamless') || 1;
+
+      if (area > 0 && tile) {
+        let p = tile.price, note = '';
+        if (tile.smallAreaDouble && area <= 10) { p *= 2; note = ' (×2 ≤10м²)'; }
+        const mult = layoutMult * seamlessMult;
+        const sum = area * p * mult;
+        total += sum;
+        let desc = tile.name + note;
+        if (layoutMult > 1) desc += ' +діаг.';
+        if (seamlessMult > 1) desc += ' +безш.';
+        const unit = tile.unit === 'm2' ? 'м²' : 'м.п';
+        let detail = area + ' ' + unit + ' × ' + p + ' грн';
+        if (mult > 1) detail += ' × ' + mult;
+        lines.push({ name: desc, detail: detail, sum: sum });
+      }
+
+      const gp = val('grout');
+      if (gp > 0 && area > 0) {
+        const s = area * gp;
+        total += s;
+        lines.push({
+          name: PRICES.grout[gp] || 'Фуга',
+          detail: area + ' м² × ' + gp + ' грн',
+          sum: s
+        });
+      }
+      const g45 = val('grout45');
+      if (g45 > 0) {
+        const s = g45 * 250;
+        total += s;
+        lines.push({ name: 'Фуга + 45° кут', detail: g45 + ' м.п × 250 грн', sum: s });
+      }
+
+      for (const [id, info] of Object.entries(PRICES.prep)) {
+        const q = val(id);
+        if (q > 0) {
+          const s = q * info.price;
+          total += s;
+          const u = (id === 'hydroTape' || id === 'strobs') ? 'м.п' : 'м²';
+          lines.push({ name: info.name, detail: q + ' ' + u + ' × ' + info.price + ' грн', sum: s });
+        }
+      }
+      for (const [id, info] of Object.entries(PRICES.extra)) {
+        const q = val(id);
+        if (q > 0) {
+          const s = q * info.price;
+          total += s;
+          lines.push({ name: info.name, detail: q + ' м.п × ' + info.price + ' грн', sum: s });
+        }
+      }
+      for (const [id, info] of Object.entries(PRICES.pieces)) {
+        const q = val(id);
+        if (q > 0) {
+          const s = q * info.price;
+          const unit = id === 'gypsumPipe' ? 'м.п' : 'шт';
+          if (info.currency === 'USD') {
+            totalUsd += s;
+            lines.push({ name: info.name, detail: q + ' ' + unit + ' × ' + info.price + ' $', sum: s, currency: 'USD' });
+          } else {
+            total += s;
+            lines.push({ name: info.name, detail: q + ' ' + unit + ' × ' + info.price + ' грн', sum: s });
+          }
+        }
+      }
+
+      let totalText = fmt(total);
+      if (totalUsd > 0) totalText += ' + ' + totalUsd + ' $';
+      document.getElementById('totalDisplay').textContent = totalText;
+
+      window._lastCalc = { lines, total, totalUsd, totalText };
+
+      const btnPdf = document.getElementById('btnPdf');
+      if (btnPdf) btnPdf.disabled = lines.length === 0;
+
+      const br = document.getElementById('breakdown');
+      if (lines.length === 0) {
+        br.innerHTML = '<div class="text-gray-500 text-center py-4">Заповніть поля — сума з\'явиться тут</div>';
+      } else {
+        let html = lines.map(l => {
+          const st = l.currency === 'USD' ? l.sum + ' $' : fmt(l.sum);
+          return `<div class="breakdown-item">
+            <div class="label">
+              <span class="text-gray-300">${l.name}</span>
+              <small class="text-gray-500">${l.detail || ''}</small>
+            </div>
+            <div class="value text-white font-semibold">${st}</div>
+          </div>`;
+        }).join('');
+        let tl = fmt(total);
+        if (totalUsd > 0) tl += ' + ' + totalUsd + ' $';
+        html += `<div class="breakdown-item total"><span>Разом</span><span>${tl}</span></div>`;
+        br.innerHTML = html;
+      }
+    }
+
+    function savePdf() {
+      const data = window._lastCalc;
+      if (!data || !data.lines || data.lines.length === 0) {
+        alert('Спочатку введіть дані для розрахунку');
+        return;
+      }
+
+      const clientName = prompt('Ім\'я клієнта (можна залишити порожнім):', '') || '';
+
+      const now = new Date();
+      const dateStr = now.toLocaleDateString('uk-UA', { day: '2-digit', month: '2-digit', year: 'numeric' })
+        + ' ' + now.toLocaleTimeString('uk-UA', { hour: '2-digit', minute: '2-digit' });
+
+      const rows = data.lines.map(l => {
+        const sumText = l.currency === 'USD' ? (l.sum + ' $') : fmt(l.sum);
+        return `<tr>
+          <td style="padding:8px 10px;border-bottom:1px solid #e5e7eb;">${l.name}</td>
+          <td style="padding:8px 10px;border-bottom:1px solid #e5e7eb;color:#555;">${l.detail || ''}</td>
+          <td style="padding:8px 10px;border-bottom:1px solid #e5e7eb;text-align:right;font-weight:600;">${sumText}</td>
+        </tr>`;
+      }).join('');
+
+      const html = `<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Розрахунок — Roman Mall</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; color:#111; padding:32px; max-width:800px; margin:0 auto; }
+  h1 { font-size:20px; margin-bottom:4px; }
+  .sub { font-size:12px; color:#555; margin-bottom:2px; }
+  .line { border:none; border-top:3px solid #0a0e14; margin:16px 0; }
+  h2 { font-size:15px; margin-bottom:8px; }
+  .client { font-size:13px; color:#333; margin-bottom:14px; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th { background:#f0f4f8; text-align:left; padding:8px 10px; border-bottom:2px solid #ccc; }
+  th:last-child, td:last-child { text-align:right; }
+  .total-row { margin-top:16px; padding-top:12px; border-top:2px solid #0a0e14; font-size:16px; font-weight:800; display:flex; justify-content:space-between; }
+  .notes { margin-top:28px; font-size:11px; color:#888; line-height:1.6; }
+  @media print {
+    body { padding:12px; }
+    .no-print { display:none !important; }
+  }
+</style>
+</head>
+<body>
+  <h1>Roman Mall — Плиточник 10 Level</h1>
+  <div class="sub">Івано-Франківськ · +38 (050) 761 50 32</div>
+  <div class="sub">Дата: ${dateStr}</div>
+  <hr class="line">
+  <h2>Розрахунок вартості робіт</h2>
+  ${clientName ? '<div class="client">Клієнт: ' + clientName + '</div>' : ''}
+  <table>
+    <thead>
+      <tr>
+        <th>Позиція</th>
+        <th>Розрахунок</th>
+        <th style="width:110px;">Сума</th>
+      </tr>
+    </thead>
+    <tbody>${rows}</tbody>
+  </table>
+  <div class="total-row">
+    <span>Разом:</span>
+    <span>${data.totalText}</span>
+  </div>
+  <div class="notes">
+    * Ціни вказані без вартості матеріалів (клей, фуга тощо).<br>
+    * Це орієнтовний розрахунок. Остаточна вартість може уточнюватися після огляду об'єкта.<br>
+    * Гарантія на роботи — 5 років.
+  </div>
+  <div class="no-print" style="margin-top:32px;text-align:center;">
+    <button onclick="window.print()" style="background:#0a0e14;color:#fff;border:none;padding:12px 28px;font-size:15px;border-radius:8px;cursor:pointer;font-weight:700;">
+      📄 Зберегти як PDF / Друк
+    </button>
+    <p style="margin-top:10px;font-size:12px;color:#888;">У вікні друку оберіть «Зберегти як PDF»</p>
+  </div>
+  <script>
+    setTimeout(function(){ window.print(); }, 400);
+  <\/script>
+</body>
+</html>`;
+
+      const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const w = window.open(url, '_blank');
+
+      if (!w) {
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'rozrahunok.html';
+        a.click();
+        alert('Спливаюче вікно заблоковано. Файл завантажено. Відкрийте його та натисніть Друк → Зберегти як PDF.');
+      }
+
+      setTimeout(() => URL.revokeObjectURL(url), 60000);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('input, select').forEach(el => {
+        el.addEventListener('input', calculate);
+        el.addEventListener('change', calculate);
+      });
+      calculate();
+    });
+  </script>
+</body>
+</html>
