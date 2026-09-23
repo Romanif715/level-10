@@ -179,55 +179,106 @@
       </select>
     </div>
 
-    <!-- ============================================================
-         БЛОК 2: УКЛАДКА ПЛИТКИ (м²)
+       <!-- ============================================================
+         БЛОК 2a: УКЛАДКА ПЛИТКИ — ПІДЛОГА (м²)
          ============================================================ -->
     <div class="card-dark p-5 sm:p-6 mb-5">
-      <div class="section-title"><i class="fa-solid fa-th-large"></i> Укладка плитки, м²</div>
+      <div class="section-title">
+        <i class="fa-solid fa-square"></i> Укладка плитки — ПІДЛОГА, м²
+      </div>
       <div class="grid sm:grid-cols-2 gap-4 mb-4">
         <div>
-          <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">Тип поверхні</label>
-          <select id="surface" class="input-dark">
-            <option value="floor">Підлога</option>
-            <option value="wall">Стіна</option>
+          <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">
+            Категорія і розмір плитки <span class="text-aqua">(без фуги)</span>
+          </label>
+          <select id="tileTypeFloor" class="input-dark">
+            <optgroup label="Керамічна плитка">
+              <option value="cer-750">20×30 / 30×30 / 30×60 — 750 грн/м²</option>
+              <option value="cer-800">10×20 / 20×20 / 25×25 — 800 грн/м²</option>
+              <option value="cer-1500">10×10 / 5×20 — 1 500 грн/м²</option>
+            </optgroup>
+            <optgroup label="Керамограніт">
+              <option value="porc-750">60×60 (стандарт) — 750 грн/м²</option>
+              <option value="porc-900">120×60 (стандарт 1,5–2 мм) — 900 грн/м²</option>
+              <option value="porc-1200">120×60 (Premium 1 мм) — 1 200 грн/м²</option>
+              <option value="porc-parquet">Паркетна дошка — 1 200 грн/м²</option>
+              <option value="porc-1700">120×120 — 1 700 грн/м²</option>
+              <option value="porc-mosaic">Мозаїка — 1 200 грн/м²</option>
+            </optgroup>
           </select>
         </div>
         <div>
-          <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">Площа, м²</label>
-          <input type="number" id="areaM2" min="0" step="0.1" placeholder="12.5" class="input-dark">
+          <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">
+            Площа підлоги, м²
+          </label>
+          <input type="number" id="areaFloor" min="0" step="0.1" placeholder="12.5" class="input-dark">
         </div>
-      </div>
-      <div class="mb-4">
-        <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">
-          Категорія і розмір плитки <span class="text-aqua">(без фуги)</span>
-        </label>
-        <select id="tileTypeM2" class="input-dark">
-          <optgroup label="Керамічна плитка">
-            <option value="cer-750">20×30 / 30×30 / 30×60 — 750 грн/м²</option>
-            <option value="cer-800">10×20 / 20×20 / 25×25 — 800 грн/м²</option>
-            <option value="cer-1500">10×10 / 5×20 — 1 500 грн/м²</option>
-          </optgroup>
-          <optgroup label="Керамограніт">
-            <option value="porc-750">60×60 (стандарт) — 750 грн/м²</option>
-            <option value="porc-900">120×60 (стандарт 1,5–2 мм) — 900 грн/м²</option>
-            <option value="porc-1200">120×60 (Premium 1 мм) — 1 200 грн/м²</option>
-            <option value="porc-parquet">Паркетна дошка — 1 200 грн/м²</option>
-            <option value="porc-1700">120×120 — 1 700 грн/м²</option>
-            <option value="porc-mosaic">Мозаїка — 1 200 грн/м²</option>
-          </optgroup>
-        </select>
       </div>
       <div class="grid sm:grid-cols-2 gap-4">
         <div>
           <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">Спосіб укладки</label>
-          <select id="layout" class="input-dark">
+          <select id="layoutFloor" class="input-dark">
             <option value="1">Пряма (стандарт)</option>
             <option value="1.5">По діагоналі / ялинка (+50%)</option>
           </select>
         </div>
         <div>
           <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">Безшовна</label>
-          <select id="seamless" class="input-dark">
+          <select id="seamlessFloor" class="input-dark">
+            <option value="1">Ні</option>
+            <option value="1.3">Так (+30%)</option>
+          </select>
+        </div>
+      </div>
+      <p class="text-base text-[#7dd3fc] mt-3 italic">* Керамограніт ≤ 10 м² — ціна ×2 автоматично</p>
+    </div>
+
+    <!-- ============================================================
+         БЛОК 2b: УКЛАДКА ПЛИТКИ — СТІНИ (м²)
+         ============================================================ -->
+    <div class="card-dark p-5 sm:p-6 mb-5">
+      <div class="section-title">
+        <i class="fa-solid fa-border-all"></i> Укладка плитки — СТІНИ, м²
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 mb-4">
+        <div>
+          <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">
+            Категорія і розмір плитки <span class="text-aqua">(без фуги)</span>
+          </label>
+          <select id="tileTypeWall" class="input-dark">
+            <optgroup label="Керамічна плитка">
+              <option value="cer-750">20×30 / 30×30 / 30×60 — 750 грн/м²</option>
+              <option value="cer-800">10×20 / 20×20 / 25×25 — 800 грн/м²</option>
+              <option value="cer-1500">10×10 / 5×20 — 1 500 грн/м²</option>
+            </optgroup>
+            <optgroup label="Керамограніт">
+              <option value="porc-750">60×60 (стандарт) — 750 грн/м²</option>
+              <option value="porc-900">120×60 (стандарт 1,5–2 мм) — 900 грн/м²</option>
+              <option value="porc-1200">120×60 (Premium 1 мм) — 1 200 грн/м²</option>
+              <option value="porc-parquet">Паркетна дошка — 1 200 грн/м²</option>
+              <option value="porc-1700">120×120 — 1 700 грн/м²</option>
+              <option value="porc-mosaic">Мозаїка — 1 200 грн/м²</option>
+            </optgroup>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">
+            Площа стін, м²
+          </label>
+          <input type="number" id="areaWall" min="0" step="0.1" placeholder="18.0" class="input-dark">
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">Спосіб укладки</label>
+          <select id="layoutWall" class="input-dark">
+            <option value="1">Пряма (стандарт)</option>
+            <option value="1.5">По діагоналі / ялинка (+50%)</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">Безшовна</label>
+          <select id="seamlessWall" class="input-dark">
             <option value="1">Ні</option>
             <option value="1.3">Так (+30%)</option>
           </select>
@@ -309,7 +360,7 @@
         </div>
         <div>
           <label class="text-xs text-gray-500 uppercase tracking-wider font-semibold block mb-1.5">
-            Площа фугування, м² <span class="text-aqua">(0 = як укладка)</span>
+            Площа фугування, м² <span class="text-aqua">(підлога + стіни)</span>
           </label>
           <input type="number" id="groutArea" min="0" step="0.1" value="0" placeholder="0" class="input-dark">
         </div>
@@ -569,7 +620,7 @@
   <span>Постійним клієнтам!</span>
 </div>
 
-      <!-- Перемикач режиму -->
+      <!-- Перемикач режиму знижка-->
       <div class="flex gap-2 mb-4">
   <button type="button" id="btnDiscount" onclick="setMode('discount')"
           class="flex-1 py-3 rounded-xl font-bold text-sm transition bg-red-500/20 text-red-400 border-2 border-red-500/40 leading-tight">
@@ -637,7 +688,7 @@
 
 <script>
     /* ============================================================
-       КУРС ДОЛАРА
+       Початок скрипта: КУРС ДОЛАРА 
        ------------------------------------------------------------
        Якщо курс зміниться — замініть число 45 на потрібне.
        Всі позиції в $ автоматично перерахуються.
@@ -825,31 +876,55 @@
         });
       }
 
-      /* ---------- 2. УКЛАДКА ПЛИТКИ (м²) ---------- */
-      const areaM2 = val('areaM2');
-      const tileM2 = PRICES.tiles[document.getElementById('tileTypeM2').value];
-      const layoutMult = val('layout') || 1;
-      const seamlessMult = val('seamless') || 1;
+           /* ---------- 2a. УКЛАДКА ПЛИТКИ — ПІДЛОГА (м²) ---------- */
+      const areaFloor = val('areaFloor');
+      const tileFloor = PRICES.tiles[document.getElementById('tileTypeFloor').value];
+      const layoutFloorMult = val('layoutFloor') || 1;
+      const seamlessFloorMult = val('seamlessFloor') || 1;
 
-      if (areaM2 > 0 && tileM2) {
-        let p = tileM2.price;
+      if (areaFloor > 0 && tileFloor) {
+        let p = tileFloor.price;
         let note = '';
-
-        // Якщо площа ≤10 м² і плитка позначена smallAreaDouble — ціна ×2
-        if (tileM2.smallAreaDouble && areaM2 <= 10) {
+        if (tileFloor.smallAreaDouble && areaFloor <= 10) {
           p *= 2;
           note = ' (×2 ≤10м²)';
         }
-
-        const mult = layoutMult * seamlessMult;
-        const sum = areaM2 * p * mult;
+        const mult = layoutFloorMult * seamlessFloorMult;
+        const sum = areaFloor * p * mult;
         total += sum;
 
-        let desc = tileM2.name + note;
-        if (layoutMult > 1) desc += ' +діаг.';
-        if (seamlessMult > 1) desc += ' +безш.';
+        let desc = 'ПІДЛОГА: ' + tileFloor.name + note;
+        if (layoutFloorMult > 1) desc += ' +діаг.';
+        if (seamlessFloorMult > 1) desc += ' +безш.';
 
-        let detail = areaM2 + ' м² × ' + p + ' грн';
+        let detail = areaFloor + ' м² × ' + p + ' грн';
+        if (mult > 1) detail += ' × ' + mult;
+
+        lines.push({ name: desc, detail: detail, sum: sum });
+      }
+
+      /* ---------- 2b. УКЛАДКА ПЛИТКИ — СТІНИ (м²) ---------- */
+      const areaWall = val('areaWall');
+      const tileWall = PRICES.tiles[document.getElementById('tileTypeWall').value];
+      const layoutWallMult = val('layoutWall') || 1;
+      const seamlessWallMult = val('seamlessWall') || 1;
+
+      if (areaWall > 0 && tileWall) {
+        let p = tileWall.price;
+        let note = '';
+        if (tileWall.smallAreaDouble && areaWall <= 10) {
+          p *= 2;
+          note = ' (×2 ≤10м²)';
+        }
+        const mult = layoutWallMult * seamlessWallMult;
+        const sum = areaWall * p * mult;
+        total += sum;
+
+        let desc = 'СТІНИ: ' + tileWall.name + note;
+        if (layoutWallMult > 1) desc += ' +діаг.';
+        if (seamlessWallMult > 1) desc += ' +безш.';
+
+        let detail = areaWall + ' м² × ' + p + ' грн';
         if (mult > 1) detail += ' × ' + mult;
 
         lines.push({ name: desc, detail: detail, sum: sum });
@@ -885,9 +960,11 @@
          Якщо groutArea = 0 — беремо площу з areaM2 (як було раніше).
          Якщо groutArea > 0 — рахуємо фугу окремо за цією площею.
       -------------------------------------------- */
-      const gp = val('grout');
+         const gp = val('grout');
       const groutAreaInput = val('groutArea');
-      const groutArea = groutAreaInput > 0 ? groutAreaInput : areaM2;
+      // Якщо groutArea = 0 — беремо суму площ підлоги + стін
+      const totalArea = areaFloor + areaWall;
+      const groutArea = groutAreaInput > 0 ? groutAreaInput : totalArea;
 
       if (gp > 0 && groutArea > 0) {
         const s = groutArea * gp;
