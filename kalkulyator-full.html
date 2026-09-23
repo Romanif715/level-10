@@ -548,20 +548,24 @@
          - "НАЦІНКА" (зелена) — збільшує суму
          Потім вводимо відсоток (тільки додатнє число)
          ============================================================ -->
-    <div class="card-dark p-5 sm:p-6 mb-5">
-      <div class="section-title"><i class="fa-solid fa-percent"></i> Знижка / Націнка</div>
+<div class="section-title">
+  <i class="fa-solid fa-percent"></i> 
+  <span>Постійним клієнтам!</span>
+</div>
 
       <!-- Перемикач режиму -->
       <div class="flex gap-2 mb-4">
-        <button type="button" id="btnDiscount" onclick="setMode('discount')"
-                class="flex-1 py-3 rounded-xl font-bold text-sm transition bg-red-500/20 text-red-400 border-2 border-red-500/40">
-          <i class="fa-solid fa-arrow-down mr-1"></i> ЗНИЖКА (−)
-        </button>
-        <button type="button" id="btnMarkup" onclick="setMode('markup')"
-                class="flex-1 py-3 rounded-xl font-bold text-sm transition bg-[#1e2835] text-gray-400 border-2 border-transparent">
-          <i class="fa-solid fa-arrow-up mr-1"></i> НАЦІНКА (+)
-        </button>
-      </div>
+  <button type="button" id="btnDiscount" onclick="setMode('discount')"
+          class="flex-1 py-3 rounded-xl font-bold text-sm transition bg-red-500/20 text-red-400 border-2 border-red-500/40 leading-tight">
+    <i class="fa-solid fa-arrow-down mr-1"></i> ЗНИЖКА
+    <span class="block text-s font-normal opacity-80 mt-0.5">Бонус / постійним клієнтам </span>
+  </button>
+  <button type="button" id="btnMarkup" onclick="setMode('markup')"
+          class="flex-1 py-3 rounded-xl font-bold text-sm transition bg-[#1e2835] text-gray-400 border-2 border-transparent leading-tight">
+    <i class="fa-solid fa-arrow-up mr-1"></i> НАЦІНКА
+    <span class="block text-s font-normal opacity-80 mt-0.5">Терміново / складні умови</span>
+  </button>
+</div>
 
       <div class="grid sm:grid-cols-2 gap-4">
         <div>
@@ -586,19 +590,19 @@
         <button type="button" onclick="setPercent(0)" class="px-4 py-2 bg-[#1e2835] text-gray-400 rounded-lg text-sm hover:bg-[#2a3442] transition">Скинути</button>
       </div>
     </div>
-
-    <!-- ============================================================
+    
+        <!-- ============================================================
          РЕЗУЛЬТАТ (загальна сума + breakdown + кнопки)
          ============================================================ -->
-    <div class="card-dark p-6 sm:p-8 border-aqua/30" style="border-color: #7dd3fc40;">
-      <div class="text-center mb-4">
+    <div class="card-dark p-6 sm:p-8 max-w-4xl mx-auto border-aqua/30" style="border-color: #7dd3fc40;">
+      <div class="text-center mb-5">
         <p class="text-sm text-gray-400 uppercase tracking-wider font-semibold mb-1">Орієнтовна вартість</p>
         <div id="totalDisplay" class="text-3xl sm:text-4xl font-black aqua-gradient">0 грн</div>
       </div>
       <div id="breakdown" class="bg-[#0a0e14] rounded-xl p-4 max-h-64 overflow-y-auto text-sm">
         <div class="text-gray-500 text-center py-4">Заповніть поля — сума з'явиться тут</div>
       </div>
-      <div class="flex flex-col sm:flex-row gap-3 mt-5">
+      <div class="flex flex-col sm:flex-row gap-3 mt-6">
         <button type="button" id="btnPdf" onclick="savePdf()"
                 class="flex-1 aqua-bg font-bold py-3.5 rounded-xl text-base flex items-center justify-center gap-2 hover:opacity-90 transition disabled:opacity-40 disabled:cursor-not-allowed"
                 disabled>
@@ -609,7 +613,7 @@
           <i class="fa-solid fa-home"></i> На головну
         </a>
       </div>
-      <p class="text-xs text-gray-500 text-center mt-4">Ціни без вартості матеріалів. Піддони в $.</p>
+      <p class="text-xs text-base-500 text-center mt-4">Ціни без вартості матеріалів. Піддони в $.</p>
     </div>
 
     <p class="text-center text-gray-600 text-xs mt-8">Roman Mall · Плиточник 10 Level · Івано-Франківськ</p>
@@ -657,7 +661,7 @@
         btnM.className = 'flex-1 py-3 rounded-xl font-bold text-sm transition bg-emerald-500/20 text-emerald-400 border-2 border-emerald-500/40';
         label.textContent = '(націнка)';
         label.className = 'text-emerald-400';
-        hint.innerHTML = 'Введіть <b>5</b> → націнка 5%';
+        hint.innerHTML = 'Введіть <b>5</b> → терміново / складні умови +20%';
       }
 
       // Скидаємо значення поля при зміні режиму
@@ -965,17 +969,17 @@
             isDiscount: true,
             isDiscountReal: true
           });
-        } else {
-          // === НАЦІНКА — додаємо ===
-          total += amount;
-          lines.push({
-            name: 'Націнка ' + percentValue + '%',
-            detail: '+' + fmt(amount),
-            sum: amount,
-            isDiscount: true,
-            isDiscountReal: false
-          });
-        }
+      } else {
+  // === НАЦІНКА — додаємо ===
+  total += amount;
+  lines.push({
+    name: 'Терміново / складні умови ' + percentValue + '%',
+    detail: '+' + fmt(amount),
+    sum: amount,
+    isDiscount: true,
+    isDiscountReal: false
+  });
+}
       }
 
       /* ---------- ВИВОДИМО ЗАГАЛЬНУ СУМУ ---------- */
