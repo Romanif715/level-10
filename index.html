@@ -11,7 +11,7 @@
 </head>
 <body>
 
-   <!-- ====== NAVBAR ====== -->
+    <!-- ====== NAVBAR ====== -->
     <header class="fixed top-0 left-0 w-full bg-[#0a0e14]/95 backdrop-blur-xl z-50 border-b border-[#1e2835]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
 
@@ -728,348 +728,55 @@
     </div>
 </section>
 
-    <!-- ====== REVIEWS (СЛАЙДЕР) ====== -->
-    <section id="reviews" class="py-24 bg-[#0e141c]">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-black mt-5">
-                    Що кажуть <span class="aqua-gradient">клієнти</span>
-                </h2>
-            </div>
+<!-- ====== REVIEWS (СЛАЙДЕР) ====== -->
+<section id="reviews" class="py-24 bg-[#0e141c] relative overflow-hidden">
+  <!-- Декоративне світіння -->
+  <div class="absolute top-0 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-[#7dd3fc]/5 rounded-full blur-3xl -z-0 pointer-events-none"></div>
+  <div class="absolute bottom-0 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-[#7dd3fc]/5 rounded-full blur-3xl -z-0 pointer-events-none"></div>
 
-            <div class="relative">
-                <button id="reviewsPrev"
-                        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-6 z-10 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#121821] border-2 border-[#1e2835] text-[#7dd3fc] hover:bg-[#7dd3fc] hover:text-[#0a0e14] hover:border-[#7dd3fc] transition flex items-center justify-center text-xl shadow-2xl"
-                        aria-label="Попередні відгуки">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+    <div class="text-center mb-12">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-[#7dd3fc]/10 border border-[#7dd3fc]/20 text-[#7dd3fc] text-xs font-bold tracking-widest uppercase mb-4">
+        Відгуки клієнтів
+      </span>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mt-5">
+        Що кажуть <span class="aqua-gradient">клієнти</span>
+      </h2>
+      <p class="text-gray-400 mt-4 max-w-xl mx-auto text-sm">
+        Реальні відгуки людей, для яких виконував плиточні роботи в Івано-Франківську
+      </p>
+    </div>
 
-                <div class="overflow-hidden px-2 sm:px-8">
-                    <div id="reviewsTrack" class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(0);">
+    <div class="relative">
+      <!-- Prev -->
+      <button id="reviewsPrev"
+              class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 sm:-translate-x-4 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#121821]/95 backdrop-blur border-2 border-[#1e2835] text-[#7dd3fc] hover:bg-[#7dd3fc] hover:text-[#0a0e14] hover:border-[#7dd3fc] hover:scale-105 transition-all duration-300 flex items-center justify-center text-lg shadow-xl disabled:opacity-30 disabled:pointer-events-none"
+              aria-label="Попередні відгуки">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
 
-                        <!-- СТОРІНКА 1 -->
-                        <div class="reviews-page w-full flex-shrink-0 grid md:grid-cols-3 gap-6">
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">О</div>
-                                    <div>
-                                        <p class="font-bold text-white">Оксана</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Звернулася до Романа для укладання плитки у ванній кімнаті. Все зробив швидко, якісно та чисто. Шви рівні, кут 45 ідеальний. Дякую за професійний підхід! Рекомендую."
-                                </p>
-                            </div>
-
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">А</div>
-                                    <div>
-                                        <p class="font-bold text-white">Андрій</p>
-                                        <p class="text-gray-400 text-sm">Котедж, с. Крихівці</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Дуже задоволений роботою! Все виміряв, порахував, порадив найкращий варіант розкладки. Результат перевершив очікування. 10 з 10!"
-                                </p>
-                            </div>
-
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">М</div>
-                                    <div>
-                                        <p class="font-bold text-white">Марія</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Робили душовий піддон. Усе виконано ідеально, вода зливається без затримок. Роман дуже акуратний, після себе все прибрав. Велике спасибі!"
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- СТОРІНКА 2 -->
-                        <div class="reviews-page w-full flex-shrink-0 grid md:grid-cols-3 gap-6">
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">О</div>
-                                    <div>
-                                        <p class="font-bold text-white">Олег</p>
-                                        <p class="text-gray-400 text-sm">Офіс, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Виконував роботи в комерційному приміщенні 300 м2. Чітко дотримався термінів, ціна була заздалегідь обговорена. Раджу всім!"
-                                </p>
-                            </div>
-
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">Н</div>
-                                    <div>
-                                        <p class="font-bold text-white">Наталія</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Роман — майстер з золотими руками! Зробив фартух на кухні дуже стильно. Також допоміг з вибором матеріалів. Щиро дякую!"
-                                </p>
-                            </div>
-
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">В</div>
-                                    <div>
-                                        <p class="font-bold text-white">Володимир</p>
-                                        <p class="text-gray-400 text-sm">Котедж, с. Угорники</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Великий об'єм роботи по укладанню керамограніту 120×60 — майже 700м². Впорався швидко і якісно. Задоволений та рекомендую!"
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- СТОРІНКА 3 -->
-                        <div class="reviews-page w-full flex-shrink-0 grid md:grid-cols-3 gap-6">
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">С</div>
-                                    <div>
-                                        <p class="font-bold text-white">Сергій</p>
-                                        <p class="text-gray-400 text-sm">Котедж, с. Підпечари</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Робив великоформатну плитку 120×60 по всьому будинку. Рівень і геометрія просто супер. Все акуратно в термін."
-                                </p>
-                            </div>
-
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">А</div>
-                                    <div>
-                                        <p class="font-bold text-white">Анна</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ (Каскад)</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Роман зробив санвузол під ключ. Все чисто, акуратно і з душею. Робить так, як для себе. Дуже рекомендую!"
-                                </p>
-                            </div>
-
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">Р</div>
-                                    <div>
-                                        <p class="font-bold text-white">Роман</p>
-                                        <p class="text-gray-400 text-sm">Будинок, Крихівці</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Робив плитку на терасі та сходах. Результат перевершив очікування. Професіонал своєї справи!"
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- СТОРІНКА 4 -->
-                        <div class="reviews-page w-full flex-shrink-0 grid md:grid-cols-3 gap-6">
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">М</div>
-                                    <div>
-                                        <p class="font-bold text-white">Міша</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Дуже акуратний майстер. Зробив підлогу і стіни в санвузлі. Після себе все прибирав, квартира залишалась чистою."
-                                </p>
-                            </div>
-
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">Д</div>
-                                    <div>
-                                        <p class="font-bold text-white">Дмитро</p>
-                                        <p class="text-gray-400 text-sm">Таунхаус, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Робив плитку в трьох санвузлах. Якість на найвищому рівні, все по рівню, шви ідеальні. Працює професійним інструментом."
-                                </p>
-                            </div>
-
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">Т</div>
-                                    <div>
-                                        <p class="font-bold text-white">Тетяна</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Зробив плитку на балконі та в коридорі. Все акуратно, без сколів і перепадів. Приємно спілкуватися і працювати з такою людиною."
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- СТОРІНКА 5 -->
-                        <div class="reviews-page w-full flex-shrink-0 grid md:grid-cols-3 gap-6">
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">Т</div>
-                                    <div>
-                                        <p class="font-bold text-white">Лілія</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Всім дуже сильно задоволена. Роман робив підлогу, фартух в кухні та стіни в ванній. Все виконано акуратно, швидко і рівно. Рекомендую і щиро дякую🙏"
-                                </p>
-                            </div>
-
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">О</div>
-                                    <div>
-                                        <p class="font-bold text-white">Олександра Піцик</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Щиро рекомендую!! Романа — справжній майстер, фахівець своєї справи. Все зробив акуратно, швидко, охайно та дуже якісно! Дякую за сумлінне ставлення та чудовий результат!"
-                                </p>
-                            </div>
-
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">В</div>
-                                    <div>
-                                        <p class="font-bold text-white">Володимир Коржев</p>
-                                        <p class="text-gray-400 text-sm">Таунхаус, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Рекомендую даного майстра для плиточно-оздоблювальних робіт. Роботу виконав акуратно, швидко, якісно. Працював у мене, моїх друзів. Всі його роботою задоволені."
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- СТОРІНКА 6 -->
-                        <div class="reviews-page w-full flex-shrink-0 grid md:grid-cols-3 gap-6">
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">В</div>
-                                    <div>
-                                        <p class="font-bold text-white">Василь Камаш</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Дуже задоволені роботою. Сподобався підхід майстра. Працює акуратно і професійно. Добре розуміє свою роботу. Всі питання обговорює і враховує побажання."
-                                </p>
-                            </div>
-
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">О</div>
-                                    <div>
-                                        <p class="font-bold text-white">Олександр Мельник</p>
-                                        <p class="text-gray-400 text-sm">Квартира, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Дуже задоволений роботою майстра. Плитку поклав акуратно. Терміни дотримався, зробив навіть швидше, прибрав після себе. Рекомендую всім!"
-                                </p>
-                            </div>
-
-                            <div class="review-card p-6 flex flex-col">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="review-avatar">Н</div>
-                                    <div>
-                                        <p class="font-bold text-white">Наталія Ковальчук</p>
-                                        <p class="text-gray-400 text-sm">Будинок, м. Івано-Франківськ</p>
-                                    </div>
-                                </div>
-                                <div class="review-stars text-lg mb-3">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-300 text-sm leading-relaxed flex-1">
-                                    "Майстер працює чисто, швидко, та без зайвих розмов. Однозначно рекомендую!"
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <button id="reviewsNext"
-                        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-6 z-10 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#121821] border-2 border-[#1e2835] text-[#7dd3fc] hover:bg-[#7dd3fc] hover:text-[#0a0e14] hover:border-[#7dd3fc] transition flex items-center justify-center text-xl shadow-2xl"
-                        aria-label="Наступні відгуки">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-            </div>
-
-            <div id="reviewsDots" class="flex justify-center gap-2 mt-8"></div>
-
-            <p id="reviewsCounter" class="text-center text-gray-500 text-sm mt-4">
-                Сторінка 1 з 6
-            </p>
+      <div class="overflow-hidden px-10 sm:px-14 py-4">
+        <div id="reviewsTrack" class="flex transition-transform duration-500 ease-out will-change-transform">
+          <!-- Картки рендеряться через JS -->
         </div>
-    </section>
+      </div>
+
+      <!-- Next -->
+      <button id="reviewsNext"
+              class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 sm:translate-x-4 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#121821]/95 backdrop-blur border-2 border-[#1e2835] text-[#7dd3fc] hover:bg-[#7dd3fc] hover:text-[#0a0e14] hover:border-[#7dd3fc] hover:scale-105 transition-all duration-300 flex items-center justify-center text-lg shadow-xl disabled:opacity-30 disabled:pointer-events-none"
+              aria-label="Наступні відгуки">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Крапки -->
+    <div id="reviewsDots" class="flex justify-center gap-2 mt-8"></div>
+
+    <p id="reviewsCounter" class="text-center text-gray-500 text-sm mt-4">
+      Сторінка 1 з 1
+    </p>
+  </div>
+</section>
 
    <!-- ====== PRICES ====== -->
     <section id="prices" class="py-24 bg-[#0e141c]">
@@ -1378,518 +1085,557 @@
 
     <!-- ====== SCRIPTS ====== -->
     <script>
-        // Mobile menu
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const icon = menuBtn ? menuBtn.querySelector('i') : null;
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const icon = menuBtn ? menuBtn.querySelector('i') : null;
 
-        if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                if (icon) {
-                    icon.classList.toggle('fa-bars');
-                    icon.classList.toggle('fa-xmark');
-                }
-            });
-
-            document.querySelectorAll('.mobile-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    if (icon) {
-                        icon.classList.add('fa-bars');
-                        icon.classList.remove('fa-xmark');
-                    }
-                });
-            });
-        }
-
-        // Lightbox
-        function showImage(el) {
-            const img = el.querySelector('img');
-            if (!img) return;
-            document.getElementById('lightboxImage').src = img.src;
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.remove('hidden');
-            lightbox.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.add('hidden');
-            lightbox.classList.remove('flex');
-            document.body.style.overflow = '';
-        }
-
-        // Закриття по ESC
-        document.addEventListener('keydown', (e) => {
-            if (e.key === "Escape") closeLightbox();
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-xmark');
+            }
         });
-                /* ============================================================
-           ПЕРЕМИКАННЯ МІЖ ФОРМАМИ: ЗАЯВКА ↔ ВІДГУК
-           ============================================================ */
-        function switchTab(tab) {
-            const orderForm = document.getElementById('contactForm');
-            const reviewForm = document.getElementById('reviewForm');
-            const tabOrder = document.getElementById('tabOrder');
-            const tabReview = document.getElementById('tabReview');
-            const success = document.getElementById('formSuccess');
 
-            // Скидаємо success
-            success.classList.add('hidden');
-
-            if (tab === 'order') {
-                orderForm.classList.remove('hidden');
-                reviewForm.classList.add('hidden');
-                tabOrder.className = 'tab-btn flex-1 sm:flex-none px-6 py-3 rounded-xl font-bold text-sm transition aqua-bg';
-                tabReview.className = 'tab-btn flex-1 sm:flex-none px-6 py-3 rounded-xl font-bold text-sm transition bg-[#1e2835] text-gray-400 hover:text-white';
-            } else {
-                orderForm.classList.add('hidden');
-                reviewForm.classList.remove('hidden');
-                tabOrder.className = 'tab-btn flex-1 sm:flex-none px-6 py-3 rounded-xl font-bold text-sm transition bg-[#1e2835] text-gray-400 hover:text-white';
-                tabReview.className = 'tab-btn flex-1 sm:flex-none px-6 py-3 rounded-xl font-bold text-sm transition bg-emerald-400 text-[#0a0e14]';
-            }
-        }
-
-        /* ============================================================
-           ЗІРОЧКИ ДЛЯ ВІДГУКУ
-           ============================================================ */
-        (function initStars() {
-            const starBtns = document.querySelectorAll('.star-btn');
-            const ratingInput = document.getElementById('reviewRating');
-
-            if (!starBtns.length) return;
-
-            starBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const rating = parseInt(btn.dataset.rating);
-                    ratingInput.value = rating;
-
-                   starBtns.forEach(b => {
-    const r = parseInt(b.dataset.rating);
-    if (r <= rating) {
-        b.classList.add('text-emerald-400');
-        b.classList.remove('text-gray-600');
-    } else {
-        b.classList.remove('text-emerald-400');
-        b.classList.add('text-gray-600');
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-xmark');
+                }
+            });
+        });
     }
-});
+
+    // Lightbox
+    function showImage(el) {
+        const img = el.querySelector('img');
+        if (!img) return;
+        document.getElementById('lightboxImage').src = img.src;
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") closeLightbox();
+    });
+
+    /* ============================================================
+       ПЕРЕМИКАННЯ МІЖ ФОРМАМИ
+       ============================================================ */
+    function switchTab(tab) {
+        const orderForm = document.getElementById('contactForm');
+        const reviewForm = document.getElementById('reviewForm');
+        const tabOrder = document.getElementById('tabOrder');
+        const tabReview = document.getElementById('tabReview');
+        const success = document.getElementById('formSuccess');
+
+        success.classList.add('hidden');
+
+        if (tab === 'order') {
+            orderForm.classList.remove('hidden');
+            reviewForm.classList.add('hidden');
+            tabOrder.className = 'tab-btn flex-1 sm:flex-none px-6 py-3 rounded-xl font-bold text-sm transition aqua-bg';
+            tabReview.className = 'tab-btn flex-1 sm:flex-none px-6 py-3 rounded-xl font-bold text-sm transition bg-[#1e2835] text-gray-400 hover:text-white';
+        } else {
+            orderForm.classList.add('hidden');
+            reviewForm.classList.remove('hidden');
+            tabOrder.className = 'tab-btn flex-1 sm:flex-none px-6 py-3 rounded-xl font-bold text-sm transition bg-[#1e2835] text-gray-400 hover:text-white';
+            tabReview.className = 'tab-btn flex-1 sm:flex-none px-6 py-3 rounded-xl font-bold text-sm transition bg-emerald-400 text-[#0a0e14]';
+        }
+    }
+
+    /* ============================================================
+       ЗІРОЧКИ ДЛЯ ВІДГУКУ
+       ============================================================ */
+    (function initStars() {
+        const starBtns = document.querySelectorAll('.star-btn');
+        const ratingInput = document.getElementById('reviewRating');
+        if (!starBtns.length) return;
+
+        starBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const rating = parseInt(btn.dataset.rating);
+                ratingInput.value = rating;
+
+                starBtns.forEach(b => {
+                    const r = parseInt(b.dataset.rating);
+                    if (r <= rating) {
+                        b.classList.add('text-emerald-400');
+                        b.classList.remove('text-gray-600');
+                    } else {
+                        b.classList.remove('text-emerald-400');
+                        b.classList.add('text-gray-600');
+                    }
                 });
             });
-        })(); 
-        /* ============================================================
-           ФОРМА ЗВОРОТНОГО ЗВ'ЯЗКУ → TELEGRAM BOT
-           ------------------------------------------------------------
-           ⚙️ НАЛАШТУВАННЯ (ЗАМІНІТЬ НА СВОЇ):
-           1. TELEGRAM_BOT_TOKEN — токен від @BotFather
-           2. TELEGRAM_CHAT_ID   — ваш chat_id (дізнатись через getUpdates)
+        });
+    })();
 
-           Як отримати:
-           - BotFather → /newbot → отримати токен
-           - Написати боту будь-яке повідомлення
-           - Відкрити https://api.telegram.org/bot<TOKEN>/getUpdates
-           - Знайти "chat":{"id":ЧИСЛО} — це і є CHAT_ID
-           ============================================================ */
-        const TELEGRAM_BOT_TOKEN = '8236566039:AAG1WdXon8FHuZGFc1sO2aV24Qfmhy4Gxk4'; // ← ЗАМІНІТЬ
-        const TELEGRAM_CHAT_ID   = '5283999187';                                   // ← ЗАМІНІТЬ
+    /* ============================================================
+       TELEGRAM BOT
+       ============================================================ */
+    const TELEGRAM_BOT_TOKEN = '8236566039:AAG1WdXon8FHuZGFc1sO2aV24Qfmhy4Gxk4';
+    const TELEGRAM_CHAT_ID   = '5283999187';
 
-       // Допоміжна функція для відправки в Telegram
-        async function sendToTelegram(text) {
-            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    chat_id: TELEGRAM_CHAT_ID,
-                    text: text,
-                    parse_mode: 'HTML'
-                })
+    async function sendToTelegram(text) {
+        const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                chat_id: TELEGRAM_CHAT_ID,
+                text: text,
+                parse_mode: 'HTML'
+            })
+        });
+        return await response.json();
+    }
+
+    function escapeHtml(text) {
+        return text
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+
+    /* ============================================================
+       ФОРМА ЗАЯВКИ
+       ============================================================ */
+    (function initOrderForm() {
+        const form = document.getElementById('contactForm');
+        const success = document.getElementById('formSuccess');
+        const successMessage = document.getElementById('successMessage');
+        const submitBtn = document.getElementById('formSubmit');
+        const honeypot = document.getElementById('honeypot');
+
+        if (!form) return;
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (honeypot && honeypot.value) return;
+
+            const name = document.getElementById('formName').value.trim();
+            const phone = document.getElementById('formPhone').value.trim();
+            const service = document.getElementById('formService').value;
+            const message = document.getElementById('formMessage').value.trim();
+
+            if (name.length < 2) { alert('Введіть ім\'я (мін. 2 символи)'); return; }
+            if (phone.length < 8) { alert('Введіть коректний номер телефону'); return; }
+
+            const originalHTML = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Надсилаю...</span>';
+
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('uk-UA', { day: '2-digit', month: '2-digit', year: 'numeric' })
+                + ' ' + now.toLocaleTimeString('uk-UA', { hour: '2-digit', minute: '2-digit' });
+
+            const telegramText =
+                '🔔 <b>НОВА ЗАЯВКА З САЙТУ</b>\n' +
+                '━━━━━━━━━━━━━━━━━━\n' +
+                '👤 <b>Ім\'я:</b> ' + escapeHtml(name) + '\n' +
+                '📞 <b>Телефон:</b> ' + escapeHtml(phone) + '\n' +
+                (service ? '🛠 <b>Послуга:</b> ' + escapeHtml(service) + '\n' : '') +
+                (message ? '💬 <b>Коментар:</b> ' + escapeHtml(message) + '\n' : '') +
+                '━━━━━━━━━━━━━━━━━━\n' +
+                '🕐 ' + dateStr;
+
+            try {
+                const result = await sendToTelegram(telegramText);
+                if (result.ok) {
+                    form.classList.add('hidden');
+                    document.getElementById('tabOrder').classList.add('hidden');
+                    document.getElementById('tabReview').classList.add('hidden');
+                    successMessage.textContent = 'Ваша заявка отримана. Зв\'яжусь з вами протягом 15 хвилин у робочий час.';
+                    success.classList.remove('hidden');
+                    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    throw new Error(result.description || 'Помилка');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Не вдалось надіслати. Спробуйте ще раз або зателефонуйте: +38 (050) 761 50 32');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalHTML;
+            }
+        });
+
+        const phoneInput = document.getElementById('formPhone');
+        if (phoneInput) {
+            phoneInput.addEventListener('input', (e) => {
+                let v = e.target.value.replace(/[^\d+]/g, '');
+                if (v.startsWith('0')) v = '+38' + v;
+                if (v.startsWith('380') && !v.startsWith('+')) v = '+' + v;
+                e.target.value = v;
             });
-            return await response.json();
+        }
+    })();
+
+    /* ============================================================
+       ФОРМА ВІДГУКУ
+       ============================================================ */
+    (function initReviewForm() {
+        const form = document.getElementById('reviewForm');
+        const success = document.getElementById('formSuccess');
+        const successMessage = document.getElementById('successMessage');
+        const submitBtn = document.getElementById('reviewSubmit');
+        const honeypot = document.getElementById('honeypotReview');
+
+        if (!form) return;
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (honeypot && honeypot.value) return;
+
+            const name = document.getElementById('reviewName').value.trim();
+            const city = document.getElementById('reviewCity').value.trim();
+            const rating = parseInt(document.getElementById('reviewRating').value);
+            const reviewText = document.getElementById('reviewText').value.trim();
+
+            if (name.length < 2) { alert('Введіть ім\'я (мін. 2 символи)'); return; }
+            if (reviewText.length < 10) { alert('Напишіть відгук (мін. 10 символів)'); return; }
+
+            const originalHTML = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Надсилаю...</span>';
+
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('uk-UA', { day: '2-digit', month: '2-digit', year: 'numeric' })
+                + ' ' + now.toLocaleTimeString('uk-UA', { hour: '2-digit', minute: '2-digit' });
+
+            const stars = '⭐'.repeat(rating);
+
+            const telegramText =
+                '⭐ <b>НОВИЙ ВІДГУК З САЙТУ</b>\n' +
+                '━━━━━━━━━━━━━━━━━━\n' +
+                '👤 <b>Ім\'я:</b> ' + escapeHtml(name) + '\n' +
+                (city ? '📍 <b>Об\'єкт:</b> ' + escapeHtml(city) + '\n' : '') +
+                '⭐ <b>Оцінка:</b> ' + stars + ' (' + rating + '/5)\n' +
+                '💬 <b>Відгук:</b>\n' + escapeHtml(reviewText) + '\n' +
+                '━━━━━━━━━━━━━━━━━━\n' +
+                '🕐 ' + dateStr;
+
+            try {
+                const result = await sendToTelegram(telegramText);
+                if (result.ok) {
+                    form.classList.add('hidden');
+                    document.getElementById('tabOrder').classList.add('hidden');
+                    document.getElementById('tabReview').classList.add('hidden');
+                    successMessage.textContent = 'Дякую за відгук! Він з\'явиться на сайті після перевірки.';
+                    success.classList.remove('hidden');
+                    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    throw new Error(result.description || 'Помилка');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Не вдалось надіслати. Спробуйте ще раз.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalHTML;
+            }
+        });
+    })();
+
+    /* ============================================================
+       АКОРДЕОН ПЕРЕВАГ
+       ============================================================ */
+    (function initAccordion() {
+        const items = document.querySelectorAll('.accordion-item');
+
+        items.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            const body = item.querySelector('.accordion-body');
+            const icon = item.querySelector('.accordion-icon');
+
+            if (!header || !body) return;
+
+            header.addEventListener('click', () => {
+                const isOpen = body.style.maxHeight && body.style.maxHeight !== '0px';
+
+                items.forEach(otherItem => {
+                    const otherBody = otherItem.querySelector('.accordion-body');
+                    const otherIcon = otherItem.querySelector('.accordion-icon');
+                    if (otherBody) otherBody.style.maxHeight = '0px';
+                    if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                });
+
+                if (!isOpen) {
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    })();
+
+    /* ============================================================
+       СЛАЙДЕР ФОТО РОБІТ (Об'єкти)
+       ============================================================ */
+    (function initWorksSlider() {
+        const track = document.getElementById('worksTrack');
+        const prevBtn = document.getElementById('worksPrev');
+        const nextBtn = document.getElementById('worksNext');
+        const dotsContainer = document.getElementById('worksDots');
+        const counter = document.getElementById('worksCounter');
+
+        if (!track || !prevBtn || !nextBtn) return;
+
+        const slides = track.querySelectorAll('.works-slide');
+        const totalSlides = slides.length;
+        let currentSlide = 0;
+
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'w-2.5 h-2.5 rounded-full bg-[#1e2835] hover:bg-[#7dd3fc] transition-all';
+            dot.setAttribute('aria-label', 'Слайд ' + (i + 1));
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
         }
 
-        function escapeHtml(text) {
-            return text
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;');
+        const dots = dotsContainer.querySelectorAll('button');
+
+        function updateUI() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            dots.forEach((dot, i) => {
+                if (i === currentSlide) {
+                    dot.className = 'w-8 h-2.5 rounded-full bg-[#7dd3fc] transition-all';
+                } else {
+                    dot.className = 'w-2.5 h-2.5 rounded-full bg-[#1e2835] hover:bg-[#7dd3fc] transition-all';
+                }
+            });
+
+            if (counter) {
+                counter.textContent = `Сторінка ${currentSlide + 1} з ${totalSlides}`;
+            }
+
+            prevBtn.style.opacity = currentSlide === 0 ? '0.3' : '1';
+            prevBtn.style.cursor = currentSlide === 0 ? 'not-allowed' : 'pointer';
+            nextBtn.style.opacity = currentSlide === totalSlides - 1 ? '0.3' : '1';
+            nextBtn.style.cursor = currentSlide === totalSlides - 1 ? 'not-allowed' : 'pointer';
         }
 
-        /* ============================================================
-           ФОРМА ЗАЯВКИ
-           ============================================================ */
-        (function initOrderForm() {
-            const form = document.getElementById('contactForm');
-            const success = document.getElementById('formSuccess');
-            const successMessage = document.getElementById('successMessage');
-            const submitBtn = document.getElementById('formSubmit');
-            const honeypot = document.getElementById('honeypot');
-
-            if (!form) return;
-
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                if (honeypot && honeypot.value) return;
-
-                const name = document.getElementById('formName').value.trim();
-                const phone = document.getElementById('formPhone').value.trim();
-                const service = document.getElementById('formService').value;
-                const message = document.getElementById('formMessage').value.trim();
-
-                if (name.length < 2) { alert('Введіть ім\'я (мін. 2 символи)'); return; }
-                if (phone.length < 8) { alert('Введіть коректний номер телефону'); return; }
-
-                const originalHTML = submitBtn.innerHTML;
-                submitBtn.disabled = true;
-                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Надсилаю...</span>';
-
-                const now = new Date();
-                const dateStr = now.toLocaleDateString('uk-UA', { day: '2-digit', month: '2-digit', year: 'numeric' })
-                    + ' ' + now.toLocaleTimeString('uk-UA', { hour: '2-digit', minute: '2-digit' });
-
-                const telegramText =
-                    '🔔 <b>НОВА ЗАЯВКА З САЙТУ</b>\n' +
-                    '━━━━━━━━━━━━━━━━━━\n' +
-                    '👤 <b>Ім\'я:</b> ' + escapeHtml(name) + '\n' +
-                    '📞 <b>Телефон:</b> ' + escapeHtml(phone) + '\n' +
-                    (service ? '🛠 <b>Послуга:</b> ' + escapeHtml(service) + '\n' : '') +
-                    (message ? '💬 <b>Коментар:</b> ' + escapeHtml(message) + '\n' : '') +
-                    '━━━━━━━━━━━━━━━━━━\n' +
-                    '🕐 ' + dateStr;
-
-                try {
-                    const result = await sendToTelegram(telegramText);
-                    if (result.ok) {
-                        form.classList.add('hidden');
-                        document.getElementById('tabOrder').classList.add('hidden');
-                        document.getElementById('tabReview').classList.add('hidden');
-                        successMessage.textContent = 'Ваша заявка отримана. Зв\'яжусь з вами протягом 15 хвилин у робочий час.';
-                        success.classList.remove('hidden');
-                        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    } else {
-                        throw new Error(result.description || 'Помилка');
-                    }
-                } catch (err) {
-                    console.error(err);
-                    alert('Не вдалось надіслати. Спробуйте ще раз або зателефонуйте: +38 (050) 761 50 32');
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalHTML;
-                }
-            });
-
-            // Форматування телефону
-            const phoneInput = document.getElementById('formPhone');
-            if (phoneInput) {
-                phoneInput.addEventListener('input', (e) => {
-                    let v = e.target.value.replace(/[^\d+]/g, '');
-                    if (v.startsWith('0')) v = '+38' + v;
-                    if (v.startsWith('380') && !v.startsWith('+')) v = '+' + v;
-                    e.target.value = v;
-                });
-            }
-        })();
-
-        /* ============================================================
-           ФОРМА ВІДГУКУ
-           ============================================================ */
-        (function initReviewForm() {
-            const form = document.getElementById('reviewForm');
-            const success = document.getElementById('formSuccess');
-            const successMessage = document.getElementById('successMessage');
-            const submitBtn = document.getElementById('reviewSubmit');
-            const honeypot = document.getElementById('honeypotReview');
-
-            if (!form) return;
-
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                if (honeypot && honeypot.value) return;
-
-                const name = document.getElementById('reviewName').value.trim();
-                const city = document.getElementById('reviewCity').value.trim();
-                const rating = parseInt(document.getElementById('reviewRating').value);
-                const reviewText = document.getElementById('reviewText').value.trim();
-
-                if (name.length < 2) { alert('Введіть ім\'я (мін. 2 символи)'); return; }
-                if (reviewText.length < 10) { alert('Напишіть відгук (мін. 10 символів)'); return; }
-
-                const originalHTML = submitBtn.innerHTML;
-                submitBtn.disabled = true;
-                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Надсилаю...</span>';
-
-                const now = new Date();
-                const dateStr = now.toLocaleDateString('uk-UA', { day: '2-digit', month: '2-digit', year: 'numeric' })
-                    + ' ' + now.toLocaleTimeString('uk-UA', { hour: '2-digit', minute: '2-digit' });
-
-                const stars = '⭐'.repeat(rating);
-
-                const telegramText =
-                    '⭐ <b>НОВИЙ ВІДГУК З САЙТУ</b>\n' +
-                    '━━━━━━━━━━━━━━━━━━\n' +
-                    '👤 <b>Ім\'я:</b> ' + escapeHtml(name) + '\n' +
-                    (city ? '📍 <b>Об\'єкт:</b> ' + escapeHtml(city) + '\n' : '') +
-                    '⭐ <b>Оцінка:</b> ' + stars + ' (' + rating + '/5)\n' +
-                    '💬 <b>Відгук:</b>\n' + escapeHtml(reviewText) + '\n' +
-                    '━━━━━━━━━━━━━━━━━━\n' +
-                    '🕐 ' + dateStr;
-
-                try {
-                    const result = await sendToTelegram(telegramText);
-                    if (result.ok) {
-                        form.classList.add('hidden');
-                        document.getElementById('tabOrder').classList.add('hidden');
-                        document.getElementById('tabReview').classList.add('hidden');
-                        successMessage.textContent = 'Дякую за відгук! Він з\'явиться на сайті після перевірки.';
-                        success.classList.remove('hidden');
-                        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    } else {
-                        throw new Error(result.description || 'Помилка');
-                    }
-                } catch (err) {
-                    console.error(err);
-                    alert('Не вдалось надіслати. Спробуйте ще раз.');
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalHTML;
-                }
-            });
-        })();
-
-        /* ============================================================
-           АКОРДЕОН ПЕРЕВАГ
-           ------------------------------------------------------------
-           Клік на заголовок → розкриває/закриває вміст.
-           Відкритий тільки один блок за раз (як аккордеон).
-           ============================================================ */
-        (function initAccordion() {
-            const items = document.querySelectorAll('.accordion-item');
-
-            items.forEach(item => {
-                const header = item.querySelector('.accordion-header');
-                const body = item.querySelector('.accordion-body');
-                const icon = item.querySelector('.accordion-icon');
-
-                if (!header || !body) return;
-
-                header.addEventListener('click', () => {
-                    const isOpen = body.style.maxHeight && body.style.maxHeight !== '0px';
-
-                    // Закриваємо всі
-                    items.forEach(otherItem => {
-                        const otherBody = otherItem.querySelector('.accordion-body');
-                        const otherIcon = otherItem.querySelector('.accordion-icon');
-                        if (otherBody) otherBody.style.maxHeight = '0px';
-                        if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
-                    });
-
-                    // Якщо був закритий — відкриваємо
-                    if (!isOpen) {
-                        body.style.maxHeight = body.scrollHeight + 'px';
-                        if (icon) icon.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
-
-            // Відкриваємо перший за замовчуванням (опційно)
-            // if (items.length > 0) items[0].querySelector('.accordion-header').click();
-        })();
-
-        /* ============================================================
-           СЛАЙДЕР ВІДГУКІВ
-           ============================================================ */
-        (function initReviewsSlider() {
-            const track = document.getElementById('reviewsTrack');
-            const prevBtn = document.getElementById('reviewsPrev');
-            const nextBtn = document.getElementById('reviewsNext');
-            const dotsContainer = document.getElementById('reviewsDots');
-            const counter = document.getElementById('reviewsCounter');
-
-            if (!track || !prevBtn || !nextBtn) return;
-
-            const pages = track.querySelectorAll('.reviews-page');
-            const totalPages = pages.length;
-            let currentPage = 0;
-
-            for (let i = 0; i < totalPages; i++) {
-                const dot = document.createElement('button');
-                dot.className = 'w-2.5 h-2.5 rounded-full bg-[#1e2835] hover:bg-[#7dd3fc] transition-all';
-                dot.setAttribute('aria-label', 'Сторінка ' + (i + 1));
-                dot.addEventListener('click', () => goToPage(i));
-                dotsContainer.appendChild(dot);
-            }
-
-            const dots = dotsContainer.querySelectorAll('button');
-
-            function updateUI() {
-                track.style.transform = `translateX(-${currentPage * 100}%)`;
-
-                dots.forEach((dot, i) => {
-                    if (i === currentPage) {
-                        dot.className = 'w-8 h-2.5 rounded-full bg-[#7dd3fc] transition-all';
-                    } else {
-                        dot.className = 'w-2.5 h-2.5 rounded-full bg-[#1e2835] hover:bg-[#7dd3fc] transition-all';
-                    }
-                });
-
-                if (counter) {
-                    counter.textContent = `Сторінка ${currentPage + 1} з ${totalPages}`;
-                }
-
-                prevBtn.style.opacity = currentPage === 0 ? '0.3' : '1';
-                prevBtn.style.cursor = currentPage === 0 ? 'not-allowed' : 'pointer';
-                nextBtn.style.opacity = currentPage === totalPages - 1 ? '0.3' : '1';
-                nextBtn.style.cursor = currentPage === totalPages - 1 ? 'not-allowed' : 'pointer';
-            }
-
-            function goToPage(index) {
-                if (index < 0 || index >= totalPages) return;
-                currentPage = index;
-                updateUI();
-            }
-
-            function nextPage() {
-                if (currentPage < totalPages - 1) {
-                    currentPage++;
-                    updateUI();
-                }
-            }
-
-            function prevPage() {
-                if (currentPage > 0) {
-                    currentPage--;
-                    updateUI();
-                }
-            }
-
-            prevBtn.addEventListener('click', prevPage);
-            nextBtn.addEventListener('click', nextPage);
-
-            // Свайпи на мобільному
-            let touchStartX = 0;
-            let touchEndX = 0;
-
-            track.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            }, { passive: true });
-
-            track.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                const diff = touchStartX - touchEndX;
-                if (Math.abs(diff) > 50) {
-                    if (diff > 0) nextPage();
-                    else prevPage();
-                }
-            }, { passive: true });
-
-            // Клавіші ← →
-            document.addEventListener('keydown', (e) => {
-                const reviewsSection = document.getElementById('reviews');
-                if (!reviewsSection) return;
-                const rect = reviewsSection.getBoundingClientRect();
-                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-
-                if (isVisible) {
-                    if (e.key === 'ArrowLeft') prevPage();
-                    if (e.key === 'ArrowRight') nextPage();
-                }
-            });
-
-        /* ============================================================
-           СЛАЙДЕР ФОТО РОБІТ (Об'єкти)
-           ------------------------------------------------------------
-           3 фото на слайд, стрілки ← → і крапки-індикатори
-           ============================================================ */
-        (function initWorksSlider() {
-            const track = document.getElementById('worksTrack');
-            const prevBtn = document.getElementById('worksPrev');
-            const nextBtn = document.getElementById('worksNext');
-            const dotsContainer = document.getElementById('worksDots');
-            const counter = document.getElementById('worksCounter');
-
-            if (!track || !prevBtn || !nextBtn) return;
-
-            const slides = track.querySelectorAll('.works-slide');
-            const totalSlides = slides.length;
-            let currentSlide = 0;
-
-            // Створюємо крапки
-            for (let i = 0; i < totalSlides; i++) {
-                const dot = document.createElement('button');
-                dot.className = 'w-2.5 h-2.5 rounded-full bg-[#1e2835] hover:bg-[#7dd3fc] transition-all';
-                dot.setAttribute('aria-label', 'Слайд ' + (i + 1));
-                dot.addEventListener('click', () => goToSlide(i));
-                dotsContainer.appendChild(dot);
-            }
-
-            const dots = dotsContainer.querySelectorAll('button');
-
-            function updateUI() {
-                track.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-                dots.forEach((dot, i) => {
-                    if (i === currentSlide) {
-                        dot.className = 'w-8 h-2.5 rounded-full bg-[#7dd3fc] transition-all';
-                    } else {
-                        dot.className = 'w-2.5 h-2.5 rounded-full bg-[#1e2835] hover:bg-[#7dd3fc] transition-all';
-                    }
-                });
-
-                if (counter) {
-                    counter.textContent = `Сторінка ${currentSlide + 1} з ${totalSlides}`;
-                }
-
-                prevBtn.style.opacity = currentSlide === 0 ? '0.3' : '1';
-                prevBtn.style.cursor = currentSlide === 0 ? 'not-allowed' : 'pointer';
-                nextBtn.style.opacity = currentSlide === totalSlides - 1 ? '0.3' : '1';
-                nextBtn.style.cursor = currentSlide === totalSlides - 1 ? 'not-allowed' : 'pointer';
-            }
-
-            function goToSlide(index) {
-                if (index < 0 || index >= totalSlides) return;
-                currentSlide = index;
-                updateUI();
-            }
-
-            function nextSlide() {
-                if (currentSlide < totalSlides - 1) {
-                    currentSlide++;
-                    updateUI();
-                }
-            }
-
-            function prevSlide() {
-                if (currentSlide > 0) {
-                    currentSlide--;
-                    updateUI();
-                }
-            }
-
-            prevBtn.addEventListener('click', prevSlide);
-            nextBtn.addEventListener('click', nextSlide);
-
-            // Свайпи
-            let touchStartX = 0;
-            let touchEndX = 0;
-
-            track.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            }, { passive: true });
-
-            track.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                const diff = touchStartX - touchEndX;
-                if (Math.abs(diff) > 50) {
-                    if (diff > 0) nextSlide();
-                    else prevSlide();
-                }
-            }, { passive: true });
-
+        function goToSlide(index) {
+            if (index < 0 || index >= totalSlides) return;
+            currentSlide = index;
             updateUI();
-        })();
+        }
 
-           updateUI();
-        })();
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateUI();
+            }
+        }
 
-    </script>
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateUI();
+            }
+        }
+
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        track.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        track.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) nextSlide();
+                else prevSlide();
+            }
+        }, { passive: true });
+
+        updateUI();
+    })();
+
+    /* ============================================================
+       СЛАЙДЕР ВІДГУКІВ — рендер з масиву reviewsData
+       ============================================================ */
+    (function initReviewsSlider() {
+        const reviewsData = [
+            { name: "Ігор", location: "Шевченка 35", date: "Сьогодні", text: "Робота зроблена швидко, якісно. Рекомендую майстра як професіонала своєї справи.", isNew: true },
+            { name: "Лілія", location: "Квартира, м. Івано-Франківськ", date: "18.07.2026", text: "Всім дуже сильно задоволена. Роман робив підлогу, фартух в кухні та стіни в ванній. Все виконано акуратно, швидко і рівно. Рекомендую і щиро дякую🙏" },
+            { name: "Олександра Піцик", location: "Квартира, м. Івано-Франківськ", date: "02.08.2026", text: "Щиро рекомендую!! Романа — справжній майстер, фахівець своєї справи. Все зробив акуратно, швидко, охайно та дуже якісно! Дякую за сумлінне ставлення та чудовий результат!" },
+            { name: "Володимир Коржев", location: "Таунхаус, м. Івано-Франківськ", date: "21.05.2026", text: "Рекомендую даного майстра для плиточно-оздоблювальних робіт. Роботу виконав акуратно, швидко, якісно. Працював у мене, моїх друзів. Всі його роботою задоволені." },
+            { name: "Василь Камаш", location: "Квартира, м. Івано-Франківськ", date: "14.06.2026", text: "Дуже задоволені роботою. Сподобався підхід майстра. Працює акуратно і професійно. Добре розуміє свою роботу. Всі питання обговорює і враховує побажання." },
+            { name: "Олександр Мельник", location: "Квартира, м. Івано-Франківськ", date: "09.12.2025", text: "Дуже задоволений роботою майстра. Плитку поклав акуратно. Терміни дотримався, зробив навіть швидше, прибрав після себе. Рекомендую всім!" },
+            { name: "Наталія Ковальчук", location: "Будинок, м. Івано-Франківськ", date: "22.10.2025", text: "Майстер працює чисто, швидко, та без зайвих розмов. Однозначно рекомендую!" },
+            { name: "Оксана", location: "Квартира, м. Івано-Франківськ", date: "15.08.2025", text: "Звернулася до Романа для укладання плитки у ванній кімнаті. Все зробив швидко, якісно та чисто. Шви рівні, кут 45 ідеальний. Дякую за професійний підхід! Рекомендую." },
+            { name: "Андрій", location: "Котедж, с. Крихівці", date: "03.06.2025", text: "Дуже задоволений роботою! Все виміряв, порахував, порадив найкращий варіант розкладки. Результат перевершив очікування. 10 з 10!" },
+            { name: "Марія", location: "Квартира, м. Івано-Франківськ", date: "19.03.2025", text: "Робили душовий піддон. Усе виконано ідеально, вода зливається без затримок. Роман дуже акуратний, після себе все прибрав. Велике спасибі!" },
+            { name: "Олег", location: "Офіс, м. Івано-Франківськ", date: "27.01.2025", text: "Виконував роботи в комерційному приміщенні 300 м². Чітко дотримався термінів, ціна була заздалегідь обговорена. Раджу всім!" },
+            { name: "Наталія", location: "Квартира, м. Івано-Франківськ", date: "11.11.2024", text: "Роман — майстер з золотими руками! Зробив фартух на кухні дуже стильно. Також допоміг з вибором матеріалів. Щиро дякую!" },
+            { name: "Володимир", location: "Котедж, с. Угорники", date: "08.08.2024", text: "Великий об'єм роботи по укладанню керамограніту 120×60 — майже 700 м². Впорався швидко і якісно. Задоволений та рекомендую!" },
+            { name: "Сергій", location: "Котедж, с. Підпечари", date: "22.05.2024", text: "Робив великоформатну плитку 120×60 по всьому будинку. Рівень і геометрія просто супер. Все акуратно в термін." },
+            { name: "Анна", location: "Квартира, м. Івано-Франківськ (Каскад)", date: "14.02.2024", text: "Роман зробив санвузол під ключ. Все чисто, акуратно і з душею. Робить так, як для себе. Дуже рекомендую!" },
+            { name: "Роман", location: "Будинок, Крихівці", date: "30.10.2023", text: "Робив плитку на терасі та сходах. Результат перевершив очікування. Професіонал своєї справи!" },
+            { name: "Міша", location: "Квартира, м. Івано-Франківськ", date: "17.07.2023", text: "Дуже акуратний майстер. Зробив підлогу і стіни в санвузлі. Після себе все прибирав, квартира залишалась чистою." },
+            { name: "Дмитро", location: "Таунхаус, м. Івано-Франківськ", date: "05.04.2023", text: "Робив плитку в трьох санвузлах. Якість на найвищому рівні, все по рівню, шви ідеальні. Працює професійним інструментом." },
+            { name: "Тетяна", location: "Квартира, м. Івано-Франківськ", date: "12.01.2023", text: "Зробив плитку на балконі та в коридорі. Все акуратно, без сколів і перепадів. Приємно спілкуватися і працювати з такою людиною." }
+        ];
+
+        const track = document.getElementById('reviewsTrack');
+        const prevBtn = document.getElementById('reviewsPrev');
+        const nextBtn = document.getElementById('reviewsNext');
+        const dotsContainer = document.getElementById('reviewsDots');
+        const counter = document.getElementById('reviewsCounter');
+
+        if (!track || !prevBtn || !nextBtn || !dotsContainer || !counter) {
+            console.warn('Reviews slider: не знайдено один із елементів');
+            return;
+        }
+
+        let currentPage = 0;
+        let cardsPerPage = 3;
+        let totalPages = 1;
+
+        function getCardsPerPage() {
+            if (window.innerWidth < 640) return 1;
+            if (window.innerWidth < 1024) return 2;
+            return 3;
+        }
+
+        function createCard(r) {
+            const initial = r.name.charAt(0).toUpperCase();
+            const isNew = !!r.isNew;
+
+            return `
+              <div class="review-card group relative p-5 sm:p-6 flex flex-col rounded-2xl bg-gradient-to-br from-[#121821] to-[#0e141c] ${isNew ? 'border-2 border-[#7dd3fc]/50 hover:border-[#7dd3fc]' : 'border border-[#1e2835] hover:border-[#7dd3fc]/50'} transition-all duration-300 hover:-translate-y-1 h-full">
+                ${isNew ? `<span class="absolute -top-2.5 -right-2.5 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-[#7dd3fc] to-[#38bdf8] text-[#0a0e14] text-[10px] font-black">НОВИЙ</span>` : ''}
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-[#7dd3fc] to-[#38bdf8] flex items-center justify-center text-[#0a0e14] font-black text-base shrink-0">${initial}</div>
+                  <div class="min-w-0">
+                    <p class="font-bold text-white text-sm sm:text-base truncate">${r.name}</p>
+                    <p class="text-gray-400 text-xs truncate">${r.location}</p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between mb-3">
+                  <div class="text-amber-400 text-sm flex gap-0.5">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="${isNew ? 'text-[#7dd3fc] font-semibold' : 'text-gray-500'} text-xs">${r.date}</span>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed flex-1">"${r.text}"</p>
+              </div>
+            `;
+        }
+
+        function render() {
+            cardsPerPage = getCardsPerPage();
+            totalPages = Math.ceil(reviewsData.length / cardsPerPage);
+            if (currentPage > totalPages - 1) currentPage = totalPages - 1;
+            if (currentPage < 0) currentPage = 0;
+
+            let html = '';
+            for (let i = 0; i < totalPages; i++) {
+                const start = i * cardsPerPage;
+                const page = reviewsData.slice(start, start + cardsPerPage);
+                const cols = cardsPerPage === 1
+                    ? 'grid-cols-1'
+                    : cardsPerPage === 2
+                        ? 'grid-cols-1 sm:grid-cols-2'
+                        : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
+
+                html += `<div class="reviews-page w-full flex-shrink-0 grid ${cols} gap-5">${page.map(createCard).join('')}</div>`;
+            }
+
+            track.innerHTML = html;
+            update();
+        }
+
+        function update() {
+            track.style.transform = `translateX(-${currentPage * 100}%)`;
+
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalPages; i++) {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `h-2.5 rounded-full transition-all duration-300 ${i === currentPage ? 'bg-[#7dd3fc] w-6' : 'bg-[#1e2835] w-2.5 hover:bg-[#7dd3fc]/40'}`;
+                btn.setAttribute('aria-label', `Сторінка ${i + 1}`);
+                btn.addEventListener('click', () => goTo(i));
+                dotsContainer.appendChild(btn);
+            }
+
+            counter.textContent = `Сторінка ${currentPage + 1} з ${totalPages}`;
+
+            // Затемнення на краях (без блокування)
+            prevBtn.style.opacity = currentPage === 0 ? '0.3' : '1';
+            prevBtn.style.cursor = currentPage === 0 ? 'not-allowed' : 'pointer';
+            nextBtn.style.opacity = currentPage === totalPages - 1 ? '0.3' : '1';
+            nextBtn.style.cursor = currentPage === totalPages - 1 ? 'not-allowed' : 'pointer';
+        }
+
+        function goTo(page) {
+            if (page < 0 || page >= totalPages) return;
+            currentPage = page;
+            update();
+        }
+
+        prevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            goTo(currentPage - 1);
+        });
+
+        nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            goTo(currentPage + 1);
+        });
+
+        let startX = 0;
+        track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+        track.addEventListener('touchend', e => {
+            const diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) goTo(currentPage + 1);
+                else goTo(currentPage - 1);
+            }
+        }, { passive: true });
+
+        document.addEventListener('keydown', (e) => {
+            const rect = track.getBoundingClientRect();
+            const inView = rect.top < window.innerHeight && rect.bottom > 0;
+            if (!inView) return;
+            if (e.key === 'ArrowLeft') goTo(currentPage - 1);
+            if (e.key === 'ArrowRight') goTo(currentPage + 1);
+        });
+
+        let timer;
+        window.addEventListener('resize', () => {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                const old = cardsPerPage;
+                render();
+                if (old !== cardsPerPage) {
+                    currentPage = 0;
+                    update();
+                }
+            }, 150);
+        });
+
+        render();
+    })();
+    
+</script>
 </body>
 </html>
